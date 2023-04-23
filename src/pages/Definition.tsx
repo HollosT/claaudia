@@ -9,6 +9,7 @@ const Definition = () => {
             <h1>Definition</h1>
             <Label for="range-test">Range</Label>
             <Input id="range-test" type="range" />
+            <Loading />
         </div>
     )
 }
