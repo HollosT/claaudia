@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Input, Button, Loading } from "../atoms";
+import { Input, Button, Loading, Accordion } from "../atoms";
 import { getAllHPCs } from "../services/firebase/firebase.utils";
 import { HPC } from "../services/types/hpc";
 
@@ -33,6 +33,8 @@ const Home = () => {
                 </ul>
             )}
             <Button onClick={getHPCs}> Click me! </Button>
+
+            <Accordion title="Test accordion" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
         </div>
     )
 }

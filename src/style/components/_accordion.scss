@@ -1,0 +1,49 @@
+.accordion {
+    width: 50rem;
+    background-color: $color-grey-light-1;
+    border-radius: 3px;
+    overflow: hidden;
+    
+    &-header {
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-grey-light-2;
+        
+        &__arrow {
+            font-size: 4rem;
+            transition: all .5s ease-in-out;
+
+            &-open {
+                transform: rotate(-180deg);
+            }
+
+            &-close {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+        }
+    }
+
+
+    &-body {
+        transition: all .3s ease-in;
+
+        &__text {
+            padding: .5rem;
+        }
+
+        &__open {
+            height: 15rem; 
+        }
+
+        &__close {
+            height: 0rem; 
+        }
+    }
+}
