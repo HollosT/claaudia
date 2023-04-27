@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;600&family=Quicksand:wght@300;500&display=swap');
+
+
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-weight: 400;
     /*font-size: 16px;*/
     line-height: 1.7;
@@ -8,37 +11,64 @@ body {
 
 
 h1 {
-    font-size: 6rem;
-}
-h2 {
-    font-size: 4rem;
-}
-h3 {
-    font-size: 3rem;
-}
-h4 {
-    font-size: 3rem;
-}
-h5 {
-    font-size: 1.8rem;
+    font-size: 3.6rem;
+    line-height: 1.194;
+    font-weight: bold;
 }
 
-h6 {
-    font-size: 2rem;
+h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 1.208;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 1.055;
+    font-weight: 500;
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.p-huge {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.p-big {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.p-small {
+    font-size: 1.4rem;
+    line-height: 1.714;
+    font-weight: 400;
 }
 
 label {
-    font-size: 1.6rem;
-
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 li {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 a {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
 }

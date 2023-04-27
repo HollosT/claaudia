@@ -13,9 +13,9 @@ const Accordion: React.FC<AccordionInput> = ({title, body, isOpen=false}) => {
     }
 
     return (
-        <div  className="accordion">
+        <div className="accordion">
             <div onClick={toggle} className="accordion-header">
-                <h5 className="accordion-header__title">{title}</h5>
+                <h4 className="accordion-header__title">{title}</h4>
                 <span className={`accordion-header__arrow material-symbols-outlined ${open ? 'accordion-header__arrow-open' : 'accordion-header__close-close'}`}>expand_more</span>
             </div>
             <div className={`accordion-body ${open ? 'accordion-body__open' : 'accordion-body__close'}`}>
