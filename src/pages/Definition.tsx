@@ -2,7 +2,7 @@
 import { Input, Label, Loading, Accordion } from "../atoms";
 
 
-const Definition = () => {
+const Definition:React.FC = () => {
 
     return (
         <div className="definition-container">

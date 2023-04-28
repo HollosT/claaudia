@@ -1,11 +1,12 @@
 
 import { useState } from "react";
-import { Input, Button, Loading } from "../atoms";
+import { Input, Button, Loading, Accordion } from "../atoms";
 import { getAllHPCs } from "../services/firebase/firebase.utils";
 import { HPC } from "../services/types/hpc";
 
 
-const Home = () => {
+
+const Home: React.FC = () => {
     const [hpcs, setHpcs] = useState<HPC[] | undefined>()
     const [loading, setLoading] =useState(false)
 
@@ -33,6 +34,7 @@ const Home = () => {
                 </ul>
             )}
             <Button onClick={getHPCs}> Click me! </Button>
+            <Accordion title="Test" body="This is the body test" isOpen  />
 
         </div>
     )
