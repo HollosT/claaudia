@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
 import platformRoutes from "../../services/router/platform-routes";
-
-
 const Navigation: React.FC = () => {
-
     return (
             <nav>
                 <h2>Nav</h2>
@@ -15,5 +12,4 @@ const Navigation: React.FC = () => {
             </nav>
     )
 }
-
 export default Navigation;

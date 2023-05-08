@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Input, Button, Loading, Accordion } from "../atoms";
+import { Input, Button, Loading } from "../atoms";
 import { getAllHPCs } from "../services/firebase/firebase.utils";
 import { HPC } from "../services/types/hpc";
 
@@ -9,7 +9,6 @@ import { HPC } from "../services/types/hpc";
 const Home: React.FC = () => {
     const [hpcs, setHpcs] = useState<HPC[] | undefined>()
     const [loading, setLoading] =useState(false)
-
     const getHPCs = async () => {
         setLoading(true)
         const hpcs = await getAllHPCs();
@@ -20,6 +19,8 @@ const Home: React.FC = () => {
     if(loading) {
         return <Loading />
     }
+
+
 
 
     return (
@@ -34,8 +35,6 @@ const Home: React.FC = () => {
                 </ul>
             )}
             <Button onClick={getHPCs}> Click me! </Button>
-            <Accordion title="Test" body="This is the body test" isOpen  />
-
         </div>
     )
 }
