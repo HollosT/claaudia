@@ -1,3 +1,32 @@
-button {
+.btn {
+    &,
+    &:link,
+    &:visited {
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+
+        // Change for the button element
+        border: none;
+        cursor: pointer;
+    }
     
+    &-primary {
+       background-color: $dark-blue;
+       color: $color-white;
+       padding: 1rem;
+       border-radius: 3px;
+
+       &--count {
+        color: $light-blue-200;
+        margin-right: .5rem;
+       }
+    }
+
+    &-link{
+        background: transparent;
+        color: $blue-grey;
+    }
 }
+

@@ -1,0 +1,63 @@
+.introduction-page {
+    background-color: $light-grey-100;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.introduction {
+    margin: 0 auto;
+    height: 50rem;
+    background-color: $color-white;
+
+    @include centerHorizontally;
+
+    &-content {
+        padding: 2rem 5rem;
+
+        &--body {
+            height: 22rem;
+
+        }
+
+        &--action_container{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            align-items: flex-start;
+
+            &-primer{
+                display: flex;
+                gap: 4rem;
+
+                &--btn{
+                    &:last-child {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                }
+
+                &--link {
+                    display: flex;
+                    gap: .5rem;
+                    align-self: center;
+                    align-items: center;
+                }
+            }
+
+            &-skip {
+                justify-self: flex-end;
+                color: $light-blue;
+            }
+        }
+    }
+
+    &-img--container {
+        &_image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

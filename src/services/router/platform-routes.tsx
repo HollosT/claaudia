@@ -11,12 +11,11 @@ const platformRoutes: RouteList = {
         path: '/home',
         element: <Home />
     },
-
     definition: {
         name: 'Definition',
         path: '/definition',
         element: <Definition />
-    },
+    }
 }
 
 export default platformRoutes;

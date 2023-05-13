@@ -1,0 +1,6 @@
+
+.introduction {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: $grid-introduction-width;
+}

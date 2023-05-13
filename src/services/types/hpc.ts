@@ -10,3 +10,13 @@ export interface HPC {
     memoryUnit: string;
     processingUnit: ProcessingUnit[];
 }
+
+
+export interface Step {
+    id: number,
+    question: string,
+    title: string,
+    body: string,
+    img: string,
+    order: number
+}
