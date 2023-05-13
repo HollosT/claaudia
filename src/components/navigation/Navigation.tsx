@@ -1,15 +1,36 @@
-import { Link } from "react-router-dom"
-import platformRoutes from "../../services/router/platform-routes";
+import { Logo } from "src/atoms";
+import { Link, useLocation } from "react-router-dom";
+import platformRoutes from "src/services/router/platform-routes";
+import { ContactIcon } from "./icons";
+
 const Navigation: React.FC = () => {
-    return (
-            <nav>
-                <h2>Nav</h2>
-                <ul>
-                    {Object.values(platformRoutes).map((route) => 
-                         <Link key={route.name} to={route.path}>{route.name}</Link>
-                    )}
-                </ul>
-            </nav>
-    )
-}
+  const location = useLocation();
+
+  const isRouteActive = (routePath: string): boolean => {
+    return location.pathname === routePath;
+  };
+
+  return (
+    <nav className="sidebar">
+      <Logo />
+      <ul className="sidebar-list u-margin-top-small">
+        {Object.values(platformRoutes).map((route) => (
+          <Link
+            className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
+            key={route.name}
+            to={route.path}
+          >
+            {route.icon}
+            {route.name}
+          </Link>
+        ))}
+      </ul>
+      <div className="contact">
+        <ContactIcon />    
+        <a className="contact-address" href="mailto: aau@aau.dk">Contact CLAAUDIA</a>
+      </div>
+    </nav>
+  );
+};
+
 export default Navigation;

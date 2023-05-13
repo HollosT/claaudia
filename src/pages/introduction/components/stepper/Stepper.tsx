@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { StepImage, StepItem } from '.';
 import { Step } from 'src/services/types/hpc';
-import { ArrowLeft, ArrowRight, Button } from 'src/atoms';
+import { ArrowLeft, ArrowRight, Button, Logo } from 'src/atoms';
 
 interface StepperProps {
     stps: Step[],
@@ -44,7 +44,7 @@ const Stepper: React.FC<StepperProps> = ({ stps, curr }) => {
     return (
         <section className='introduction'>
             <div className='introduction-content'>
-                <h3 className='introduction-content--title'>HPC Machmaker <span className='p-small introduction-content--title-owner'>by CLAAUDIA</span></h3>
+                <Logo />
                 <StepItem step={activeStep} active={active} />
                 <div className='introduction-content--action_container'>
                     <div className='introduction-content--action_container-primer'>

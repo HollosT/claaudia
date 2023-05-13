@@ -1,0 +1,6 @@
+export {default as ResourcesIcon} from './Resources-icon'
+export {default as SurveyIcon} from './Survey-icon'
+export {default as DictionaryIcon} from './Dictionary-icon'
+export {default as Cases} from './Cases-icon'
+export {default as AboutIcon} from './About-icon'
+export {default as ContactIcon} from './Contact-icon'

@@ -66,25 +66,31 @@ li {
     font-size: 1.8rem;
     line-height: 1.6;
     font-weight: 400;
+    text-decoration: none;
 }
 a {
     font-size: 1.8rem;
     line-height: 1.6;
     font-weight: 400;
+    text-decoration: none;
+}
+
+// Logo
+.logo {
+
+    &-title {
+        color: $light-blue-100;
+
+        &--owner {
+            color: $blue-grey;
+        } 
+    }
 }
 
 // Introduction
 .introduction {
     &-content {
-        &--title {
-            color: $light-blue-100;
-
-            &-owner {
-                color: $blue-grey;
-            }
-        }
         &--body {
-
             &-answer_title {
                 color: $dark-blue;
             }
@@ -92,6 +98,30 @@ a {
             &-answer_body {
                 color: $blue-grey;
             }
+        }
+    }
+}
+
+// Navigation 
+.sidebar {
+
+    .logo {
+        &-title {
+            &--owner {
+                color: $color-white;
+            } 
+        }
+    }
+    
+    &-list {
+        &--link {
+            color: $color-white;
+        }
+    }
+
+    .contact {
+        &-address {
+            color: $color-white;
         }
     }
 }

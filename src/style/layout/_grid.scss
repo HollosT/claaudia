@@ -4,3 +4,8 @@
     grid-template-columns: 60% 40%;
     width: $grid-introduction-width;
 }
+
+.platform-page {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}

@@ -1,0 +1,42 @@
+.sidebar {
+    background-color: $dark-blue;
+    position: sticky;
+    height: 100vh;
+    position: relative;
+
+    .logo-title {
+        padding: 5rem 3rem 0rem;
+
+    }
+    
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        &--link {
+            padding: .5rem 3rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            background-color: transparent;
+            border-left: 2px solid transparent;
+            transition: all 250ms ease-in;
+        }
+    }
+
+    .contact {
+        padding: 0 3rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+    }
+}
+
+.active-link {
+    background-color: $dark-blue-100;
+    border-left: 2px solid $light-blue-100;
+
+}

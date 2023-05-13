@@ -3,10 +3,12 @@ import Navigation from "../components/navigation/Navigation";
 
 const PlatformLayout: React.FC = () => {
     return (
-        <div>
+        <main className="platform-page">
             <Navigation />
-            <Outlet />
-        </div>
+            <div className="page-wrapper">
+                <Outlet />
+            </div>
+        </main>
     )
 }
 
