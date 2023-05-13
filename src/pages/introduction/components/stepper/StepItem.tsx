@@ -1,6 +1,5 @@
 import { Step } from "src/services/types/hpc";
 
-
 interface StepProps {
     step: Step;
     active: number;

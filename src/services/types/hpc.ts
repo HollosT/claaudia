@@ -13,10 +13,9 @@ export interface HPC {
 
 
 export interface Step {
-    id: number,
+    id: string,
     question: string,
     title: string,
     body: string,
-    img: string,
     order: number
 }

@@ -6,7 +6,8 @@ import { initializeApp } from 'firebase/app';
 // For the firestore
 import {getFirestore, getDocs, collection} from 'firebase/firestore'
 import { firebaseConfig } from './firebaseConfig';
-import { HPC } from '../types/hpc';
+import { HPC, Step } from '../types/hpc';
+
 
 
   
@@ -20,4 +21,10 @@ export const db = getFirestore();
 export const getAllHPCs = async (): Promise<HPC[]> => {
     const querySnapshot = await getDocs(collection(db, 'HPCs'));
     return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as HPC[];
+};
+
+// Will call all the HPCs data
+export const getAllIntroduction = async (): Promise<Step[]> => {
+    const querySnapshot = await getDocs(collection(db, 'Introduction'));
+    return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Step[];
 };

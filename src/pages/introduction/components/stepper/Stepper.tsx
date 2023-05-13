@@ -80,7 +80,7 @@ const Stepper: React.FC<StepperProps> = ({ stps, curr }) => {
                 </div>
             </div>
             <div className='introduction-img--container'>
-                <StepImage  img={activeStep.img} alt={activeStep.title}/>
+                <StepImage/>
             </div>
         </section>
 

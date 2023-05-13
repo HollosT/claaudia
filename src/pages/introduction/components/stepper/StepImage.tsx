@@ -1,8 +1,9 @@
 import React from 'react'
+import hpcImage from '../../../../assets/hpc_example.jpeg';
 
-const StepImage: React.FC<{img: string, alt: string}> = ({img, alt}) => {
+const StepImage: React.FC = () => {
 
-    return <img className='introduction-img--container_image' src={img} alt={alt} />   
+    return <img className='introduction-img--container_image' src={hpcImage} alt="" />   
 }
 
 export default StepImage;
