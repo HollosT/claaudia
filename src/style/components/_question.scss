@@ -21,47 +21,58 @@
         &--list {
 
             &-item {
-                width: 49%;
-                display: inline-block;
 
+                
                 &_radio {
                     display: none;    
                 }
-
+                
                 &_label {
                     cursor: pointer;
                     position: relative;
-                    padding-left: 5rem;
+                    padding: 1rem 2rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
 
                     .form__radio-button {
-                        height: 3rem;
-                        width: 3rem;
-                        border: 5px solid green;
-                        border-radius: 50%;
+                        height: 5rem;
+                        width: 50rem;
+                        border: 2px solid $light-grey;
+                        border-radius: 3px;
                         display: inline-block;
                         position: absolute;
+                        padding: 1rem 2rem;
                         left: 0;
-                        top: -.4rem;
-                
+                        top: -3%;
+                        transition: opacity .3s;
+
+                        
                         &::after {
                             content: "";
+                            padding: 1rem 2rem;
                             display: block;
-                            height: 1.3rem;
-                            width: 1.3rem;
-                            border-radius: 50%;
+                            height: 100%;
+                            width: 100%;
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: green;
+                            border-radius: 3px;
+                            border: 2px solid $dark-green;
+                            background-color: $dark-green-opacity-10;
                             opacity: 0;
                             transition: opacity .3s;
+                            left: 0;
+                            top: 0;
+
+
                         } 
                     }
                 }
 
                 &_radio:checked + &_label .form__radio-button::after{
                     opacity: 1;
+                }
+                &_radio:checked + &_label .form__radio-button{
+                    border: 2px solid transparent;
                 }
 
             }

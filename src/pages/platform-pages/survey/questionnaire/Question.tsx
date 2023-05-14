@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Input, Label } from "src/atoms";
-import { QuestionContext } from "src/services/context/question/question-context";
+import { EmptyCircle, Input, Label } from "src/atoms";
+import { QuestionContext } from "src/services/context/questionnaire/questions/question-context";
+import Answer from "./Answer";
 
 
-const Question: React.FC= () => {
-    const {activeQuestion,active} = useContext(QuestionContext)
+const Question: React.FC = () => {
+    const { activeQuestion, active } = useContext(QuestionContext)
 
 
     return (
@@ -17,26 +18,12 @@ const Question: React.FC= () => {
             <div className="question-answer">
                 <p className="question-answer--hint u-margin-bottom-small">Select a single answer from provided options</p>
                 <form className="question-answer--form">
-                        <ul className="question-answer--list">
-                                {activeQuestion.answers.map(answer => (
-                                    <li 
-                                    key={answer.label}
-                                    className="question-answer--list-item"
-                                    >
-                                        <Input 
-                                            type="radio"
-                                            name="answer"
-                                            className="question-answer--list-item_radio"
-                                            value={answer.label} id={answer.label}
-                                        />
-                                        <Label for={answer.label} className="question-answer--list-item_label">
-                                            <span className="form__radio-button"></span>
-                                            {answer.label}
-                                        </Label>
-                                    </li>
-                                ))}
+                    <ul className="question-answer--list">
+                        {activeQuestion.answers.map(answer => (
+                            <Answer key={answer.label} answer={answer} />
+                        ))}
 
-                        </ul>
+                    </ul>
                 </form>
             </div>
         </section>

@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { DoneCheck } from "src/atoms";
-import { QuestionContext } from "src/services/context/question/question-context";
+import { QuestionContext } from "src/services/context/questionnaire/questions/question-context";
 
 
-const QuestionnaireHeader: React.FC<{topics: string[]}> = ({topics}) => {
-    const {goTo, active} = useContext(QuestionContext)
+const QuestionnaireHeader: React.FC<{ topics: string[] }> = ({ topics }) => {
+    const { goTo, active } = useContext(QuestionContext)
 
     const handleGoTo = (i: number) => {
-        if(i !== active) {
+        if (i !== active) {
             goTo(i)
         } else {
             return
@@ -16,7 +16,7 @@ const QuestionnaireHeader: React.FC<{topics: string[]}> = ({topics}) => {
 
     return (
         <ul className="questionnarie-header">
-            {topics.map((topic, i) => 
+            {topics.map((topic, i) =>
                 <li key={i} onClick={() => handleGoTo(i)} className="questionnarie-header-item">
                     <DoneCheck />
                     {/* {`${i + 1}. ${topic}`} */}
