@@ -6,7 +6,8 @@ import { initializeApp } from 'firebase/app';
 // For the firestore
 import {getFirestore, getDocs, collection} from 'firebase/firestore'
 import { firebaseConfig } from './firebaseConfig';
-import { HPC, Step } from '../types/hpc';
+import { HPC } from '../types/hpc';
+import { Step } from '../types/introduction';
 
 
 

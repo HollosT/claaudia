@@ -1,4 +1,5 @@
-import { Step } from "src/services/types/hpc";
+import { Step } from "src/services/types/introduction";
+
 
 interface StepProps {
     step: Step;

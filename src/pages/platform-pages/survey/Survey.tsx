@@ -1,8 +1,17 @@
+import React from 'react';
+import { Questionnaire } from './questionnaire';
+
+
+
+
 
 const Survey: React.FC = () => {
 
     return (
-        <h1>Survey</h1>
+        <main className='survey'>
+            <h1 className='survey-title u-margin-bottom-small'>HPC Survey</h1>
+            <Questionnaire />
+        </main>
     )
 }
 

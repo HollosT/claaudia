@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { StepImage, StepItem } from '.';
-import { Step } from 'src/services/types/hpc';
+
 import { ArrowLeft, ArrowRight, Button, Logo } from 'src/atoms';
+import { Step } from 'src/services/types/introduction';
 
 interface StepperProps {
     stps: Step[],

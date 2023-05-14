@@ -22,6 +22,12 @@
         color: $light-blue-200;
         margin-right: .5rem;
        }
+
+       &--icon {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+       }
     }
 
     &-link{

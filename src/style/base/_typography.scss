@@ -11,9 +11,9 @@ body {
 
 
 h1 {
-    font-size: 3.6rem; //
+    font-size: 3rem; //
     line-height: 1.194;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 h2 {
@@ -43,7 +43,7 @@ p {
 .p-huge {
     font-size: 2.4rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
 }
 .p-big {
     font-size: 2rem;
@@ -66,7 +66,7 @@ li {
     font-size: 1.8rem;
     line-height: 1.6;
     font-weight: 400;
-    text-decoration: none;
+    list-style: none;
 }
 a {
     font-size: 1.8rem;
@@ -122,6 +122,48 @@ a {
     .contact {
         &-address {
             color: $color-white;
+        }
+    }
+}
+
+// Survey
+
+.survey {
+    &-title {
+        color: $dark-blue;
+    }
+}
+
+// Survey - Questionnaire header
+.questionnarie-header {
+    color: $dark-blue;
+    font-weight: 200;
+}
+
+.question {
+   
+    &-topic{
+        &--badge {
+            color: $color-white;
+        }
+
+        &--title{
+            color: $blue-grey;
+
+        }
+    }
+
+    &-question{
+        color: $dark-blue;
+    }
+
+    &-answer {
+        &--hint {
+            color: $blue-grey;
+        }
+
+        &--list {
+            color: $dark-blue;
         }
     }
 }
