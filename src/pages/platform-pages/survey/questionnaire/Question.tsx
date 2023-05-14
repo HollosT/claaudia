@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { EmptyCircle, Input, Label } from "src/atoms";
-import { QuestionContext } from "src/services/context/questionnaire/questions/question-context";
+import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import Answer from "./Answer";
 
 

@@ -2,20 +2,19 @@
 import { QuestionnaireHeader, Question } from "."
 import { useContext } from "react";
 import { ArrowLeft, ArrowRight, Button } from "src/atoms";
-import { QuestionContext } from "src/services/context/questionnaire/questions/question-context";
+import { QuestionContext } from "src/services/context/questionnaire/question-context";
 
 
 
 const Questionnaire: React.FC = () => {
     const { questions, handleActive, active } = useContext(QuestionContext)
-    const topics = questions.map(q => q.topic)
 
     return (
         <>
-            <QuestionnaireHeader topics={topics} />
+            <QuestionnaireHeader />
             <Question />
 
-            <div>
+            <div className="questionnaire-action--container">
                 {active === 0 ?
                     null
                     :

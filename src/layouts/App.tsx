@@ -1,6 +1,7 @@
 import React from 'react';
 import Provider from '../services/router/createRouter';
-import QuestionProvider from 'src/services/context/questionnaire/questions/QuestionProvider';
+import QuestionProvider from 'src/services/context/questionnaire/QuestionProvider';
+
 
 
 

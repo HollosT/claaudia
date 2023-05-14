@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useContext } from "react";
 import { DoneCheck, EmptyCircle, Input, Label } from "src/atoms";
+import { QuestionContext } from "src/services/context/questionnaire/question-context";
 
 interface Answer {
-    value: string | string[],
-    label: string
+    value: string,
+    label: string,
+    checked: boolean,
 }
 
 interface AnswerProps {
@@ -11,11 +13,11 @@ interface AnswerProps {
 }
 
 const Answer: React.FC<AnswerProps> = ({answer}) => {
-    const [checked, setChecked] = useState<string | string[] | null>(null);
+    const { updateChecked } = useContext(QuestionContext)
     
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(e.target.value);
-      };
+    const handleChange = () => {
+        updateChecked(answer.label);
+    }
 
     return (
         <li 
@@ -28,11 +30,12 @@ const Answer: React.FC<AnswerProps> = ({answer}) => {
                 className="question-answer--list-item_radio "
                 value={answer.label} id={answer.label}
                 onChange={handleChange}
+                checked={answer.checked}
             />
             <Label for={answer.label} className="question-answer--list-item_label">
                 <span className="form__radio-button">
                 </span>
-                {!checked  ? <EmptyCircle /> : <DoneCheck />}
+                {!answer.checked ? <EmptyCircle /> : <DoneCheck />}
                 {answer.label}
             </Label>
         </li>

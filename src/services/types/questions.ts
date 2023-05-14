@@ -1,6 +1,7 @@
 interface Answer {
     label: string,
-    value: string | string[]
+    value: string,
+    checked: boolean
 }
 
 export interface QuestionType {

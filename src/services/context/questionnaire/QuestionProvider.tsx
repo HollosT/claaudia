@@ -12,9 +12,17 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [active, setActive] = useState(0)
     const [activeQuestion, setActiveQuestion] = useState(questions[active])
 
+
     useEffect(() => {
         setActiveQuestion(questions[active]);
       }, [active, questions]);
+
+      useEffect(() => {
+        setQuestions((prevQuestions) => {
+            prevQuestions[active] = activeQuestion;
+            return prevQuestions;
+        });
+      }, [activeQuestion, active])
 
     const handleActive = (inc: Boolean) => {
         if (inc) {
@@ -44,6 +52,15 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
         }
     }
 
+    const updateChecked = (label: string) => {
+        setActiveQuestion((prevState) => {
+            const updatedAnswers = prevState.answers.map((a) =>
+              a.label === label ? { ...a, checked: !a.checked } : { ...a, checked: false }
+            );
+            return { ...prevState, answers: updatedAnswers };
+        });
+    }
+
     return(
         <QuestionContextProvider
             value={{
@@ -51,7 +68,8 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
                 active,
                 activeQuestion,
                 handleActive,
-                goTo
+                goTo,
+                updateChecked
             }}
         >
             {props.children}
