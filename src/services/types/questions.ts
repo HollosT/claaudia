@@ -5,7 +5,7 @@ interface Answer {
 }
 
 export interface QuestionType {
-    id: number,
+    id: string,
     topic: string,
     question: string,
     answers: Answer[]

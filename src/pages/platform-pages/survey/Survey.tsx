@@ -2,9 +2,6 @@ import React from 'react';
 import { Questionnaire } from './questionnaire';
 
 
-
-
-
 const Survey: React.FC = () => {
 
     return (

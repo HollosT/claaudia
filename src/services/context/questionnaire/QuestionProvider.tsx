@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { DUMMY_DATA, QuestionContextProvider } from "./question-context"
+import { QuestionType } from "src/services/types/questions";
+import { getAllQuestions } from "src/services/firebase/firebase.utils";
 
 interface QuestionProviderProps {
     children: React.ReactNode;
@@ -8,10 +10,17 @@ interface QuestionProviderProps {
 
 
 const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
-    const [questions, setQuestions] = useState(DUMMY_DATA)
+    const [questions, setQuestions] = useState<QuestionType[]>(DUMMY_DATA)
     const [active, setActive] = useState(0)
     const [activeQuestion, setActiveQuestion] = useState(questions[active])
 
+    useEffect(() => {
+        const initQuestions = async () => {
+            const qsts = await getAllQuestions()
+            setQuestions(qsts)
+        }
+        initQuestions()
+    }, [])
 
     useEffect(() => {
         setActiveQuestion(questions[active]);
@@ -61,6 +70,7 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
         });
     }
 
+
     return(
         <QuestionContextProvider
             value={{
@@ -69,7 +79,7 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
                 activeQuestion,
                 handleActive,
                 goTo,
-                updateChecked
+                updateChecked,
             }}
         >
             {props.children}
