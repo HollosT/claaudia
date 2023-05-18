@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Divider, Input, Label } from "src/atoms";
 import { keys } from "src/hooks";
 
@@ -13,6 +13,7 @@ interface OptionType {
 }
 
 const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
+    const [active, setActive] = useState<string | T>("All")
     const options = [
         {
             value: "All",
@@ -28,6 +29,7 @@ const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
     )] as OptionType[];
 
     const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setActive(event.currentTarget.value)
         handleChange(event.currentTarget.value)
     };
 
@@ -45,6 +47,7 @@ const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
                                     className="filter-header--filter_item-radio"
                                     value={opt.value}
                                     onChange={handleFilterChange}
+                                    checked={opt.value === active}
                                     id={opt.value}
                                 />
                                 <Label for={opt.value} className="filter-header--filter_item-label">
