@@ -5,10 +5,10 @@ import { Questionnaire } from './questionnaire';
 const Survey: React.FC = () => {
 
     return (
-        <main className='survey'>
+        <section className='survey'>
             <h1 className='primary-header u-margin-bottom-small'>HPC Survey</h1>
             <Questionnaire />
-        </main>
+        </section>
     )
 }
 

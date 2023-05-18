@@ -1,42 +1,35 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Divider, Input, Label } from "src/atoms";
 import { keys } from "src/hooks";
-import { AllHPC } from "src/services/types/hpc";
 
-
-import Case from "./Case";
-import { UseCasesType } from "src/services/types/usecases";
-import Footer from "src/components/footer/Footer";
-
-interface FilterProps {
-    cases: UseCasesType[];
+interface FilterProps<T> {
+    data: T;
+    handleChange: (data: string) => void
 }
 
-const Filter: React.FC<FilterProps> = ({cases}) => {
-    const [selectedFilter, setSelectedFilter] = useState<string | AllHPC>('All');
+interface OptionType {
+    label: string;
+    value: string
+}
 
+const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
     const options = [
         {
             value: "All",
             label: "All use cases"
         },
-        ...keys(AllHPC).map(
+        ...keys(data).map(
         (key, i) => (
             {
-                value: AllHPC[key],
-                label: AllHPC[key]
+                value: data[key],
+                label: data[key]
             }
         )
-    )];
+    )] as OptionType[];
 
     const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedFilter(event.target.value);
+        handleChange(event.currentTarget.value)
     };
-
-    const filteredCases = selectedFilter === 'All' ?
-    cases :
-    cases.filter((useCase) => useCase.hpcs.includes(selectedFilter as AllHPC));
-
 
     return (
         <>
@@ -51,7 +44,6 @@ const Filter: React.FC<FilterProps> = ({cases}) => {
                                     name="hpc"
                                     className="filter-header--filter_item-radio"
                                     value={opt.value}
-                                    checked={selectedFilter === opt.value}
                                     onChange={handleFilterChange}
                                     id={opt.value}
                                 />
@@ -65,13 +57,7 @@ const Filter: React.FC<FilterProps> = ({cases}) => {
                     </div>
                     <Divider />
                 </div>
-                <div className="filter-results">
-                    {filteredCases.map(useCase => (
-                        <Case key={useCase.id} useCase={useCase} />
-                    ))}
-                </div>
             </section>
-            <Footer id="#casesHeader" shown={filteredCases.length > 2 ? true : false} />
         </>
     )
 }

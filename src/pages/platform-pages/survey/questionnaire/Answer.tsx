@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { DoneCheck, EmptyCircle, Input, Label } from "src/atoms";
+import { EmptyCircle, Input, Label, SelectedAnswer } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 
 interface Answer {
@@ -34,7 +34,7 @@ const Answer: React.FC<AnswerProps> = ({answer}) => {
             <Label for={answer.label} className="question-answer--list-item_label">
                 <span className="form__radio-button">
                 </span>
-                {!answer.checked ? <EmptyCircle /> : <DoneCheck />}
+                {!answer.checked ? <EmptyCircle /> : <SelectedAnswer />}
                 {answer.label}
             </Label>
         </li>
