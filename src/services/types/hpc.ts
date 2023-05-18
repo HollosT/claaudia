@@ -11,4 +11,11 @@ export interface HPC {
     processingUnit: ProcessingUnit[];
 }
 
-
+export enum AllHPC {
+    StratoRegular = 'Strato regular',
+    StratoProjects = 'Strato projects',
+    StratoBuyIn = 'Strato buy-in',
+    AiCloud = 'AI Cloud',
+    AiCloudBuyIn = 'AI Cloud buy-in',
+    AiCloudProjects = 'AI Cloud projects',
+}

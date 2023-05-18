@@ -21,7 +21,6 @@ const Answer: React.FC<AnswerProps> = ({answer}) => {
 
     return (
         <li 
-        
         className="question-answer--list-item u-margin-bottom-medium"
         >
             <Input 

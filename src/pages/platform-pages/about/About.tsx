@@ -10,7 +10,7 @@ const About: React.FC = () => {
 
     return (
         <>
-            <h1>About CLAAUDIA</h1>
+            <h1 className='primary-header u-margin-bottom-small'>About CLAAUDIA</h1>
             <Button onClick={questions} >Add questiosn</Button>
         </>
     )

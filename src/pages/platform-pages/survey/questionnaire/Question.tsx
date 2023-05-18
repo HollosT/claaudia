@@ -1,12 +1,15 @@
 import { useContext } from "react";
-import { EmptyCircle, Input, Label } from "src/atoms";
+import {  Loading } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import Answer from "./Answer";
 
 
 const Question: React.FC = () => {
     const { activeQuestion, active } = useContext(QuestionContext)
-
+    
+    if(!activeQuestion){
+        return <Loading />
+    }
 
     return (
         <section className="question u-margin-top-small">

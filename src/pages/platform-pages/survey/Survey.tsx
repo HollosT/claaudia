@@ -6,7 +6,7 @@ const Survey: React.FC = () => {
 
     return (
         <main className='survey'>
-            <h1 className='survey-title u-margin-bottom-small'>HPC Survey</h1>
+            <h1 className='primary-header u-margin-bottom-small'>HPC Survey</h1>
             <Questionnaire />
         </main>
     )

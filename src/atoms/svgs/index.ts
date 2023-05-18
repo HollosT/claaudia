@@ -6,3 +6,5 @@ export {default as DoneCheck} from './DoneCheck';
 export {default as PendingCheck} from './PendingCheck';
 export {default as MissingCheck} from './MissingCheck';
 export {default as EmptyCircle} from './EmptyCircle';
+export {default as SideBarBottomWave} from './SideBarBottomWave';
+export {default as FeatureIcon} from './FeatureIcon';

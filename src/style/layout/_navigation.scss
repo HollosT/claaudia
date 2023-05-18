@@ -1,8 +1,9 @@
 .sidebar {
     background-color: $dark-blue;
-    position: sticky;
     height: 100vh;
-    position: relative;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 
     .logo-title {
         padding: 5rem 3rem 0rem;
@@ -32,6 +33,13 @@
         align-items: center;
         position: absolute;
         bottom: 5%;
+    }
+
+    &-bottom--wave {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
     }
 }
 

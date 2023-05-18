@@ -1,169 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;600&family=Quicksand:wght@300;500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;600&family=Quicksand:wght@300;500&display=swap");
 
 body {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: $color-black;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-black;
 }
 
-
 h1 {
-    font-size: 3rem; //
-    line-height: 1.194;
-    font-weight: 600;
+  font-size: 3rem; //
+  line-height: 1.194;
+  font-weight: 600;
 }
 
 h2 {
-    font-size: 3.4rem; //
-    line-height: 1.2;
-    font-weight: 600;
+  font-size: 3.4rem; //
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 h3 {
-    font-size: 2rem; //
-    line-height: 1.208;
-    font-weight: 600;
+  font-size: 2rem; //
+  line-height: 1.208;
+  font-weight: 600;
 }
 
 h4 {
-    font-size: 1.8rem; //
-    line-height: 1.055;
-    font-weight: 500;
+  font-size: 1.8rem; //
+  line-height: 1.055;
+  font-weight: 500;
 }
 
 p {
-    font-size: 1.6rem; //
-    line-height: 1.6;
-    font-weight: 400;
+  font-size: 1.6rem; //
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 .p-huge {
-    font-size: 2.4rem;
-    line-height: 1.5;
-    font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: 600;
 }
 .p-big {
-    font-size: 2rem;
-    line-height: 1.6;
-    font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 .p-small {
-    font-size: 1.4rem;
-    line-height: 1.714;
-    font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.714;
+  font-weight: 600;
 }
 
 label {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 li {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    font-weight: 400;
-    list-style: none;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+  list-style: none;
 }
 a {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    font-weight: 400;
-    text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+// Primary header
+.primary-header {
+  color: $dark-blue;
 }
 
 // Logo
 .logo {
+  &-title {
+    color: $light-blue-100;
 
-    &-title {
-        color: $light-blue-100;
-
-        &--owner {
-            color: $blue-grey;
-        } 
+    &--owner {
+      color: $blue-grey;
     }
+  }
 }
 
+// *******************************************************************
 // Introduction
 .introduction {
-    &-content {
-        &--body {
-            &-answer_title {
-                color: $dark-blue;
-            }
-            &-question, 
-            &-answer_body {
-                color: $blue-grey;
-            }
-        }
-    }
-}
-
-// Navigation 
-.sidebar {
-
-    .logo {
-        &-title {
-            &--owner {
-                color: $color-white;
-            } 
-        }
-    }
-    
-    &-list {
-        &--link {
-            color: $color-white;
-        }
-    }
-
-    .contact {
-        &-address {
-            color: $color-white;
-        }
-    }
-}
-
-// Survey
-
-.survey {
-    &-title {
+  &-content {
+    &--body {
+      &-answer_title {
         color: $dark-blue;
+      }
+      &-question,
+      &-answer_body {
+        color: $blue-grey;
+      }
     }
+  }
 }
+
+// Navigation
+.sidebar {
+  .logo {
+    &-title {
+      &--owner {
+        color: $color-white;
+      }
+    }
+  }
+
+  &-list {
+    &--link {
+      color: $color-white;
+    }
+  }
+
+  .contact {
+    &-address {
+      color: $color-white;
+    }
+  }
+}
+
+// *******************************************************************
+// Survey
 
 // Survey - Questionnaire header
 .questionnarie-header {
-    color: $dark-blue;
-    font-weight: 200;
+  color: $dark-blue;
+  font-weight: 200;
 }
 
 .question {
-   
-    &-topic{
-        &--badge {
-            color: $color-white;
-        }
-
-        &--title{
-            color: $blue-grey;
-
-        }
+  &-topic {
+    &--badge {
+      color: $color-white;
     }
 
-    &-question{
-        color: $dark-blue;
+    &--title {
+      color: $blue-grey;
+    }
+  }
+
+  &-question {
+    color: $dark-blue;
+  }
+
+  &-answer {
+    &--hint {
+      color: $blue-grey;
     }
 
-    &-answer {
-        &--hint {
-            color: $blue-grey;
-        }
+    &--list {
+      color: $dark-blue;
+    }
+  }
+}
 
-        &--list {
+// *******************************************************************
+// Use cases page
+.cases {
+  &-header {
+    p {
+      color: $paragraph-grey;
+    }
+  }
+}
+
+// Filter
+.filter {
+  &-header {
+    &--title {
+      color: $dark-blue;
+      font-weight: 500;
+    }
+
+    &--filter {
+      &_item {
+        &-radio {
+          &-label {
             color: $dark-blue;
+          }
+        }
+        &-radio:checked + &-label {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+// Case
+.case-body--content {
+  &-title {
+    color: $dark-blue;
+  }
+  &-feature {
+    &_title {
+        color: $paragraph-grey;
+        font-style: italic;
+
+        span {
+            color: $color-black;
         }
     }
+  }
+
+  &-body{
+    color: $paragraph-grey;
+  }
 }

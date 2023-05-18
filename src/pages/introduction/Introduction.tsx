@@ -13,10 +13,6 @@ const Introduction: React.FC = () => {
         return <Loading />
     }
 
-    if(error) {
-        return <h1>{error.message}</h1>
-    }
-
     return (
         <Stepper stps={data} />
     )
