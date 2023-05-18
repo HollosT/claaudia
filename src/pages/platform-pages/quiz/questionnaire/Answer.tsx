@@ -1,15 +1,10 @@
 import React, { useContext } from "react";
 import { EmptyCircle, Input, Label, SelectedAnswer } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
-
-interface Answer {
-    value: string,
-    label: string,
-    checked: boolean,
-}
+import { AnswerType } from "src/services/types/questions";
 
 interface AnswerProps {
-    answer: Answer;
+    answer: AnswerType;
 }
 
 const Answer: React.FC<AnswerProps> = ({answer}) => {

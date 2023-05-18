@@ -4,7 +4,8 @@ import { keys } from "src/hooks";
 
 interface FilterProps<T> {
     data: T;
-    handleChange: (data: string) => void
+    handleChange: (data: string) => void;
+    title: string
 }
 
 interface OptionType {
@@ -12,7 +13,7 @@ interface OptionType {
     value: string
 }
 
-const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
+const Filter = <T,>({ data, handleChange, title }: FilterProps<T>) => {
     const [active, setActive] = useState<string | T>("All")
     const options = [
         {
@@ -37,7 +38,7 @@ const Filter = <T,>({ data, handleChange }: FilterProps<T>) => {
         <>
             <section className="filter">
                 <div className="filter-header">
-                    <p className="filter-header--title u-margin-bottom-small">Filter use cases by used PC</p>
+                    <p className="filter-header--title u-margin-bottom-small">{title}</p>
                     <div className="filter-header--filter u-margin-bottom-medium">
                         {options.map(opt => (
                             <Fragment key={opt.value}>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { RouteList } from './routes';
-import Survey from 'src/pages/platform-pages/survey/Survey';
+import Survey from 'src/pages/platform-pages/quiz/Survey';
 import About from 'src/pages/platform-pages/about/About';
 import Cases from 'src/pages/platform-pages/cases/Cases';
-import Dictionary from 'src/pages/platform-pages/dictionary/Dictionary';
+import Definition from 'src/pages/platform-pages/definition/Definition';
 import Resources from 'src/pages/platform-pages/resources/Resources';
 import { DictionaryIcon, ResourcesIcon, SurveyIcon } from 'src/components/navigation/icons';
 import CasesIcon from 'src/components/navigation/icons/Cases-icon';
@@ -18,15 +18,15 @@ const platformRoutes: RouteList = {
     },
     survey: {
         icon: <SurveyIcon />,
-        name: 'HPC Survey',
-        path: '/survey',
+        name: 'HPC Matching quiz',
+        path: '/quiz',
         element: <Survey />
     },
     dictionary: {
         icon: <DictionaryIcon />,
-        name: 'Terms dictionary',
-        path: '/dictionary',
-        element: <Dictionary />
+        name: 'Definition library',
+        path: '/definition',
+        element: <Definition />
     },
     cases: {
         icon: <CasesIcon />,

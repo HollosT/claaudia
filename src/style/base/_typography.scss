@@ -32,6 +32,12 @@ h4 {
   font-weight: 500;
 }
 
+h5 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font: 600;
+}
+
 p {
   font-size: 1.6rem; //
   line-height: 1.8;
@@ -228,5 +234,28 @@ a {
 
   &-body{
     color: $paragraph-grey;
+  }
+}
+
+// *******************************************************************
+// Definition page
+
+.definition {
+  &-items--title {
+    color: $dark-blue;
+  }
+}
+.defintion-item {
+  &--title {
+      color: $dark-blue;
+  }
+
+  &--body {
+    color: $paragraph-grey;
+  }
+  &--link {
+    color: $dark-blue;
+    font-weight: 200;
+    font-size: 1.6rem;
   }
 }

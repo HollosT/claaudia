@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { DoneCheck, MissingCheck, PendingCheck } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
-import Answer from "./Answer";
+import { AnswerType } from "src/services/types/questions";
+
 
 enum Status {
     done ='Done',
@@ -20,7 +21,7 @@ const QuestionnaireHeader: React.FC = () => {
         }
     }
 
-    const getStatus = (answers: Answer[], i: number): React.ReactNode => {
+    const getStatus = (answers: AnswerType[], i: number): React.ReactNode => {
         let status: Status;
 
         if(i === active) {
