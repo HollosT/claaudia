@@ -12,10 +12,10 @@ export interface HPC {
 }
 
 export enum AllHPC {
-    StratoRegular = 'Strato regular',
-    StratoProjects = 'Strato projects',
-    StratoBuyIn = 'Strato buy-in',
     AiCloud = 'AI Cloud',
     AiCloudBuyIn = 'AI Cloud buy-in',
     AiCloudProjects = 'AI Cloud projects',
+    StratoRegular = 'Strato regular',
+    StratoProjects = 'Strato projects',
+    StratoBuyIn = 'Strato buy-in',
 }

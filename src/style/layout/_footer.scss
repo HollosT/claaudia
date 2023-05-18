@@ -1,0 +1,13 @@
+.footer {
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-block: 4rem;
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}

@@ -105,6 +105,7 @@ a {
   }
 }
 
+// *******************************************************************
 // Navigation
 .sidebar {
   .logo {
@@ -125,6 +126,19 @@ a {
     &-address {
       color: $color-white;
     }
+  }
+}
+
+// *******************************************************************
+// Footer
+.footer {
+  &-rights {
+    color: $paragraph-grey;
+  }
+
+  &-nav {
+    color: $dark-blue;
+    font-size: 1.6rem;
   }
 }
 

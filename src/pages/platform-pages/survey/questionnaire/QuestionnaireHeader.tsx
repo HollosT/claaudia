@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { DoneCheck, MissingCheck, PendingCheck } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
-import { QuestionType } from "src/services/types/questions";
 import Answer from "./Answer";
 
 enum Status {
