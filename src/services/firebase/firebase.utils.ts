@@ -1,11 +1,11 @@
-// import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 
 // For authentication
 // import { getAuth, signInWithRedirect } from 'firebase/auth';
 
 // For the firestore
 import {getFirestore, getDocs, collection,setDoc, doc, getDoc, } from 'firebase/firestore'
-// import { firebaseConfig } from './firebaseConfig';
+import { firebaseConfig } from './firebaseConfig';
 import { AllHPC, HPC } from '../types/hpc';
 import { Step } from '../types/introduction';
 import { DUMMY_DATA } from '../context/questionnaire/question-context';
@@ -16,7 +16,7 @@ import { UseCasesType } from '../types/usecases';
 import { v4 as uuidv4} from 'uuid'
 import { DefinitionTopic, DefinitionType } from '../types/definition';
 
-// const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
 // Init the DB
 export const db = getFirestore();
