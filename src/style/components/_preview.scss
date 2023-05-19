@@ -1,16 +1,22 @@
 .preview {
     border-radius: 4px;
     border: 1px solid $border-darker-grey;
-    padding: 1rem;
+    padding: 3rem 1rem; 
     border-top: 3px solid $light-blue;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 
     &-icon{
         background-color: $border-darker-grey;
         border-radius: 4px;
         width: max-content;
-        padding: .5rem;
+        padding: 2rem;
+        position: relative;
+
+        .nav-icon {
+            fill: $light-blue;
+            @include center()
+        }
     }
 }

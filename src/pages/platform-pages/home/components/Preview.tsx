@@ -9,9 +9,9 @@ const Preview: React.FC<{prev: PreviewType}> = ({prev}) => {
             <div className="preview-icon">
                 {prev.icon}
             </div>
-            <h5 className="preview-item--title">{prev.title}</h5>
-            <p className="preview-item--body">{prev.body}</p>
-            <Link className="preview-item--nav" to={platformRoutes.resources.path}>{prev.linkTitle}</Link>
+            <h5 className="preview-title">{prev.title}</h5>
+            <p className="preview-body">{prev.body}</p>
+            <Link className="preview-nav" to={platformRoutes.resources.path}>{prev.linkTitle}</Link>
         </article>
     )
 };

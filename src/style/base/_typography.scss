@@ -311,3 +311,18 @@ a {
       }
   }
 }
+
+.preview {
+
+  &-title {
+    color: $dark-blue;
+  }
+  &-body {
+    color: $paragraph-grey;
+  }
+  &-nav {
+    color: $dark-blue;
+    font-size: 1.6rem;
+  }
+
+}
