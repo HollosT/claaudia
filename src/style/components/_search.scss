@@ -1,0 +1,30 @@
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+   
+
+    &-icon {
+        position: absolute;
+        transition: all 250ms ease-in;
+        left: 1%;
+    }   
+    &-field {
+        background-color: $light-grey-200;
+        border-radius: 4px;
+        width: 100%;
+        padding: 1rem 4rem;
+
+        &:target, 
+        &:focus {
+          border: 1px solid $dark-blue;
+        }
+    }
+
+    &-field:focus + &-icon,
+    &-field:target + &-icon  {
+        rotate: 45deg;
+    }
+
+}

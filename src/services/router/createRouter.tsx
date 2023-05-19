@@ -10,7 +10,6 @@ const router = createBrowserRouter([
         path: "/",
         loader: () => {
             const isIntroduction = localStorage.getItem('introduction') === "1"
-            console.log(isIntroduction)
             if(isIntroduction) {
                 return redirect(platformRoutes.survey.path)
             } else {

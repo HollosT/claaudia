@@ -259,3 +259,25 @@ a {
     font-size: 1.6rem;
   }
 }
+
+
+// *******************************************************************
+// Search input
+.search {
+
+  &-field {
+      font-size: 1.6rem;
+      color: $dark-blue;
+      border: 1px solid transparent;
+
+
+      &::placeholder {
+          color: $dark-blue;
+          font-size: 1.6rem;
+          font-weight: 100;
+          line-height: 1.7;
+      }
+
+  }
+
+}

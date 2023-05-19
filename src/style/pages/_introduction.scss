@@ -24,7 +24,7 @@
     background-color: $color-white;
     z-index: 100;
 
-    @include centerHorizontally;
+    @include center;
 
     &-content {
         padding: 2rem 5rem;
