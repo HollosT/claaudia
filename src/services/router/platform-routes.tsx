@@ -8,15 +8,22 @@ import Resources from 'src/pages/platform-pages/resources/Resources';
 import { DictionaryIcon, ResourcesIcon, SurveyIcon } from 'src/components/navigation/icons';
 import CasesIcon from 'src/components/navigation/icons/Cases-icon';
 import AboutIcon from 'src/components/navigation/icons/About-icon';
+import Home from 'src/pages/platform-pages/home/Home';
 
 const platformRoutes: RouteList = {
+    home: {
+        show: false,
+        name: 'Home',
+        path: '/home',
+        element: <Home />
+    },
     resources: {
         icon: <ResourcesIcon />,
         name: 'AAU HPC Resources',
         path: '/resources',
         element: <Resources />
     },
-    survey: {
+    quiz: {
         icon: <SurveyIcon />,
         name: 'HPC Matching quiz',
         path: '/quiz',

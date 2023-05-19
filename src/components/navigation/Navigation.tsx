@@ -12,9 +12,14 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="sidebar">
-      <Logo />
+      <Link to={platformRoutes.home.path}>
+        <Logo />
+      </Link>
       <ul className="sidebar-list u-margin-top-small">
         {Object.values(platformRoutes).map((route) => (
+          route.show === false ?
+          null
+          :
           <Link
             className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
             key={route.name}
