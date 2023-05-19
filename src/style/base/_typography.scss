@@ -281,3 +281,33 @@ a {
   }
 
 }
+
+
+// *******************************************************************
+// Home page
+.home {
+  &-header {
+
+      &--content {
+        
+        &-body {
+          color: $paragraph-grey;
+        }
+        &-link {
+          font-size: 1.6rem;
+          color: $light-blue;
+        }
+      }
+  }
+
+  &-preview {
+
+      &--title {
+
+      }
+      &--container {
+          display: flex;
+      
+      }
+  }
+}

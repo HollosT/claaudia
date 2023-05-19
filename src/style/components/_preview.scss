@@ -1,0 +1,16 @@
+.preview {
+    border-radius: 4px;
+    border: 1px solid $border-darker-grey;
+    padding: 1rem;
+    border-top: 3px solid $light-blue;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-icon{
+        background-color: $border-darker-grey;
+        border-radius: 4px;
+        width: max-content;
+        padding: .5rem;
+    }
+}

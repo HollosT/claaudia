@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 import platformRoutes from "src/services/router/platform-routes";
+import { PreviewType } from "../Home";
 
-const Preview: React.FC = () => {
+const Preview: React.FC<{prev: PreviewType}> = ({prev}) => {
 
     return (
-        <article className="home-preview--item">
-            <h5 className="home-preview--item-title">AAU HPC Resources</h5>
-            <p className="home-preview--item-body">Find all HPC resources available for your research at AAU</p>
-
-            <Link className="home-preview--item-nav" to={platformRoutes.resources.path}>See available resources</Link>
+        <article className="preview">
+            <div className="preview-icon">
+                {prev.icon}
+            </div>
+            <h5 className="preview-item--title">{prev.title}</h5>
+            <p className="preview-item--body">{prev.body}</p>
+            <Link className="preview-item--nav" to={platformRoutes.resources.path}>{prev.linkTitle}</Link>
         </article>
     )
 };
