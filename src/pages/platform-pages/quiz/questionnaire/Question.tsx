@@ -17,7 +17,7 @@ const Question: React.FC = () => {
                 <span className="question-topic--badge">{active + 1}</span>
                 <p className="question-topic--title">{activeQuestion.topic}</p>
             </div>
-            <h2 className="question-question p-huge u-margin-bottom-medium">{activeQuestion.question}</h2>
+            <h2 className="question-question p-huge u-margin-bottom-small">{activeQuestion.question}</h2>
             <div className="question-answer">
                 <p className="question-answer--hint u-margin-bottom-small">Select a single answer from provided options</p>
                 <form className="question-answer--form">
