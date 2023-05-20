@@ -19,3 +19,19 @@ export enum AllHPC {
     StratoProjects = 'Strato projects',
     StratoBuyIn = 'Strato buy-in',
 }
+
+export enum DataLevel {
+    Free,
+    Number,
+    Private,
+    Sensitive,
+}
+
+export interface HPCCategory {
+    id: string,
+    initial: string,
+    name: string,
+    subHpcs?: AllHPC[] | [], 
+    dataLevel: DataLevel[],
+    additionalInfo?: string
+}

@@ -1,0 +1,1 @@
+export {default as ResourcesRightArrow} from './ResourcesRightArrow';

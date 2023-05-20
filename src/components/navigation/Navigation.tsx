@@ -1,7 +1,7 @@
 import { Logo } from "src/atoms";
 import { Link, useLocation } from "react-router-dom";
 import platformRoutes from "src/services/router/platform-routes";
-import { SidebarWave, ContactIcon } from "./icons";
+import { SidebarWave } from "./icons";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
