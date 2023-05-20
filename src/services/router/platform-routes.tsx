@@ -5,14 +5,14 @@ import About from 'src/pages/platform-pages/about/About';
 import Cases from 'src/pages/platform-pages/cases/Cases';
 import Definition from 'src/pages/platform-pages/definition/Definition';
 import Resources from 'src/pages/platform-pages/resources/Resources';
-import { DictionaryIcon, ResourcesIcon, SurveyIcon } from 'src/components/navigation/icons';
+import { DictionaryIcon, HomeIcon, ResourcesIcon, SurveyIcon } from 'src/components/navigation/icons';
 import CasesIcon from 'src/components/navigation/icons/Cases-icon';
 import AboutIcon from 'src/components/navigation/icons/About-icon';
 import Home from 'src/pages/platform-pages/home/Home';
 
 const platformRoutes: RouteList = {
     home: {
-        show: false,
+        icon: <HomeIcon />,
         name: 'Home',
         path: '/home',
         element: <Home />

@@ -6,7 +6,7 @@ const DefinitionItem: React.FC<{def: DefinitionType}> = ({def}) => {
         <article className="defintion-item u-margin-bottom-medium">
             <h5 className="defintion-item--title">{def.title}</h5>
             <p className="defintion-item--body">{def.body}</p>
-            <a className="defintion-item--link" target="_blank" href={def.link}>Read more about {def.linkTitle}</a>
+            {/* <a className="defintion-item--link" target="_blank" href={def.link}>Read more about {def.linkTitle}</a> */}
         </article>
     )
 }
