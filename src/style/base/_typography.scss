@@ -326,3 +326,54 @@ a {
   }
 
 }
+
+// *******************************************************************
+// Resources page
+.resources {
+
+  &-header {
+      color: $paragraph-grey;
+  }
+}
+
+.category-item {
+  &--initial-title {
+    color: $light-blue;
+  }
+  .category-content {
+
+      &--body {
+        &-title{
+          color: $dark-blue;
+        }
+          &-content {      
+              .subs {
+                  color: $paragraph-grey;
+                &-body {
+                  color: $paragraph-grey;
+                  font-weight: 500;
+                }
+              }
+              
+              .data-level {
+                &--title {
+                  color: $paragraph-grey;
+                }
+                &--item {
+                  color: $color-white;
+                font-size: 1.4rem;
+                }
+              }
+
+              .addtional-info {
+                &--body {
+                  color: $dark-blue;
+                }
+              }
+          }
+      }
+  }
+
+
+  
+}

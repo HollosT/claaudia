@@ -40,7 +40,7 @@ const Resources: React.FC = () => {
 
     return (
         <section className="resources">
-            <div className="resources-header">
+            <div className="resources-header u-margin-bottom-medium">
                 <h1 className='primary-header u-margin-bottom-small'>AAU HPC Resources</h1>
                 <p className="resources-header--body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
             </div>

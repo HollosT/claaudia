@@ -1,8 +1,9 @@
+import { InfoIcon } from "./svg";
 
 const AdditionalInfo: React.FC<{info: string}> = ({info}) => {
     return (
         <div className="addtional-info">
-            <span>icon</span>
+            <InfoIcon />
             <p className="addtional-info--body">{info}</p>
         </div>
     )
