@@ -1,7 +1,7 @@
-import { Logo, SideBarBottomWave } from "src/atoms";
+import { Logo } from "src/atoms";
 import { Link, useLocation } from "react-router-dom";
 import platformRoutes from "src/services/router/platform-routes";
-import { ContactIcon } from "./icons";
+import { SidebarWave, ContactIcon } from "./icons";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -30,11 +30,13 @@ const Navigation: React.FC = () => {
           </Link>
         ))}
       </ul>
-      <div className="contact">
+      {/* <div className="contact">
         <ContactIcon />    
         <a className="contact-address" href="mailto: aau@aau.dk">Contact CLAAUDIA</a>
+      </div> */}
+      <div className="sidebar-wave">
+        <SidebarWave />
       </div>
-      {/* <SideBarBottomWave /> */}
     </nav>
   );
 };
