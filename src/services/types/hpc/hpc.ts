@@ -1,15 +1,48 @@
-enum ProcessingUnit {
-  Cpu = "CPU",
-  Gpu = "GPU",
+
+export enum SystemType {
+  AICloud,
+  Strato,
+  LocalMachine,
+  UCloud
 }
 
-export interface HPC {
-  id: string;
-  name: string;
-  memory: number;
-  memoryUnit: string;
-  processingUnit: ProcessingUnit[];
+export interface IntegrationType {
+  gui: boolean,
+  web_browser: boolean
 }
+export interface SkillType {
+    linux: boolean,
+    programming: boolean,
+    ssh: boolean,
+    containers: boolean
+}
+
+export interface ResourceAvailabilityType {
+  payment: boolean,
+  time_limitation: boolean,
+  minimum_time : boolean,
+  own_resources : boolean,
+}
+
+export interface HarwareSpecType {
+  vcpu: number | string,
+  netwrok_storage: number | string,
+  memory: number | string,
+  gpu: number | string,
+  shared_temporary_storage: number,
+}
+
+export interface HPCType  {
+  id: string,
+  intro: string,
+  type: SystemType,
+  name: AllHPC,
+  hardware_spec: HarwareSpecType,
+  resource_availability: ResourceAvailabilityType,
+  data: DataLevel[],
+  integrations: IntegrationType,
+  skill: SkillType
+};
 
 export enum AllHPC {
   AiCloud = "AI Cloud",
@@ -71,3 +104,6 @@ export interface HPCCategoryType {
   tab: TabType;
   subs?: AllHPC[];
 }
+
+
+

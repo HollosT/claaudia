@@ -1,0 +1,18 @@
+.resources-options {
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .option {
+
+            &-item {
+                &--item {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}
