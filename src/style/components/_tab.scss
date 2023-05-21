@@ -57,7 +57,10 @@
   }
 
   &-faq {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    row-gap: 2rem;
   }
 }

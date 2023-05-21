@@ -67,7 +67,7 @@ export const STRATO_DATA: HPCCategoryType = {
                     {
                         img: 'https://www.atominfo.hu/files/linux.png',
                         title: 'Linux based virtual computer',
-                        body: 'Network storage allows users to store and process large datasets.'
+                        body: 'Strato is a linux based virtual computer platform to support data driven research that needs additional processing capacity.'
                     },
                     {
                         img: 'https://www.atominfo.hu/files/linux.png',

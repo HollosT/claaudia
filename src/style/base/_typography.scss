@@ -96,6 +96,24 @@ a {
 }
 
 // *******************************************************************
+// Accordion
+.accordion {
+  &-header {
+    color: $dark-blue;
+
+    .accordion-title-open {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    &__text {
+      color: $paragraph-grey;
+    }
+  }
+}
+
+// *******************************************************************
 // Introduction
 .introduction {
   &-content {
@@ -362,10 +380,9 @@ a {
 
 .resource-detail {
   &--header {
-     &-body {
+    &-body {
       color: $paragraph-grey;
-     }
-
+    }
   }
 }
 
@@ -373,20 +390,19 @@ a {
 // Tab
 .tab {
   &-header {
-      &--nav {
-          &-item {
-              font-size: 1.6rem;
-              color: $paragraph-grey;
-          }
+    &--nav {
+      &-item {
+        font-size: 1.6rem;
+        color: $paragraph-grey;
       }
-      .tab-item--active {
-        font-weight: 500;
-        color: $dark-blue;
-      }
+    }
+    .tab-item--active {
+      font-weight: 500;
+      color: $dark-blue;
+    }
   }
 
   &-content {
-
     &--item {
       &-title {
         color: $dark-blue;
@@ -394,8 +410,6 @@ a {
       &-body {
         color: $paragraph-grey;
       }
-      
     }
   }
-
 }
