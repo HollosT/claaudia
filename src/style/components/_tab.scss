@@ -1,0 +1,42 @@
+.tab {
+  &-header {
+    &--nav {
+      display: flex;
+
+
+
+      &-item {
+        width: 15rem;
+        text-align: center;
+        transition: all 150ms ease-in;
+        &:hover,
+        &:active {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--underline {
+      margin-top: 1rem;
+      width: 100%;
+      height: 2px;
+      background-color: $border-darker-grey;
+      position: relative;
+
+
+        &-active {
+            position: absolute;
+            height: 2px;
+            width: 10rem;
+            background-color: $dark-blue;
+            transition: all 250ms ease-in;
+        }
+
+    }
+  }
+
+  .tab-item--active:hover,
+  .tab-item--active:active {
+    cursor: pointer;
+  }
+}

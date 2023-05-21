@@ -223,16 +223,16 @@ a {
   }
   &-feature {
     &_title {
-        color: $paragraph-grey;
-        font-style: italic;
+      color: $paragraph-grey;
+      font-style: italic;
 
-        span {
-            color: $color-black;
-        }
+      span {
+        color: $color-black;
+      }
     }
   }
 
-  &-body{
+  &-body {
     color: $paragraph-grey;
   }
 }
@@ -247,7 +247,7 @@ a {
 }
 .defintion-item {
   &--title {
-      color: $dark-blue;
+    color: $dark-blue;
   }
 
   &--body {
@@ -260,60 +260,48 @@ a {
   }
 }
 
-
 // *******************************************************************
 // Search input
 .search {
-
   &-field {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
+    color: $dark-blue;
+    border: 1px solid transparent;
+
+    &::placeholder {
       color: $dark-blue;
-      border: 1px solid transparent;
-
-
-      &::placeholder {
-          color: $dark-blue;
-          font-size: 1.6rem;
-          font-weight: 100;
-          line-height: 1.7;
-      }
-
+      font-size: 1.6rem;
+      font-weight: 100;
+      line-height: 1.7;
+    }
   }
-
 }
-
 
 // *******************************************************************
 // Home page
 .home {
   &-header {
-
-      &--content {
-        
-        &-body {
-          color: $paragraph-grey;
-        }
-        &-link {
-          font-size: 1.6rem;
-          color: $light-blue;
-        }
+    &--content {
+      &-body {
+        color: $paragraph-grey;
       }
+      &-link {
+        font-size: 1.6rem;
+        color: $light-blue;
+      }
+    }
   }
 
   &-preview {
-
-      &--title {
-
-      }
-      &--container {
-          display: flex;
-      
-      }
+    &--title {
+    }
+    &--container {
+      display: flex;
+    }
   }
 }
 
 .preview {
-
   &-title {
     color: $dark-blue;
   }
@@ -324,15 +312,13 @@ a {
     color: $dark-blue;
     font-size: 1.6rem;
   }
-
 }
 
 // *******************************************************************
 // Resources page
 .resources {
-
   &-header {
-      color: $paragraph-grey;
+    color: $paragraph-grey;
   }
 }
 
@@ -341,39 +327,62 @@ a {
     color: $light-blue;
   }
   .category-content {
-
-      &--body {
-        &-title{
-          color: $dark-blue;
+    &--body {
+      &-title {
+        color: $dark-blue;
+      }
+      &-content {
+        .subs {
+          color: $paragraph-grey;
+          &-body {
+            color: $paragraph-grey;
+            font-weight: 600;
+          }
         }
-          &-content {      
-              .subs {
-                  color: $paragraph-grey;
-                &-body {
-                  color: $paragraph-grey;
-                  font-weight: 500;
-                }
-              }
-              
-              .data-level {
-                &--title {
-                  color: $paragraph-grey;
-                }
-                &--item {
-                  color: $color-white;
-                font-size: 1.4rem;
-                }
-              }
 
-              .addtional-info {
-                &--body {
-                  color: $dark-blue;
-                }
-              }
+        .data-level {
+          &--title {
+            color: $paragraph-grey;
+          }
+          &--item {
+            color: $color-white;
+            font-size: 1.4rem;
+          }
+        }
+
+        .addtional-info {
+          &--body {
+            color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.resource-detail {
+  &--header {
+     &-body {
+      color: $paragraph-grey;
+     }
+
+  }
+}
+
+// *******************************************************************
+// Tab
+.tab {
+  &-header {
+      &--nav {
+          &-item {
+              font-size: 1.6rem;
+              color: $paragraph-grey;
           }
       }
   }
 
-
-  
+  .tab-item--active {
+    font-weight: 500;
+    color: $dark-blue;
+  }
 }

@@ -1,6 +1,6 @@
-import { DataLevel as DataLevelType} from "src/services/types/hpc"
+import { DataLevel as DataLevelType } from "src/services/types/hpc/hpc"
 
-const DataLevel: React.FC<{data: DataLevelType[]}> = ({data}) => {
+const DataLevel: React.FC<{ data: DataLevelType[] }> = ({ data }) => {
 
     return (
         <div className="data-level">

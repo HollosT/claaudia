@@ -1,14 +1,14 @@
-import { AllHPC } from "./hpc"
+import { AllHPC } from "./hpc/hpc";
 
 interface Features {
-    feature: string
+  feature: string;
 }
 
-export interface UseCasesType  {
-    id: string,
-    type: string,
-    title: string,
-    hpcs: AllHPC[],
-    features: Features[],
-    body: string
+export interface UseCasesType {
+  id: string;
+  type: string;
+  title: string;
+  hpcs: AllHPC[];
+  features: Features[];
+  body: string;
 }

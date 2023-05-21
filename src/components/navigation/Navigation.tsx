@@ -15,6 +15,9 @@ const Navigation: React.FC = () => {
         <Logo />
       <ul className="sidebar-list u-margin-top-small">
         {Object.values(platformRoutes).map((route) => (
+          route.show === false ?
+          null
+          :
           <Link
             className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
             key={route.name}

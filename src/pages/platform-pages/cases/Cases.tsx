@@ -3,7 +3,7 @@ import { useFetchData } from "src/hooks";
 import { getAllUseCasess } from "src/services/firebase/firebase.utils";
 import { Loading } from "src/atoms";
 import { useState } from "react";
-import { AllHPC } from "src/services/types/hpc";
+import { AllHPC } from "src/services/types/hpc/hpc";
 import Footer from "src/components/footer/Footer";
 import Filter from "src/components/filter/Filter";
 
