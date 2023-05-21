@@ -1,4 +1,3 @@
-import platformRoutes from 'src/services/router/platform-routes';
 import { AllHPC, DataLevel, HPCCategoryType, HPCIntroductionType } from 'src/services/types/hpc/hpc';
 import { v4 as uuidv4 } from 'uuid'
 
@@ -39,7 +38,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     },
 ]
 
-export const STRATO_DATA = {
+export const STRATO_DATA: HPCCategoryType = {
     id: uuidv4(),
     name: 'Strato',
     introduction: 'Strato is an on-premise cloud platform based on servers with CPU and GPU components that enable you to solve both generic and specific computational problems using virtual machines that you can configure yourself. This can be for both short-term problem solving, as well as work that takes a long time. ',
@@ -47,23 +46,18 @@ export const STRATO_DATA = {
         tab_header: [
             {
                 tab_title: 'General information',
+                isFaq: false,
                 value: 0,
             },
             {
-                tab_title: 'Benefits',
+                tab_title: 'Benefits & Common use',
+                isFaq: false,
                 value: 1,
             },
             {
-                tab_title: 'Common use',
-                value: 2,
-            },
-            {
-                tab_title: 'Getting access',
-                value: 3,
-            },
-            {
                 tab_title: 'FAQ',
-                value: 4,
+                isFaq: true,
+                value: 2,
             },
         ],
         tab_value: [
@@ -99,19 +93,72 @@ export const STRATO_DATA = {
             },
             {
                 value: 1,
-                data: ['Interactive', 'good', 'easy']
-            }, 
+                data: [
+                    {
+                        img: 'https://www.atominfo.hu/files/linux.png',
+                        title: 'Additional RAM, CPU and GPU hardware',
+                        body: 'By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.'
+                    },
+                    {
+                        img: 'https://www.atominfo.hu/files/linux.png',
+                        title: 'CPU Heavy tasks',
+                        body: 'Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.'
+                    },
+                    {
+                        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png',
+                        title: 'GPU Heavy tasks',
+                        body: 'Training of models on GPUs, simulation of physics and biomolecular models, teaching of advanced computational methods and testing of distributed computing systems.',
+                    },
+                    {
+                        img: 'https://www.atominfo.hu/files/linux.png',
+                        title: 'Adjust the size of computer without losing data',
+                        body: 'It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.'
+                    },
+                ]
+            },
             {
-                value: 0,
-                data: ['sensitive data', 'engineering', 'language model' ]
-            }
+                value: 2,
+                data: [
+                    {
+                        title: 'Who has access to the Strato platform?',
+                        body: 'By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.'
+                    },
+                    {
+                        title: 'Do I have access to GPU resources on my Strato virtual machines?',
+                        body: 'Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.'
+                    },
+                    {
+                        title: 'What software can I run on my Strato virtual machine?',
+                        body: 'All Strato virtual machine instances are launched from Linux images. Therefore, your software needs to be able to run on Linux.',
+                    },
+                    {
+                        title: 'Can I have a GUI (Graphical user interface) with my Strato virtual machine?',
+                        body: 'It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.'
+                    },
+                    {
+                        title: 'How do I connect to my virtual machine on Strato?',
+                        body: 'Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.'
+                    },
+                    {
+                        title: 'Am I allowed to work with confidential or sensitive data on my Strato virtual machine?',
+                        body: 'It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.'
+                    },
+                    {
+                        title: 'Can I have virtual machine with Windows OS?',
+                        body: 'Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.'
+                    },
+                    {
+                        title: 'Can I use Strato virtual machines as part of my production setup?',
+                        body: 'It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.'
+                    },
+                ]
+            },
         ]
     },
-
     subs: [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn]
 }
 
-export const AICLOUD_DATA: HPCCategoryType = {
+export const AICLOUD_DATA = {
     id: uuidv4(),
     name: 'AI Cloud',
     introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
@@ -161,13 +208,13 @@ export const AICLOUD_DATA: HPCCategoryType = {
     // subs: [AllHPC.AiCloud, AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn]
 }
 
-export const LOCALMACHINE_DATA: HPCCategoryType = {
+export const LOCALMACHINE_DATA = {
     id: uuidv4(),
     name: 'Local machine',
     introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   
 }
-export const UCLOUD_DATA: HPCCategoryType = {
+export const UCLOUD_DATA = {
     id: uuidv4(),
     name: 'UCloud',
     introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",

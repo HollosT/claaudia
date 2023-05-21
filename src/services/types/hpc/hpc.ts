@@ -43,16 +43,31 @@ export interface CategoryTabDataType {
   body: string;
 }
 
-export interface CategoryTabType {
-  tab_title: string;
+
+export interface TabDataType {
+  img?: string,
+  title: string,
+  body: string,
+}
+export interface TabValueType {
   value: number,
-  data: CategoryTabDataType[] | string [];
+  data: TabDataType[],
+}
+export interface TabHeaderType {
+  tab_title: string,
+  isFaq: boolean,
+  value: number,
+}
+
+export interface TabType {
+  tab_header:TabHeaderType[];
+  tab_value: TabValueType[];
 }
 
 export interface HPCCategoryType {
   id: string;
   name: string;
   introduction: string;
-  tab?: CategoryTabType[],
+  tab: TabType;
   subs?: AllHPC[];
 }

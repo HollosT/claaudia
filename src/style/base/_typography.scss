@@ -379,10 +379,23 @@ a {
               color: $paragraph-grey;
           }
       }
+      .tab-item--active {
+        font-weight: 500;
+        color: $dark-blue;
+      }
   }
 
-  .tab-item--active {
-    font-weight: 500;
-    color: $dark-blue;
+  &-content {
+
+    &--item {
+      &-title {
+        color: $dark-blue;
+      }
+      &-body {
+        color: $paragraph-grey;
+      }
+      
+    }
   }
+
 }

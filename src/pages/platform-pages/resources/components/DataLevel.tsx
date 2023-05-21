@@ -6,7 +6,7 @@ const DataLevel: React.FC<{ data: DataLevelType[] }> = ({ data }) => {
         <div className="data-level">
             <p className="data-level--title">Data classification levels:</p>
             {data.map(d => (
-                <span className={`data-level--item data-level--item-${d}`}>{d}</span>
+                <span key={d} className={`data-level--item data-level--item-${d}`}>{d}</span>
             ))}
         </div>
     )
