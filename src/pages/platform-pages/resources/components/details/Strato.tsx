@@ -7,6 +7,7 @@ import { Divider } from "src/atoms";
 import DetailsHeader from "./DeailsHeader";
 import { SystemType } from "src/services/types/hpc/hpc";
 import Options from "./Options";
+import Footer from "src/components/footer/Footer";
 
 const Strato: React.FC = () => {
     const data = STRATO_DATA;
@@ -18,6 +19,7 @@ const Strato: React.FC = () => {
             <Tab data={data.tab} />
             <Divider />
             <Options hpcs={stratos} />
+            <Footer shown={true} />
         </section>
 
     )

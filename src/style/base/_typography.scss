@@ -413,3 +413,51 @@ a {
     }
   }
 }
+
+// *******************************************************************
+// Resources
+.resources-options {
+
+  &--title {
+    color: $dark-blue;
+    font-size: 1.8rem;
+  }
+
+  &-container {
+  
+    .option {
+      &-title { 
+           
+          color: $dark-blue;
+          font-size: 3.4rem;
+          font-weight: 600;
+        }
+        &-body {
+          color: $light-blue;
+
+        }
+        &-nav {
+          color: $dark-blue;
+        }
+        
+
+          &-item {
+              padding-top: 2rem;
+              &--title {
+                color: $dark-blue;
+                font-size: 1.4rem;
+                font-weight: 600;
+              }
+              &--item {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+
+                  &-body {
+                    color: $paragraph-grey;
+                  }
+              }
+          }
+      }
+  }
+}

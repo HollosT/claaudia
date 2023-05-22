@@ -5,7 +5,7 @@ const Options: React.FC<{hpcs: HPCType[]}> = ({hpcs}) => {
 
     return (
         <section className="resources-options">
-           <h4>Available options within Strato</h4>
+           <h4 className="resources-options--title u-margin-top-small u-margin-bottom-small">Available options within Strato</h4>
            <div className="resources-options-container">
             {hpcs.map(hpc => (
                     <OptionItem key={hpc.id} hpc={hpc} />

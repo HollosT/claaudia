@@ -4,6 +4,7 @@ import { AICLOUD_DATA, ALL_HPCS_DATA } from "src/services/types/hpc/constant";
 import { Tab } from "../tab";
 import { Divider } from "src/atoms";
 import Options from "./Options";
+import Footer from "src/components/footer/Footer";
 
 const AICloud: React.FC = () => {
     const data = AICLOUD_DATA;
@@ -15,8 +16,7 @@ const AICloud: React.FC = () => {
             <Tab data={data.tab} />
             <Divider />
             <Options hpcs={aiclouds} />
-            
-
+            <Footer shown={true} />
         </section>
 
     )

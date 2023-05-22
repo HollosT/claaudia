@@ -3,14 +3,47 @@
     &-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-
+        justify-content: space-between;
+        gap: 5rem;
+        
         .option {
+            padding: 3rem 2rem;
+            border: 1px solid $border-darker-grey;
+            border-radius: 4px;
+            border-top: 3px solid $dark-blue;
+            min-width: 30rem;
+            max-width: 100%;
+
+              &-title {
+                @include centerOptions();
+                padding-bottom: .5rem;
+              }
+              &-body {
+                @include centerOptions();
+                padding-bottom: 1rem;
+    
+              }
+              &-nav {
+                @include centerOptions();
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: $light-grey-200;
+                padding:  .5rem 2rem;
+                border-radius: 4px;
+              }
 
             &-item {
+                @include centerOptions();
+    
                 &--item {
                     display: flex;
                     align-items: center;
                     gap: 1rem;
+
+                    &-body {
+            
+                      }
                 }
             }
         }

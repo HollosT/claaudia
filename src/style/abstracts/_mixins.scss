@@ -9,6 +9,10 @@
   top: 50%;
   transform: translateY(-50%);
 }
+@mixin centerOptions {
+  width: 70%;
+  margin: 0 auto;
+}
 
 
 // MEDIA QUERY MANAGER
