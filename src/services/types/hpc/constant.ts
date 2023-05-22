@@ -15,9 +15,9 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     link: "/strato",
     name: "Local machine",
     dataLevel: [
-      DataLevel.Free,
-      DataLevel.Number,
-      DataLevel.Private,
+      DataLevel.Public,
+      DataLevel.Internal,
+      DataLevel.Confidential,
       DataLevel.Sensitive,
     ],
     additionalInfo: "Lenovo ThinkPad available to borrow at AAU",
@@ -28,7 +28,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     name: "Strato",
     link: "/strato",
     subHpcs: [AllHPC.StratoRegular, AllHPC.StratoBuyIn, AllHPC.StratoProjects],
-    dataLevel: [DataLevel.Free, DataLevel.Number],
+    dataLevel: [DataLevel.Public, DataLevel.Internal],
   },
   {
     id: uuidv4(),
@@ -37,7 +37,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     link: "/aicloud",
 
     subHpcs: [AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.AiCloudProjects],
-    dataLevel: [DataLevel.Free, DataLevel.Number],
+    dataLevel: [DataLevel.Public, DataLevel.Internal],
   },
   {
     id: uuidv4(),
@@ -45,7 +45,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     name: "UCLoud",
     link: "/aicloud",
     subHpcs: [],
-    dataLevel: [DataLevel.Free, DataLevel.Number],
+    dataLevel: [DataLevel.Public, DataLevel.Internal],
   },
 ];
 
@@ -330,7 +330,7 @@ export const STRATO_REGULAR: HPCType = {
     minimum_time : false,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number],
+  data: [DataLevel.Public, DataLevel.Internal],
   integrations: {
     gui: true,
     web_browser: true
@@ -361,7 +361,7 @@ export const STRATO_PROJECTS: HPCType= {
     minimum_time : false,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number],
+  data: [DataLevel.Public, DataLevel.Internal],
   integrations: {
     gui: true,
     web_browser: true
@@ -391,7 +391,7 @@ export const STRATO_BUY_IN: HPCType= {
     minimum_time : false,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number],
+  data: [DataLevel.Public, DataLevel.Internal],
   integrations: {
     gui: true,
     web_browser: true
@@ -422,7 +422,7 @@ export const AI_CLOUD_DATA: HPCType = {
     minimum_time : false,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number],
+  data: [DataLevel.Public, DataLevel.Sensitive],
   integrations: {
     gui: false,
     web_browser: false
@@ -452,7 +452,7 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
     minimum_time : true,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number, DataLevel.Private, DataLevel.Sensitive],
+  data: [DataLevel.Public, DataLevel.Internal, DataLevel.Confidential, DataLevel.Sensitive],
   integrations: {
     gui: false,
     web_browser: false
@@ -482,7 +482,7 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
     minimum_time : false,
     own_resources : true,
   },
-  data: [DataLevel.Free, DataLevel.Number, DataLevel.Private, DataLevel.Sensitive],
+  data: [DataLevel.Public, DataLevel.Internal, DataLevel.Confidential, DataLevel.Sensitive],
   integrations: {
     gui: false,
     web_browser: false

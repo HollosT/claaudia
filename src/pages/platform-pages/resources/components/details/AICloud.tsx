@@ -5,6 +5,7 @@ import { Tab } from "../tab";
 import { Divider } from "src/atoms";
 import Options from "./Options";
 import Footer from "src/components/footer/Footer";
+import platformRoutes from "src/services/router/platform-routes";
 
 const AICloud: React.FC = () => {
     const data = AICLOUD_DATA;
@@ -12,7 +13,7 @@ const AICloud: React.FC = () => {
 
     return (
         <section className="resource-detail">
-            <DetailsHeader title={data.name} body={data.introduction} />
+            <DetailsHeader title={data.name} body={data.introduction} path={platformRoutes.resources.path} />
             <Tab data={data.tab} />
             <Divider />
             <Options hpcs={aiclouds} />

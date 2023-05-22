@@ -10,6 +10,7 @@ import CasesIcon from 'src/components/navigation/icons/Cases-icon';
 import AboutIcon from 'src/components/navigation/icons/About-icon';
 import Home from 'src/pages/platform-pages/home/Home';
 import { AICloud, Strato } from 'src/pages/platform-pages/resources/components/details';
+import { Comparison } from 'src/pages/platform-pages/resources/components/comparison';
 
 
 const platformRoutes: RouteList = {
@@ -53,14 +54,20 @@ const platformRoutes: RouteList = {
     strato: {
         show: false,
         name: 'Strato',
-        path: 'strato',
+        path: '/strato',
         element: <Strato />
     },
     aicloud: {
         show: false,
         name: 'AI Cloud',
-        path: 'aicloud',
+        path: '/aicloud',
         element: <AICloud />
+    },
+    comparison: {
+        show: false,
+        name: 'Comparison',
+        path: '/comparison',
+        element: <Comparison />
     },
 }
 

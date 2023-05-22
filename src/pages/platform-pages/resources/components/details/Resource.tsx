@@ -5,11 +5,11 @@ const Resource: React.FC<{data: ResourceAvailabilityType}> = ({data}) => {
 
     return (
         <div className="option-item">
-            <p className="option-item--title">HARDWARE SPECIFICATIONS</p>
+            <p className="option-item--title">RESOURCE AVAILABILITY</p>
 
             <div className="option-item--item">
-                {data.payment ? <Check /> : <X />}
-                {data.payment ? <p className="option-item--item-body">No payment required</p> : <p className="option-item--item-body">Payment required</p>}
+                {data.payment ? <X /> : <Check /> }
+                {data.payment ?  <p className="option-item--item-body">Payment required</p> : <p className="option-item--item-body">No payment required</p>}
             </div>
             <div className="option-item--item">
                 {data.time_limitation ? <Check /> : <X />}

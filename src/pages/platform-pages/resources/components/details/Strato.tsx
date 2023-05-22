@@ -8,6 +8,7 @@ import DetailsHeader from "./DeailsHeader";
 import { SystemType } from "src/services/types/hpc/hpc";
 import Options from "./Options";
 import Footer from "src/components/footer/Footer";
+import platformRoutes from "src/services/router/platform-routes";
 
 const Strato: React.FC = () => {
     const data = STRATO_DATA;
@@ -15,7 +16,7 @@ const Strato: React.FC = () => {
   
     return (
         <section className="resource-detail">
-            <DetailsHeader title={data.name} body={data.introduction} />
+            <DetailsHeader title={data.name} body={data.introduction} path={platformRoutes.resources.path} />
             <Tab data={data.tab} />
             <Divider />
             <Options hpcs={stratos} />
