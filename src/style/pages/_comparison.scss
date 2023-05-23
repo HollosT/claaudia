@@ -1,0 +1,10 @@
+.comparison {
+
+    &-select {
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr;
+        justify-content: space-between;
+
+        gap: 4rem;
+    }
+}

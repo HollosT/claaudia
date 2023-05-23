@@ -52,7 +52,6 @@ export enum AllHPC {
     StratoRegular = "Strato regular",
     StratoProjects = "Strato projects",
     StratoBuyIn = "Strato buy-in",
-    keys = "keys"
 }
 
 export enum DataLevel {
