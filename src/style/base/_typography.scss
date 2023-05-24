@@ -12,6 +12,7 @@ h1 {
   font-size: 3rem; //
   line-height: 1.194;
   font-weight: 600;
+
 }
 
 h2 {
@@ -456,6 +457,77 @@ a {
                   &-body {
                     color: $paragraph-grey;
                   }
+              }
+          }
+      }
+  }
+}
+
+// *******************************************************************
+// Comparison
+.comparison {
+
+  &-select {
+ 
+      &--title{
+        h4 {
+          color: $dark-blue;
+        }
+
+      }
+  }
+}
+
+
+// *******************************************************************
+// Select
+.select {
+  &-select {
+    color: $dark-blue;
+    font-size: 1.8rem;
+
+    &::placeholder {
+      color: $border-darker-grey;
+    }
+  }
+
+  &-header {
+    &--title {
+      color: $dark-blue;
+    }
+    &--intro {
+      color: $light-blue;
+      font-weight: 600;
+    }
+    &--nav {
+      a {
+        color: $dark-blue;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-usecase {
+    color: $paragraph-grey;
+  }
+
+  &-item {
+
+      &--item {
+          
+          &-body {
+              &_content {
+                &-title {
+                  color: $paragraph-grey;
+                  font-size: 1.6rem;
+                  font-weight: 400;
+                }
+                &-data {
+                  color: $dark-blue;
+                  
+
+                }
               }
           }
       }

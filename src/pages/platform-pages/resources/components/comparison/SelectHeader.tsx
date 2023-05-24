@@ -45,15 +45,14 @@ const SelectHeader: React.FC<{ name: string | boolean }> = ({ name }) => {
     return (
         <>
             {hpc ?
-                <div className="select-header">
+                <div className="select-header u-margin-bottom-small">
                     <h2 className="select-header--title">{hpc.name}</h2>
-                    <p className="select-header--intro">{hpc.intro}</p>
-                    <div className="select-header--nav">
+                    <p className="select-header--intro u-margin-bottom-small">{hpc.intro}</p>
+                    <div className="select-header--nav u-margin-bottom-small">
                         <Link to="/">View use cases</Link>
                         <Link to={handleType().nav}>Go to {handleType().label} page</Link>
-                        <Divider />
                     </div>
-
+                    <Divider />
                 </div>
                 :
                 null

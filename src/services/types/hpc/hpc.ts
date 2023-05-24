@@ -35,6 +35,8 @@ export interface HarwareSpecType {
 export interface HPCType  {
   id: string,
   intro: string,
+  useCase: string,
+  application: string,
   type: SystemType,
   name: AllHPC,
   hardware_spec: HarwareSpecType,

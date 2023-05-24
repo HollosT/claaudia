@@ -7,3 +7,4 @@ export {default as CpuGpuIcon} from './CpuGpuIcon';
 export {default as MemoryIcon} from './MemoryIcon';
 export {default as NetworkStorageIcon} from './NetworkStorageIcon';
 export {default as TemporaryStorageIcon} from './TemporaryStorageIcon';
+export {default as ApplicationIcon} from './ApplicationIcon';

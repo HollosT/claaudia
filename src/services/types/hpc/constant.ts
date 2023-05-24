@@ -315,6 +315,8 @@ export const UCLOUD_DATA = {
 export const STRATO_REGULAR: HPCType = {
   id: uuidv4(),
   intro: 'Self-manage software',
+  useCase: 'Strato is a good choice for CPU-intensive processes. It allows for explorative research thanks to its interactive environment - for example running queries or specialized algorithms or working on descriptive data exploration.',
+  application: 'No application process',
   type: SystemType.Strato,
   name: AllHPC.StratoRegular,
   hardware_spec: {
@@ -347,6 +349,8 @@ export const STRATO_PROJECTS: HPCType= {
   id: uuidv4(),
   type: SystemType.Strato,
   intro: 'Self-manage software',
+  useCase: 'Strato Projects is a great solution for those who work with machine learning and need to run their experiments on servers with many CPU cores, for example for creating synthetic data',
+  application: 'Internal application process',
   name: AllHPC.StratoProjects,
   hardware_spec: {
     vcpu: 120,
@@ -376,6 +380,8 @@ export const STRATO_PROJECTS: HPCType= {
 export const STRATO_BUY_IN: HPCType= {
   id: uuidv4(),
   intro: 'Self-manage software',
+  useCase: 'Strato buy-in is a great for those whose projects require the interactivity of the Strato virtual machines’ environment but at the same time working with large amount of data. Starto buy-in enables you to add the hardware you need, so you can specify your own needs, which will be connected to the system.',
+  application: 'Internal application process',
   type: SystemType.Strato,
   name: AllHPC.StratoBuyIn,
   hardware_spec: {
@@ -407,6 +413,8 @@ export const STRATO_BUY_IN: HPCType= {
 export const AI_CLOUD_DATA: HPCType = {
   id: uuidv4(),
   intro: 'Self-manage software',
+  useCase: 'AI Cloud is a great tool for training large language models – thanks to the powerful GPU processors it provides, it is possible to accelerate various cloud workloads via parallel data processing.',
+  application: 'Internal application process',
   type: SystemType.AICloud,
   name: AllHPC.AiCloud,
   hardware_spec: {
@@ -438,6 +446,8 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
   id: uuidv4(),
   intro: 'Self-manage software',
   type: SystemType.AICloud,
+  useCase: 'AI Cloud Projects is the most fitting choice when it comes to intensive parallel processing with sensitive or confidential data, as this option can be tailored to suit for all data levels.',
+  application: 'Internal application process',
   name: AllHPC.AiCloudProjects,
   hardware_spec: {
     vcpu: -1,
@@ -467,6 +477,8 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
 export const AI_CLOUD_BUYIN_DATA: HPCType = {
   id: uuidv4(),
   intro: 'Self-manage software',
+  useCase: 'AI Cloud buy-in offers the opportunity to purchase the hardware that best suits your needs and to include it in the AI Cloud platform. It is convenient for transformer methods in deep learning, particularly when the analysis requires processing of exceptionally large datasets– particularly image or high definition video data.',
+  application: 'Internal application process',
   type: SystemType.AICloud,
   name: AllHPC.AiCloudBuyIn,
   hardware_spec: {

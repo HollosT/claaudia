@@ -2,10 +2,34 @@
 
     &-select {
         display: grid;
-        grid-template-columns: 10% 1fr;
+        grid-template-columns: auto 1fr;
         justify-content: space-between;
 
         gap: 4rem;
+
+        &--title{
+            border-right: 1px solid $border-darker-grey;
+            padding-right: 2rem;
+            min-width: 25rem;
+            position: relative;
+
+            &-item {
+                position: absolute;
+            }
+            &-item_1 {
+                top: 0%;
+            }
+            &-item_2 {
+                top: 25%;
+            }
+            &-item_3 {
+                top: 38%;
+            }
+            &-item_4 {
+                top: 51%;
+            }
+
+        }
 
         &--container {
             display: grid;
@@ -13,6 +37,10 @@
             justify-content: space-between;
 
             gap: 4rem;
+
+            .select {
+                max-width: 50rem;
+            }
         }
     }
 }

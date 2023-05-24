@@ -46,8 +46,8 @@ const SelectOption: React.FC<SelectOptionProps> = ({compared}) => {
     }
 
     return (
-        <div className="select-select">
-            <Select
+        <div className="select-select u-margin-bottom-small">
+            <Select 
                     options={options}
                     value={selectedValue}
                     placeholder="Select an HPC"
