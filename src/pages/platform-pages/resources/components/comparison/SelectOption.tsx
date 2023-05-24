@@ -3,7 +3,7 @@ import { ComparisonContext } from "src/services/context/comparison/comparison-co
 import Select from "react-select"
 import { AllHPC } from "src/services/types/hpc/hpc"
 import { keys } from "src/hooks"
-import SelectContent from "./SelectContent"
+
 
 interface SelectOptionProps {
     compared?: boolean;
@@ -15,7 +15,7 @@ interface OptionType {
   }
 
 const SelectOption: React.FC<SelectOptionProps> = ({compared}) => {
-    const { selectedHPC, handleSelectedHPC } = useContext(ComparisonContext);
+    const { selectedHPC, handleSelectedHPC, handleComparedHPC } = useContext(ComparisonContext);
     const [active, setActive] = useState<AllHPC | string>(compared ? "" : selectedHPC)
 
     const options = compared ? [...keys(AllHPC).filter(hpc => AllHPC[hpc] !== selectedHPC).map(hpc => {
@@ -34,7 +34,11 @@ const SelectOption: React.FC<SelectOptionProps> = ({compared}) => {
 
     const handleChange = (hpc: OptionType | null) => {
         if (hpc && hpc.value !== null) {
-            handleSelectedHPC(hpc.value)
+            if(compared) {
+                handleComparedHPC(hpc.value)
+            } else {
+                handleSelectedHPC(hpc.value)
+            }
             setActive(hpc.value)
         } else {
             setActive("")
@@ -42,14 +46,13 @@ const SelectOption: React.FC<SelectOptionProps> = ({compared}) => {
     }
 
     return (
-        <div className="select">
+        <div className="select-select">
             <Select
                     options={options}
                     value={selectedValue}
                     placeholder="Select an HPC"
                     onChange={handleChange}
             />
-            <SelectContent name={active} />
 
 
         </div>

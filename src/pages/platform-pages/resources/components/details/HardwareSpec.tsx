@@ -8,12 +8,12 @@ const HardwareSpec: React.FC<{data: HarwareSpecType}> = ({data}) => {
             <p className="option-item--title">HARDWARE SPECIFICATIONS</p>
 
             <div className="option-item--item">
-                {data.vcpu === -1 ? <X /> : <Check />}
-                {data.vcpu === -1 ? <p className="option-item--item-body">No VCPU</p> : <p className="option-item--item-body">{typeof data.vcpu !== 'string' ?`Up to ${data.vcpu} VCPU` : `${data.vcpu} VCPU`}</p>}
+                <Check />
+                {data.vcpu === -1 ? <p className="option-item--item-body">vCPU not limited</p> : <p className="option-item--item-body">{typeof data.vcpu !== 'string' ?`Up to ${data.vcpu} VCPU` : `${data.vcpu} VCPU`}</p>}
             </div>
             <div className="option-item--item">
-                {data.netwrok_storage === -1 ? <X /> : <Check />}
-                {data.netwrok_storage === -1 ? <p className="option-item--item-body">No Network storage</p> : <p className="option-item--item-body">{typeof data.netwrok_storage !== 'string' ?`Up to ${data.netwrok_storage} GB network storage` : `${data.netwrok_storage} network storage`}</p>}
+                {data.netwrok_storage === -1 ? <X /> :  <Check /> }
+                {data.netwrok_storage === -1 ? <p className="option-item--item-body">Unlimited Network storage</p> : <p className="option-item--item-body">{typeof data.netwrok_storage !== 'string' ?`Up to ${data.netwrok_storage} GB network storage` : `${data.netwrok_storage} network storage`}</p>}
             </div>
             <div className="option-item--item">
                 {data.memory === -1 ? <X /> : <Check />}

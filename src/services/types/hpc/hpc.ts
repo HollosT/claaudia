@@ -25,10 +25,10 @@ export interface ResourceAvailabilityType {
 }
 
 export interface HarwareSpecType {
-  vcpu: number | string,
-  netwrok_storage: number | string,
-  memory: number | string,
-  gpu: number | string,
+  vcpu: number,
+  netwrok_storage: number,
+  memory: number,
+  gpu: number,
   shared_temporary_storage: number,
 }
 

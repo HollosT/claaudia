@@ -3,3 +3,7 @@ export {default as InfoIcon} from './InfoIcon';
 export {default as Check} from './Check';
 export {default as X} from './X';
 export {default as ComparisonIcon} from './ComparisonIcon';
+export {default as CpuGpuIcon} from './CpuGpuIcon';
+export {default as MemoryIcon} from './MemoryIcon';
+export {default as NetworkStorageIcon} from './NetworkStorageIcon';
+export {default as TemporaryStorageIcon} from './TemporaryStorageIcon';

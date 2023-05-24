@@ -1,12 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Divider } from "src/atoms";
 import { ComparisonContext } from "src/services/context/comparison/comparison-context";
 import platformRoutes from "src/services/router/platform-routes";
 import { SystemType } from "src/services/types/hpc/hpc";
-import HardwareContent from "./HardwareContent";
 
-const SelectContent: React.FC<{ name: string }> = ({ name }) => {
+const SelectHeader: React.FC<{ name: string | boolean }> = ({ name }) => {
     const { allHPC } = useContext(ComparisonContext);
     const hpc = allHPC.find(h => h.name === name);
 
@@ -46,15 +45,14 @@ const SelectContent: React.FC<{ name: string }> = ({ name }) => {
     return (
         <>
             {hpc ?
-                <div className="select-body">
-                    <h2 className="select-body--title">{hpc.name}</h2>
-                    <p className="select-body--intro">{hpc.intro}</p>
-                    <div className="select-body--nav">
+                <div className="select-header">
+                    <h2 className="select-header--title">{hpc.name}</h2>
+                    <p className="select-header--intro">{hpc.intro}</p>
+                    <div className="select-header--nav">
                         <Link to="/">View use cases</Link>
                         <Link to={handleType().nav}>Go to {handleType().label} page</Link>
                         <Divider />
                     </div>
-                    <HardwareContent data={hpc.hardware_spec} />
 
                 </div>
                 :
@@ -64,4 +62,4 @@ const SelectContent: React.FC<{ name: string }> = ({ name }) => {
     )
 }
 
-export default SelectContent;
+export default SelectHeader;

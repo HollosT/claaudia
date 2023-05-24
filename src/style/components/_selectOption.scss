@@ -1,0 +1,46 @@
+.select {
+    &-select {
+
+    }
+
+    &-header {
+
+    }
+
+    &-item {
+
+        &--item {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            border: 1px solid $border-darker-grey;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            
+            &-body {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                &-icon {
+                    background-color: $light-grey-200;
+                    border-radius: 4px;
+                    width: max-content;
+                    padding: 2rem;
+                    position: relative;
+
+                    .nav-icon {
+                        @include center()
+                    }
+                }
+            }
+        }
+
+        &--item-hardware {
+            .pie {
+                width: 4.4rem !important;
+                height: 4.4rem !important;
+            }
+        }
+    }
+}

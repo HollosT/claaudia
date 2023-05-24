@@ -321,8 +321,8 @@ export const STRATO_REGULAR: HPCType = {
     vcpu: 16,
     netwrok_storage: 5000,
     memory: 32,
-    gpu: -1,
-    shared_temporary_storage: -1,
+    gpu: 0,
+    shared_temporary_storage: 0,
   },
   resource_availability: {
     payment: false,
@@ -350,10 +350,10 @@ export const STRATO_PROJECTS: HPCType= {
   name: AllHPC.StratoProjects,
   hardware_spec: {
     vcpu: 120,
-    netwrok_storage: 5000 + '+',
-    memory: 250,
+    netwrok_storage: -1,
+    memory: 240,
     gpu: 6,
-    shared_temporary_storage: -1,
+    shared_temporary_storage: 0,
   },
   resource_availability: {
     payment: false,
@@ -379,11 +379,11 @@ export const STRATO_BUY_IN: HPCType= {
   type: SystemType.Strato,
   name: AllHPC.StratoBuyIn,
   hardware_spec: {
-    vcpu: 'Unlimited',
-    netwrok_storage: 'Unlimited',
-    memory: 'Unlimited',
-    gpu: 'Unlimited',
-    shared_temporary_storage: -1,
+    vcpu: -1,
+    netwrok_storage: -1,
+    memory: -1,
+    gpu: -1,
+    shared_temporary_storage: 0,
   },
   resource_availability: {
     payment: true,
@@ -441,10 +441,10 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
   name: AllHPC.AiCloudProjects,
   hardware_spec: {
     vcpu: -1,
-    netwrok_storage: ">" + 1000,
+    netwrok_storage: -1,
     memory: 256,
     gpu: 4,
-    shared_temporary_storage: -1,
+    shared_temporary_storage: 0,
   },
   resource_availability: {
     payment: true,
@@ -474,7 +474,7 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
     netwrok_storage: -1,
     memory: -1,
     gpu: -1,
-    shared_temporary_storage: -1,
+    shared_temporary_storage: 0,
   },
   resource_availability: {
     payment: true,
