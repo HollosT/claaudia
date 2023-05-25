@@ -6,7 +6,6 @@
 
       &-item {
         width: 20rem;
-        // text-align: center;
         transition: all 150ms ease-in;
         &:hover,
         &:active {
@@ -40,13 +39,23 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
+
+    @media (max-width: 1450px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+    }
 
     &--item {
-      max-width: 40rem;
+      max-width: 50rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
+      @media (max-width: 1450px) {
+        max-width: 45rem;
+      }
       &-img {
         height: 50%;
         width: 100%;

@@ -20,13 +20,25 @@
                 top: 0%;
             }
             &-item_2 {
-                top: 25%;
+                top: 10%;
             }
             &-item_3 {
-                top: 38%;
+                top: 18%;
             }
             &-item_4 {
-                top: 51%;
+                top: 24%;
+            }
+            &-item_5 {
+                top: 47%;
+            }
+            &-item_6 {
+                top: 66%;
+            }
+            &-item_7 {
+                top: 71%;
+            }
+            &-item_8 {
+                top: 82%;
             }
 
         }
@@ -39,6 +51,7 @@
             gap: 4rem;
 
             .select {
+                min-width: 30rem;
                 max-width: 50rem;
             }
         }

@@ -5,10 +5,15 @@ import AdditionalInfo from "./AdditionalInfo";
 import { Link } from "react-router-dom";
 import { ResourcesRightArrow } from "./svg";
 
-const CategoryItem: React.FC<{ cat: HPCIntroductionType }> = ({ cat }) => {
+interface CategoryItemProps {
+    cat: HPCIntroductionType,
+    className?: string
+}
+
+const CategoryItem: React.FC<CategoryItemProps> = ({cat, className}) => {
 
     return (
-            <div  className='category-item u-margin-bottom-medium'>
+            <div  className={className ? `category-item u-margin-bottom-small ${className}` : "category-item u-margin-bottom-small"}>
                 <div className='category-item--initial'>
                     <h3 className='category-item--initial-title'>{cat.initial}</h3>
                 </div>

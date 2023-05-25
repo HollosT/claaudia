@@ -12,8 +12,7 @@ const Application: React.FC<{compared?:  boolean}> = ({compared}) => {
     return (
         <>
             {hpc ?
-                <div className="select-item u-margin-bottom-medium">
-                    <div className="select-item--item">
+                    <div className="select-item--item u-margin-bottom-medium">
                         <div className="select-item--item-body-icon">
                           <ApplicationIcon />
                         </div>
@@ -24,7 +23,6 @@ const Application: React.FC<{compared?:  boolean}> = ({compared}) => {
                             </div>
                         </div>
                     </div>
-                </div>
                 :
                 null
             }

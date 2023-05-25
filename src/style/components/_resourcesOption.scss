@@ -5,6 +5,12 @@
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
         gap: 5rem;
+
+
+      @media (max-width: 1250px) {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
         
         .option {
             padding: 3rem 2rem;
@@ -12,36 +18,43 @@
             border-radius: 4px;
             border-top: 3px solid $dark-blue;
             min-width: 30rem;
-            max-width: 100%;
+            max-width: 50rem;
 
               &-title {
                 @include centerOptions();
                 padding-bottom: .5rem;
+                min-width: max-content;
+
               }
               &-body {
                 @include centerOptions();
-                padding-bottom: 1rem;
-    
+                min-width: max-content;
+                padding-bottom: 1rem;  
               }
               &-nav {
                 @include centerOptions();
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: .5rem;
                 background-color: $light-grey-200;
-                padding:  1rem 2rem;
+                padding:  1rem;
                 border-radius: 4px;
-                justify-content: center
+                justify-content: center;
+                min-width: 27rem;
+
               }
 
             &-item {
                 @include centerOptions();
+                min-width: 27rem;
+
     
                 &--item {
                     display: flex;
                     align-items: center;
                     gap: 1rem;
                     margin-bottom: .5rem;
+
                 }
             }
         }

@@ -11,8 +11,8 @@ export interface IntegrationType {
   web_browser: boolean
 }
 export interface SkillType {
-    linux: boolean,
-    programming: boolean,
+    linux: string,
+    programming: string,
     ssh: boolean,
     containers: boolean
 }
@@ -56,11 +56,17 @@ export enum AllHPC {
     StratoBuyIn = "Strato buy-in",
 }
 
+
 export enum DataLevel {
   Public,
   Internal,
   Confidential,
   Sensitive,
+}
+export enum HPCCategory {
+    NoHpc,
+    Internal,
+    Danish
 }
 
 export interface HPCIntroductionType {
@@ -71,6 +77,7 @@ export interface HPCIntroductionType {
   subHpcs?: AllHPC[] | [];
   dataLevel: DataLevel[];
   additionalInfo?: string;
+  category: HPCCategory
 }
 
 export interface CategoryTabDataType {

@@ -6,7 +6,7 @@ import { useFetchData } from 'src/hooks';
 
 
 const Introduction: React.FC = () => {
-    const {data, loading, error} = useFetchData(getAllIntroduction) 
+    const {data, loading} = useFetchData(getAllIntroduction) 
 
 
     if(loading || !data) {

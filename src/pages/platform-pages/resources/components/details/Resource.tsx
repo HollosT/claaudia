@@ -13,15 +13,15 @@ const Resource: React.FC<{data: ResourceAvailabilityType}> = ({data}) => {
             </div>
             <div className="option-item--item">
                 {data.time_limitation ?  <X /> : <Check />}
-                {data.time_limitation ? <p className="option-item--item-body">No time limitations</p> : <p className="option-item--item-body">Time limitations apply</p>}
+                {data.time_limitation ? <p className="option-item--item-body">Maximum time of use applies</p> : <p className="option-item--item-body">No maximum time of use</p>}
             </div>
             <div className="option-item--item">
                 {data.minimum_time ?  <X /> : <Check />}
-                {data.minimum_time ? <p className="option-item--item-body">No minimum time of use</p> : <p className="option-item--item-body">Yes, minimum 1 month</p>}
+                {data.minimum_time ? <p className="option-item--item-body">Minimum time of use 1 month</p> : <p className="option-item--item-body">No minimum time of use</p>}
             </div>
             <div className="option-item--item">
                 {data.own_resources ? <Check /> : <X />}
-                {data.own_resources ? <p className="option-item--item-body">All resources to yourself</p> : <p className="option-item--item-body">Shared resources</p>}
+                {data.own_resources ? <p className="option-item--item-body">All resources to yourself</p> : <p className="option-item--item-body">Resources not only to yourself</p>}
             </div>
         </div>
     )

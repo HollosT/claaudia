@@ -49,7 +49,7 @@ const SelectHeader: React.FC<{ name: string | boolean }> = ({ name }) => {
                     <h2 className="select-header--title">{hpc.name}</h2>
                     <p className="select-header--intro u-margin-bottom-small">{hpc.intro}</p>
                     <div className="select-header--nav u-margin-bottom-small">
-                        <Link to="/">View use cases</Link>
+                        <Link to={platformRoutes.cases.path}>View use cases</Link>
                         <Link to={handleType().nav}>Go to {handleType().label} page</Link>
                     </div>
                     <Divider />

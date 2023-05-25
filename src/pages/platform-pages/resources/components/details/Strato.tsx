@@ -1,7 +1,6 @@
 
 
 import {ALL_HPCS_DATA, STRATO_DATA } from "src/services/types/hpc/constant";
-import BackLeftArrow from "../svg/BackLeftArrow";
 import { Tab } from "../tab";
 import { Divider } from "src/atoms";
 import DetailsHeader from "./DeailsHeader";

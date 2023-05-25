@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { HPCType } from "src/services/types/hpc/hpc";
 import HardwareSpec from "./HardwareSpec";
 import Resource from "./Resource";

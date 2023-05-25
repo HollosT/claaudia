@@ -1,6 +1,7 @@
 import {
   AllHPC,
   DataLevel,
+  HPCCategory,
   HPCCategoryType,
   HPCIntroductionType,
   HPCType,
@@ -11,6 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
   {
     id: uuidv4(),
+    category: HPCCategory.NoHpc,
     initial: "LM",
     link: "/strato",
     name: "Local machine",
@@ -25,6 +27,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
   {
     id: uuidv4(),
     initial: "S",
+    category: HPCCategory.Internal,
     name: "Strato",
     link: "/strato",
     subHpcs: [AllHPC.StratoRegular, AllHPC.StratoBuyIn, AllHPC.StratoProjects],
@@ -34,6 +37,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     id: uuidv4(),
     initial: "AL",
     name: "AI Cloud",
+    category: HPCCategory.Internal,
     link: "/aicloud",
 
     subHpcs: [AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.AiCloudProjects],
@@ -43,6 +47,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     id: uuidv4(),
     initial: "UC",
     name: "UCLoud",
+    category: HPCCategory.Danish,
     link: "/aicloud",
     subHpcs: [],
     dataLevel: [DataLevel.Public, DataLevel.Internal],
@@ -338,8 +343,8 @@ export const STRATO_REGULAR: HPCType = {
     web_browser: true
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: false
   }
@@ -371,8 +376,8 @@ export const STRATO_PROJECTS: HPCType= {
     web_browser: true
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: false
   }
@@ -403,8 +408,8 @@ export const STRATO_BUY_IN: HPCType= {
     web_browser: true
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: false
   }
@@ -428,7 +433,7 @@ export const AI_CLOUD_DATA: HPCType = {
     payment: false,
     time_limitation: false,
     minimum_time : false,
-    own_resources : true,
+    own_resources : false,
   },
   data: [DataLevel.Public, DataLevel.Sensitive],
   integrations: {
@@ -436,8 +441,8 @@ export const AI_CLOUD_DATA: HPCType = {
     web_browser: false
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: true
   }
@@ -468,8 +473,8 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
     web_browser: false
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: true
   }
@@ -500,8 +505,8 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
     web_browser: false
   },
   skill: {
-    linux: true,
-    programming: true,
+    linux: "Linux",
+    programming: "C",
     ssh: true,
     containers: true
   }

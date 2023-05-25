@@ -15,7 +15,7 @@ const HardwareContent: React.FC<{ compared?: boolean }> = ({ compared }) => {
     return (
         <>
             {hpc ?
-                <div className="select-item">
+                <div className="select-item u-margin-bottom-medium">
                     <div className="select-item--item select-item--item-hardware">
                         <div className="select-item--item-body-icon">
                             <CpuGpuIcon />
