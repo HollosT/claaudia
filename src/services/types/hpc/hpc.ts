@@ -1,9 +1,9 @@
 
 export enum SystemType {
-  AICloud,
-  Strato,
-  LocalMachine,
-  UCloud
+  AICloud =  "AI Cloud",
+  Strato = "Strato",
+  LocalMachine = "Local Machines",
+  UCloud = "UCloud"
 }
 
 export interface IntegrationType {
@@ -54,6 +54,8 @@ export enum AllHPC {
     StratoRegular = "Strato regular",
     StratoProjects = "Strato projects",
     StratoBuyIn = "Strato buy-in",
+    UCloud = "UCloud",
+    LocalMachine = "Lenovo Thinpad P53",
 }
 
 

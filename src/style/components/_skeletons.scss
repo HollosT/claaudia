@@ -1,0 +1,28 @@
+.skeleton {
+    background-color: $background-light;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-darker-grey;
+    border-radius: 4px;
+    padding: 2rem;
+
+    
+    &-category {
+        display: grid;
+        grid-template-columns: 10% auto;
+
+        &--content {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            &-title {
+                width: 30rem;
+            }
+            &-body {
+                width: 60rem;
+
+            }
+        }
+    }
+}

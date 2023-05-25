@@ -309,6 +309,12 @@ a {
       &-link {
         font-size: 1.6rem;
         color: $light-blue;
+        transition: all 150ms ease-in-out;
+
+        &:hover,
+        &:active {
+          color: $active-blue;
+        }
       }
     }
   }

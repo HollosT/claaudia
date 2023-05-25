@@ -5,15 +5,15 @@ const Skills: React.FC<{data: SkillType}> = ({data}) => {
 
     return (
         <div className="option-item">
-            <p className="option-item--title">DATA</p>
+            <p className="option-item--title">REQUIRED SKILLS & KNOWLEDGE</p>
 
             <div className="option-item--item">
                 {data.linux  ?  <Check /> : null}
-                {data.linux  ? <p className="option-item--item-body">Linux terminal</p> : null}
+                {data.linux  ? <p className="option-item--item-body">{data.linux}</p> : null}
             </div>
             <div className="option-item--item">
                 {data.programming  ?  <Check /> : null}
-                {data.programming  ? <p className="option-item--item-body">Programming skills</p> : null}
+                {data.programming  ? <p className="option-item--item-body">{data.programming}</p> : null}
             </div>
             <div className="option-item--item">
                 {data.ssh  ?  <Check /> : null}

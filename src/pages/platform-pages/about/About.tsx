@@ -1,5 +1,5 @@
 import { Button } from 'src/atoms';
-import { addQuestions } from 'src/services/firebase/firebase.utils';
+import { addQuestions, addSystemCategories } from 'src/services/firebase/firebase.utils';
 
 
 const About: React.FC = () => {
@@ -8,10 +8,15 @@ const About: React.FC = () => {
         await addQuestions();
     }
 
+    const categories = async () => {
+        await addSystemCategories();
+    }
+
     return (
         <>
             <h1 className='primary-header u-margin-bottom-small'>About CLAAUDIA</h1>
             <Button onClick={questions} >Add questiosn</Button>
+            <Button onClick={categories} >Add categories</Button>
         </>
     )
 }

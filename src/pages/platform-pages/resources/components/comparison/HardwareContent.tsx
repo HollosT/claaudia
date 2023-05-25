@@ -35,7 +35,7 @@ const HardwareContent: React.FC<{ compared?: boolean }> = ({ compared }) => {
                         <div className="select-item--item-body">
                             <div className="select-item--item-body_content">
                                 <span className="select-item--item-body_content-title">vGPU</span>
-                                <h3 className="select-item--item-body_content-data">{hpc.hardware_spec.gpu !== -1 ? `Up to ${hpc.hardware_spec.gpu} vGPU's` : `Unlimited vGPU`}</h3>
+                                <h3 className="select-item--item-body_content-data">{hpc.hardware_spec.gpu !== -1 ? ( hpc.hardware_spec.gpu !== 0 ?`Up to ${hpc.hardware_spec.gpu} vGPU's` : `No GPU access`) : `Unlimited vGPU`}</h3>
                             </div>
                             <PieChart val1={hpc.hardware_spec.gpu} val2={comparedVal?.hardware_spec.gpu} />
                         </div>

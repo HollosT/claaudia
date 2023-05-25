@@ -4,16 +4,21 @@ import { CategoryItem } from './components';
 import { DUMMY_HPC_CATEGORY } from 'src/services/types/hpc/constant';
 import Footer from 'src/components/footer/Footer';
 import { Divider } from 'src/atoms';
+import { useFetchData } from 'src/hooks';
+import { getAllSystemCategories } from 'src/services/firebase/firebase.utils';
+import { SkeletonCat } from './skeleton';
 
 
 
 
 const Resources: React.FC = () => {
+    const {data, loading} = useFetchData(getAllSystemCategories);
+
     const noHpc: HPCIntroductionType[] = [];
     const internalHpc: HPCIntroductionType[] = [];
     const danishHpc: HPCIntroductionType[] = [];
 
-    DUMMY_HPC_CATEGORY.forEach((hpc) => {
+    data?.forEach((hpc) => {
         switch (hpc.category) {
         case HPCCategory.NoHpc:
             noHpc.push(hpc);
@@ -38,9 +43,12 @@ const Resources: React.FC = () => {
             </div>
             <div>
                 <div className='resources-category u-margin-bottom-medium'>
-                    {noHpc.length > 0 && 
+                    <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
+                    {loading ?
+
+                        <SkeletonCat />
+                        : 
                         <>
-                            <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
                             {noHpc.map(category => (
                                 <CategoryItem key={category.id} cat={category} className="no-hpc" />
                             ))}
@@ -48,9 +56,11 @@ const Resources: React.FC = () => {
                     }
                 </div>
                 <div className='resources-category u-margin-bottom-medium'>
-                    {internalHpc.length > 0 && 
+                    <h4 className='resources-category--title u-margin-bottom-small'>Internal AAU resources</h4>
+                    {loading ?
+                        <SkeletonCat />
+                        : 
                         <>
-                            <h4 className='resources-category--title u-margin-bottom-small'>Internal AAU resources</h4>
                             {internalHpc.map(category => (
                                 <CategoryItem key={category.id} cat={category} />
                             ))}
@@ -58,9 +68,11 @@ const Resources: React.FC = () => {
                     }
                 </div>
                 <div className='resources-category u-margin-bottom-medium'>
-                    {danishHpc.length > 0 && 
+                        <h4 className='resources-category--title u-margin-bottom-small'>Danish resources</h4>
+                    {loading ?
+                        <SkeletonCat />
+                        : 
                         <>
-                            <h4 className='resources-category--title u-margin-bottom-small'>Danish resources</h4>
                             {danishHpc.map(category => (
                                 <CategoryItem key={category.id} cat={category} />
                             ))}

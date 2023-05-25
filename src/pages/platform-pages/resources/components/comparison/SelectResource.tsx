@@ -30,7 +30,7 @@ const SelectResource: React.FC<{compared?:  boolean}> = ({compared})=> {
                     <div className="select-item--item-body">
                         <div className="select-item--item-body_content">
                             <span className="select-item--item-body_content-title">Maximum time of use</span>
-                            <h3 className="select-item--item-body_content-data">{hpc.resource_availability.time_limitation ? 'No maximum time of use' : 'Maximum time of use apply'}</h3>
+                            <h3 className="select-item--item-body_content-data">{hpc.resource_availability.time_limitation ?  'Maximum time of use apply' : 'No maximum time of use' }</h3>
                         </div>
                     </div>
                 </div>

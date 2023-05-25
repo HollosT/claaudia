@@ -14,7 +14,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     id: uuidv4(),
     category: HPCCategory.NoHpc,
     initial: "LM",
-    link: "/strato",
+    link: "/localmachine",
     name: "Local machine",
     dataLevel: [
       DataLevel.Public,
@@ -48,9 +48,14 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
     initial: "UC",
     name: "UCLoud",
     category: HPCCategory.Danish,
-    link: "/aicloud",
+    link: "/ucloud",
     subHpcs: [],
-    dataLevel: [DataLevel.Public, DataLevel.Internal],
+    dataLevel: [
+      DataLevel.Public,
+      DataLevel.Internal,
+      DataLevel.Confidential,
+      DataLevel.Sensitive,
+    ],
   },
 ];
 
@@ -308,13 +313,248 @@ export const LOCALMACHINE_DATA = {
   id: uuidv4(),
   name: "Local machine",
   introduction:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+tab: {
+  tab_header: [
+    {
+      tab_title: "General information",
+      isFaq: false,
+      value: 0,
+    },
+    {
+      tab_title: "Benefits & Common use",
+      isFaq: false,
+      value: 1,
+    },
+    {
+      tab_title: "FAQ",
+      isFaq: true,
+      value: 2,
+    },
+  ],
+  tab_value: [
+    {
+      value: 0,
+      data: [
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Linux based virtual computer",
+          body: "Strato is a linux based virtual computer platform to support data driven research that needs additional processing capacity.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Network storage",
+          body: "Network storage allows users to store and process large datasets.",
+        },
+        {
+          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+          title: "OpenStack platform",
+          body: "The OpenStack platform allows the user to change the size of the computer (processing capacity) that is connected to their boot disk.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Virtualized cluster of hardware",
+          body: "The Strato platform is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Accessed on the local computer",
+          body: "Strato can be accessed from a terminal application on the user's local computer. The required software can then be installed and configured to the user's needs.",
+        },
+      ],
+    },
+    {
+      value: 1,
+      data: [
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Additional RAM, CPU and GPU hardware",
+          body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "CPU Heavy tasks",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+          title: "GPU Heavy tasks",
+          body: "Training of models on GPUs, simulation of physics and biomolecular models, teaching of advanced computational methods and testing of distributed computing systems.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Adjust the size of computer without losing data",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+      ],
+    },
+    {
+      value: 2,
+      data: [
+        {
+          title: "Who has access to the Strato platform?",
+          body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.",
+        },
+        {
+          title:
+            "Do I have access to GPU resources on my Strato virtual machines?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title: "What software can I run on my Strato virtual machine?",
+          body: "All Strato virtual machine instances are launched from Linux images. Therefore, your software needs to be able to run on Linux.",
+        },
+        {
+          title:
+            "Can I have a GUI (Graphical user interface) with my Strato virtual machine?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+        {
+          title: "How do I connect to my virtual machine on Strato?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title:
+            "Am I allowed to work with confidential or sensitive data on my Strato virtual machine?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+        {
+          title: "Can I have virtual machine with Windows OS?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title:
+            "Can I use Strato virtual machines as part of my production setup?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+      ],
+    },
+  ],
+},
+subs: [AllHPC.LocalMachine],
 };
 export const UCLOUD_DATA = {
   id: uuidv4(),
   name: "UCloud",
-  introduction:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  tab: {
+  tab_header: [
+    {
+      tab_title: "General information",
+      isFaq: false,
+      value: 0,
+    },
+    {
+      tab_title: "Benefits & Common use",
+      isFaq: false,
+      value: 1,
+    },
+    {
+      tab_title: "FAQ",
+      isFaq: true,
+      value: 2,
+    },
+  ],
+  tab_value: [
+    {
+      value: 0,
+      data: [
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Linux based virtual computer",
+          body: "Strato is a linux based virtual computer platform to support data driven research that needs additional processing capacity.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Network storage",
+          body: "Network storage allows users to store and process large datasets.",
+        },
+        {
+          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+          title: "OpenStack platform",
+          body: "The OpenStack platform allows the user to change the size of the computer (processing capacity) that is connected to their boot disk.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Virtualized cluster of hardware",
+          body: "The Strato platform is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Accessed on the local computer",
+          body: "Strato can be accessed from a terminal application on the user's local computer. The required software can then be installed and configured to the user's needs.",
+        },
+      ],
+    },
+    {
+      value: 1,
+      data: [
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Additional RAM, CPU and GPU hardware",
+          body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "CPU Heavy tasks",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+          title: "GPU Heavy tasks",
+          body: "Training of models on GPUs, simulation of physics and biomolecular models, teaching of advanced computational methods and testing of distributed computing systems.",
+        },
+        {
+          img: "https://www.atominfo.hu/files/linux.png",
+          title: "Adjust the size of computer without losing data",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+      ],
+    },
+    {
+      value: 2,
+      data: [
+        {
+          title: "Who has access to the Strato platform?",
+          body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.",
+        },
+        {
+          title:
+            "Do I have access to GPU resources on my Strato virtual machines?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title: "What software can I run on my Strato virtual machine?",
+          body: "All Strato virtual machine instances are launched from Linux images. Therefore, your software needs to be able to run on Linux.",
+        },
+        {
+          title:
+            "Can I have a GUI (Graphical user interface) with my Strato virtual machine?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+        {
+          title: "How do I connect to my virtual machine on Strato?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title:
+            "Am I allowed to work with confidential or sensitive data on my Strato virtual machine?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+        {
+          title: "Can I have virtual machine with Windows OS?",
+          body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
+        },
+        {
+          title:
+            "Can I use Strato virtual machines as part of my production setup?",
+          body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
+        },
+      ],
+    },
+  ],
+},
+  subs: [AllHPC.UCloud],
 };
 
 export const STRATO_REGULAR: HPCType = {
@@ -344,7 +584,7 @@ export const STRATO_REGULAR: HPCType = {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: false
   }
@@ -377,7 +617,7 @@ export const STRATO_PROJECTS: HPCType= {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: false
   }
@@ -409,7 +649,7 @@ export const STRATO_BUY_IN: HPCType= {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: false
   }
@@ -442,7 +682,7 @@ export const AI_CLOUD_DATA: HPCType = {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: true
   }
@@ -474,7 +714,7 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: true
   }
@@ -506,11 +746,76 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
   },
   skill: {
     linux: "Linux",
-    programming: "C",
+    programming: "C knowledge",
     ssh: true,
     containers: true
   }
 }
 
+export const UCLOUD: HPCType = {
+  id: uuidv4(),
+  intro: 'Not self managed',
+  useCase: 'AI Cloud is a great tool for training large language models – thanks to the powerful GPU processors it provides, it is possible to accelerate various cloud workloads via parallel data processing.',
+  application: 'No application process',
+  type: SystemType.UCloud,
+  name: AllHPC.UCloud,
+  hardware_spec: {
+    vcpu: 64,
+    netwrok_storage: -1,
+    memory: 384,
+    gpu: 0,
+    shared_temporary_storage: 0,
+  },
+  resource_availability: {
+    payment: false,
+    time_limitation: true,
+    minimum_time : false,
+    own_resources : true,
+  },
+  data: [DataLevel.Public, DataLevel.Internal, DataLevel.Confidential, DataLevel.Sensitive],
+  integrations: {
+    gui: true,
+    web_browser: true
+  },
+  skill: {
+    linux: "",
+    programming: "Minimal programming skills",
+    ssh: false,
+    containers: false
+  }
+}
+export const LENOVO: HPCType = {
+  id: uuidv4(),
+  intro: 'Mobile worksation',
+  useCase: 'No data available',
+  application: 'Through AAU library',
+  type: SystemType.LocalMachine,
+  name: AllHPC.LocalMachine,
+  hardware_spec: {
+    vcpu: 1,
+    netwrok_storage: 256,
+    memory: 8,
+    gpu: 1,
+    shared_temporary_storage: 0,
+  },
+  resource_availability: {
+    payment: false,
+    time_limitation: false,
+    minimum_time : false,
+    own_resources : true,
+  },
+  data: [DataLevel.Public, DataLevel.Internal, DataLevel.Confidential, DataLevel.Sensitive],
+  integrations: {
+    gui: true,
+    web_browser: true
+  },
+  skill: {
+    linux: "Windows",
+    programming: "",
+    ssh: false,
+    containers: false
+  }
+}
 
-export const ALL_HPCS_DATA = [STRATO_REGULAR, STRATO_PROJECTS, STRATO_BUY_IN, AI_CLOUD_DATA, AI_CLOUD_PROJECTS_DATA, AI_CLOUD_BUYIN_DATA]
+
+export const ALL_HPCS_DATA = [STRATO_REGULAR, STRATO_PROJECTS, STRATO_BUY_IN, AI_CLOUD_DATA, AI_CLOUD_PROJECTS_DATA, AI_CLOUD_BUYIN_DATA, UCLOUD, LENOVO]

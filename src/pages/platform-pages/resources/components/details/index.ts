@@ -8,3 +8,5 @@ export { default as Resource } from "./Resource";
 export { default as OptionData } from "./OptionData";
 export { default as Integration } from "./Integration";
 export { default as Skills } from "./Skills";
+export { default as UCloud } from "./UCloud";
+export { default as LocalMachine } from "./LocalMachine";

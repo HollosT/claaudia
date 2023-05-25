@@ -21,7 +21,7 @@ const HardwareSpec: React.FC<{data: HarwareSpecType}> = ({data}) => {
             </div>
             <div className="option-item--item">
                 {data.gpu === -1 ? <X /> : <Check />}
-                {data.gpu === -1 ? <p className="option-item--item-body">No GPU access</p> : <p className="option-item--item-body">{typeof data.gpu !== 'string' ?`Up to ${data.gpu} GB GPU` : `${data.gpu} GPU`}</p>}
+                {data.gpu === -1  ? <p className="option-item--item-body">No GPU access</p> : <p className="option-item--item-body">{typeof data.gpu !== 'string' ?`Up to ${data.gpu} GB GPU` : `${data.gpu} GPU`}</p>}
             </div>
             <div className="option-item--item">
                 {data.shared_temporary_storage === -1 ? <X /> : <Check />}
