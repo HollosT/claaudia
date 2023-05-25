@@ -2,5 +2,9 @@
 
     &-header {
         width: 50%;
+
+        @media (max-width: 1450px) {
+            width: 100%
+          }
     }
 }

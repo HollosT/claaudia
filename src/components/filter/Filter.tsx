@@ -53,7 +53,7 @@ const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) 
                     <p className="filter-header--title u-margin-bottom-small">{title}</p>
                     <div className="filter-header--filter u-margin-bottom-medium">
                         {options.map(opt => (
-                            <Fragment key={opt.value}>
+                            <div className="filter-item--container" key={opt.value}>
                                 <Input
                                     type="radio"
                                     name="hpc"
@@ -68,7 +68,7 @@ const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) 
                                     </span>
                                     {opt.label}
                                 </Label>
-                            </Fragment>
+                            </div>
                         ))}
                     </div>
                     <Divider />

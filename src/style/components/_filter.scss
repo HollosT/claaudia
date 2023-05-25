@@ -3,26 +3,41 @@
 
   &-header {
     &--filter {
-        width: 100%;
-        display: flex;
-        gap: 1rem;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+
+      
+      @media (max-width: 1450px) {
+        justify-content: space-between;
+        width: 100rem;
+        overflow-x:scroll;
+      }
+    
       &_item {
         &-radio {
           display: none;
         }
-
+        
         &-label {
           cursor: pointer;
           position: relative;
           text-align: center;
           transition: all 0.3s;
-          padding-inline: 1rem;
+          padding: 1rem;
 
 
+          @media (max-width: 1450px) {
+            display: block;
+            width: 30rem;
+            padding: 0rem;
+
+          }
+          
           .form__radio-button {
             width: 100%;
             height: 100%;
-            display: inline-block;
+            display: block;
             position: absolute;
             border-radius: 100vw;
             transition: opacity 0.3s;
@@ -30,8 +45,12 @@
             z-index: -1;
             top: 0%;
             left: 0;
-
-
+            transition: all 150ms ease-in-out;
+            
+            @media (max-width: 1450px) {
+              width: 100%;
+            }
+            
             &::after {
               content: "";
               display: block;
@@ -46,10 +65,15 @@
             }
           }
         }
-
+        
+        &-radio:hover + &-label .form__radio-button{
+          background-color: $light-grey-50;
+          cursor: pointer;
+        }
         &-radio:checked + &-label .form__radio-button::after {
           opacity: 1;
         }
+       
       }
     }
   }
