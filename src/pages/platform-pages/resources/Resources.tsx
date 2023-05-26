@@ -38,8 +38,8 @@ const Resources: React.FC = () => {
     return (
         <section className="resources">
             <div className="resources-header u-margin-bottom-medium">
-                <h1 className='primary-header u-margin-bottom-small'>AAU HPC Resources</h1>
-                <p className="resources-header--body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <h1 className='primary-header u-margin-bottom-small'>HPC Resources</h1>
+                <p className="resources-header--body">Find out more about high-performance computing resources available for you. See an overview of the offered hardware, operating systems and possible skills required to interact with the machines. Explore the benefits of each of the systems or run a comparison query to have a better understanding of the differences. </p>
             </div>
             <div>
                 <div className='resources-category u-margin-bottom-medium'>

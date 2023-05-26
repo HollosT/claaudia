@@ -159,9 +159,12 @@ a {
 // *******************************************************************
 // Footer
 .footer {
-  &-rights {
+  &-content--body-item {
     color: $paragraph-grey;
+    font-size: 1.6rem;
+
   }
+
 
   &-nav {
     color: $dark-blue;

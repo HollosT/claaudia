@@ -53,7 +53,7 @@ const Home: React.FC = () => {
                     <div className="home-header--content">
                         <h1 className='primary-header u-margin-bottom-small'>Welcome to HPC Matchmaker</h1>
                         <p className="home-header--content-body">
-                        Explore the High-Performance Computing possibilities available to you at Aalborg University and find out which HPC system fits your needs.
+                        Explore the high-performance computing possibilities available to you at Aalborg University and find out which HPC system fits your needs. Convenient cloud computing is accessible now at hand through your laptop. 
                         </p>
                         <Link className="home-header--content-link" to={platformRoutes.quiz.path}>Find out which HPC suits you best <ArrowRight /> </Link>
                     </div>
@@ -70,6 +70,7 @@ const Home: React.FC = () => {
                         ))}
                     </div>
                 </div>
+                
             </div>
             <Footer shown={false} />
         </section>

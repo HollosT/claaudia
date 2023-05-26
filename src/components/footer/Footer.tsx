@@ -11,7 +11,13 @@ const Footer: React.FC<FooterProps> = ({ shown}) => {
         <footer className="footer u-margin-bottom-medium">
             <Divider />
             <div className="footer-content">
-                <p className="footer-rights">All rights reserved to CLAAUDIA © 2023</p>
+                <div className="footer-content--body">
+                    <div className="footer-content--body-container">
+                        <a href="#" className="footer-content--body-item footer-content--body-item_nav">About HPC Matchmaker</a>
+                        <a href="#"  className="footer-content--body-item footer-content--body-item_nav">Contact CLAAUDIA</a>
+                    </div>
+                    <p  className="footer-content--body-item footer-content--body-item_rights">All rights reserved to CLAAUDIA © 2023</p>
+                </div>
                 {shown ?
                     <a href="#topOfThePage" className="footer-nav">
                         <UpArrow />

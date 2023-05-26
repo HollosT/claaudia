@@ -30,6 +30,8 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 2rem;
+        background-color: $color-white;
+        border: none;
 
         &--content {
             width: 60%;
@@ -59,5 +61,10 @@
                 width: 25rem;
             }
         }
+    }
+
+    &-def {
+        padding: 2rem;
+        margin-bottom: 2rem;
     }
 }

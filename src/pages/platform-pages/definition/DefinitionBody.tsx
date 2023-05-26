@@ -1,14 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import Filter from "src/components/filter/Filter";
 import Footer from "src/components/footer/Footer";
-import { DefinitionTopic, DefinitionType } from "src/services/types/definition";
+import { DEFINiTIONS_FILTER_INTRO, DefinitionTopic, DefinitionType } from "src/services/types/definition";
 import { Definitions } from "./components";
 import Search from "src/components/search/Search";
 import { DefinitonContext } from "src/services/context/definition/definition-context";
 
-interface DefinitionBodyProps {
-    data: DefinitionType[]
-}
+import { getAllDefintions } from "src/services/firebase/firebase.utils";
+import { useFetchData } from "src/hooks";
+import { Divider } from "src/atoms";
+import SkeletonDefinition from "./components/SkeletonDefinition";
+
 
 // Here is a code snippet for filtering and searching togehter
 // ****************************************
@@ -27,11 +29,14 @@ interface DefinitionBodyProps {
 
 
 
-const DefinitionBody: React.FC<DefinitionBodyProps> = ({ data }) => {
+const DefinitionBody: React.FC = () => {
+    const {data, loading} = useFetchData(getAllDefintions)
+
     const { isFiltering, isSearching } = useContext(DefinitonContext)
     const [filteredDefinitions, setFilteredDefinitions] = useState(data);
     const [selectedFilter, setSelectedFilter] = useState<string | DefinitionTopic>('All');
     const [searchTerm, setSearchTerm] = useState("");
+    const intro = DEFINiTIONS_FILTER_INTRO.find(def => def.topic === selectedFilter)
 
     useEffect(() => {
         if (data) {
@@ -45,7 +50,7 @@ const DefinitionBody: React.FC<DefinitionBodyProps> = ({ data }) => {
 
     useEffect(() => {
         setFilteredDefinitions(
-            data.filter(item =>
+            data?.filter(item =>
                 item.body.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 item.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
@@ -66,7 +71,7 @@ const DefinitionBody: React.FC<DefinitionBodyProps> = ({ data }) => {
     const systemEnv: DefinitionType[] = [];
     const dataClass: DefinitionType[] = [];
 
-    filteredDefinitions.forEach((def) => {
+    filteredDefinitions?.forEach((def) => {
         switch (def.topic[0]) {
             case DefinitionTopic.Computing:
                 computing.push(def);
@@ -95,13 +100,20 @@ const DefinitionBody: React.FC<DefinitionBodyProps> = ({ data }) => {
             <Search handleChange={handleDataFromSearch} className="u-margin-bottom-small" isFiltering={isFiltering} />
 
             <Filter title="Or filter definitions by topic" data={DefinitionTopic} handleChange={handleDataFromFilter} isSearching={isSearching} />
-            <Definitions data={computing} />
-            <Definitions data={hardware} />
-            <Definitions data={compInf} />
-            <Definitions data={systemEnv} />
-            <Definitions data={dataClass} />
+            {intro && <p className="u-margin-bottom-small">{intro.body}</p>}
+            <Divider />
 
-            <Footer shown={filteredDefinitions.length > 2 ? true : false} />
+            {loading ? <SkeletonDefinition iteration={3} /> : 
+                    <>
+                        <Definitions data={computing} />
+                        <Definitions data={hardware} />
+                        <Definitions data={compInf} />
+                        <Definitions data={systemEnv} />
+                        <Definitions data={dataClass} />
+                    </>
+             }
+
+            <Footer shown={true} />
         </>
     )
 }

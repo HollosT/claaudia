@@ -270,7 +270,7 @@ export const DUMMY_CASES: UseCasesType[] = [
     
   ];
 
-  export const DUMMY_DEFINITIONS: DefinitionType[] = [
+export const DUMMY_DEFINITIONS: DefinitionType[] = [
     {
       id: uuidv4(),
       title: "HPC (High Performance Computing)",
@@ -401,4 +401,5 @@ export const DUMMY_CASES: UseCasesType[] = [
       body: "This is information which, by virtue of its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure. ",
       topic: [DefinitionTopic.DataClassification],
     }, 
-  ];
+];
+
