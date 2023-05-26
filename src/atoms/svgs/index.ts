@@ -8,3 +8,4 @@ export {default as MissingCheck} from './MissingCheck';
 export {default as EmptyCircle} from './EmptyCircle';
 export {default as FeatureIcon} from './FeatureIcon';
 export {default as SelectedAnswer} from './SelectedAnswer';
+export {default as FeatureDataIcon} from './FeatureDataIcon';

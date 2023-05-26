@@ -223,17 +223,18 @@ a {
     }
 
     &--filter {
-      &_item {
-        &-radio {
-          &-label {
+      .filter-item {
+
+          &--title {
             color: $dark-blue;
+            font-size: 1.6rem;
+          transition: all 150ms ease-in-out;
           }
         }
-        &-radio:checked + &-label {
-          color: $color-white;
-        }
       }
-    }
+      .active .filter-item--title {
+        color: $color-white;
+      }
   }
 }
 
@@ -353,6 +354,12 @@ a {
   &--initial-title {
     color: $light-blue;
   }
+
+  &:hover {
+    .category-item--initial-title{
+      color: $color-white;
+    }
+  }
   .category-content {
     &--body {
       &-title {
@@ -381,6 +388,7 @@ a {
   .category-item--initial-title {
     color: $secondary-orange;
   }
+
 }
 
 .data-level {

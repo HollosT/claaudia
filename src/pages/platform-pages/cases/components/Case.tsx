@@ -1,8 +1,19 @@
-import { Divider, FeatureIcon } from "src/atoms";
+import { Divider, FeatureDataIcon, FeatureIcon } from "src/atoms";
 import { StepImage } from "src/pages/introduction/components/stepper";
 import { UseCasesType } from "src/services/types/usecases";
 
 const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
+
+    const returnIcon = (i: number): React.ReactNode => {
+        switch(i) {
+            case 0 :
+                return <FeatureIcon />;
+            case 1 :
+                return <FeatureDataIcon />;
+            default :
+                return <FeatureIcon />;
+        }
+    }
 
     return (
 
@@ -19,7 +30,7 @@ const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
                         <div className="case-body--content-feature_features">
                             {useCase.features.map((ftr, i) => (
                                 <div key={i} className="feature">
-                                    <FeatureIcon />
+                                    {returnIcon(i)}
                                     <p>{ftr.feature}</p>
                                 </div>
                             ))}
@@ -28,7 +39,7 @@ const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
                     <p className="case-body--content-body">{useCase.body}</p>
                 </div>
                 <div className="case-body--image">
-                    <StepImage />
+                    {useCase.img ? <img src={`/${useCase.img}`} />  : <StepImage />}
                 </div>
 
             </div>

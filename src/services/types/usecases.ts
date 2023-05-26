@@ -2,7 +2,7 @@ import { AllHPC } from "./hpc/hpc";
 
 
 export enum UseCasesFilters {
-  MLDL = 'Machine Learning and Deep Learning', 
+  MLDL = 'Machine & Deep Learning', 
   NLP = 'Natural Language Processing (NLP)', 
   KRE = 'Knowledge Representation and Reasoning', 
   TDM = 'Text & Data Mining', 
@@ -22,4 +22,5 @@ export interface UseCasesType {
   hpcs?: AllHPC[];
   features: Features[];
   body: string;
+  img?: string;
 }

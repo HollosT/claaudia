@@ -7,9 +7,21 @@
   border-left: 3px solid $light-blue;
   padding: 2rem;
   align-items: center;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $light-grey-75;
+
+    .category-item--initial{
+      background-color: $light-blue;
+
+    }
+  }
 
   
   &--initial {
+    transition: all 150ms ease-in-out;
     background-color: $light-grey-200;
     border-radius: 4px;
     padding: 1rem;
@@ -17,6 +29,7 @@
     height: 5rem;
 
     &-title {
+      transition: all 150ms ease-in-out;
       text-align: center;
     }
   }
@@ -61,9 +74,17 @@
 .no-hpc {
   background-color: $secondary-orange-8;
   border-left: 3px solid $secondary-orange;
-  .category-item--initial {
+
+  &:hover {
     background-color: $secondary-orange-15;
 
+    .category-item--initial{
+      background-color: $secondary-orange;
+
+    }
+  }
+  .category-item--initial {
+    background-color: $secondary-orange-15;
   }
 }
 

@@ -1,15 +1,15 @@
 
 export enum DefinitionTopic {
-    Components = 'Components',
-    Software = 'Software',
-    SomethingElse = 'Something else',
+   Computing = "Computing",
+   HardwareComponents = "Hardware components",
+   CompInf = "Computing infrastructure",
+   SystemEnv = "System environment",
+   DataClassification = "Data classification",
 }
 
 export interface DefinitionType {
         id: string,
         title: string,
         body: string,
-        link: string,
-        linkTitle: string,
         topic: DefinitionTopic[]
 }

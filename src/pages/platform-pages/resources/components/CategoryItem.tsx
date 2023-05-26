@@ -2,7 +2,7 @@ import { HPCIntroductionType } from "src/services/types/hpc/hpc";
 import Subs from "./Subs";
 import DataLevel from "./DataLevel";
 import AdditionalInfo from "./AdditionalInfo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ResourcesRightArrow } from "./svg";
 
 interface CategoryItemProps {
@@ -11,9 +11,14 @@ interface CategoryItemProps {
 }
 
 const CategoryItem: React.FC<CategoryItemProps> = ({cat, className}) => {
+    const navigate = useNavigate();
+
+    const goTo = () => {
+        navigate(cat.link)
+    }
 
     return (
-            <div  className={className ? `category-item u-margin-bottom-small ${className}` : "category-item u-margin-bottom-small"}>
+            <div onClick={goTo}  className={className ? `category-item u-margin-bottom-small ${className}` : "category-item u-margin-bottom-small"}>
                 <div className='category-item--initial'>
                     <h3 className='category-item--initial-title'>{cat.initial}</h3>
                 </div>

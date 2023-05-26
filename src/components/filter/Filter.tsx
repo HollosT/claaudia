@@ -1,5 +1,5 @@
 import { Fragment, useContext, useEffect, useState } from "react";
-import { Divider, Input, Label } from "src/atoms";
+import { ArrowRight, Divider, Input, Label } from "src/atoms";
 import { keys } from "src/hooks";
 import { DefinitonContext } from "src/services/context/definition/definition-context";
 
@@ -17,13 +17,13 @@ interface OptionType {
 
 const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) => {
     const [active, setActive] = useState<string | T>("All")
-    const { filtering } = useContext(DefinitonContext)
+    const { filtering } = useContext(DefinitonContext);
 
     useEffect(() => {
         if(isSearching) {
             setActive("All")
         }
-    }, [isSearching])
+    }, [isSearching, active])
 
 
     const options = [
@@ -40,38 +40,29 @@ const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) 
         )
     )] as OptionType[];
 
-    const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFilterChange = (value: string) => {
+
+
         filtering()
-        setActive(event.currentTarget.value)
-        handleChange(event.currentTarget.value)
+        setActive(value)
+        handleChange(value)
     };
 
     return (
         <>
             <section className="filter">
                 <div className="filter-header">
-                    <p className="filter-header--title u-margin-bottom-small">{title}</p>
+                    <p className="filter-header--title u-margin-bottom-small">{title}
+                    <ArrowRight className="filter-arrow" />
+                    </p>
+                    
                     <div className="filter-header--filter u-margin-bottom-medium">
                         {options.map(opt => (
-                            <div className="filter-item--container" key={opt.value}>
-                                <Input
-                                    type="radio"
-                                    name="hpc"
-                                    className="filter-header--filter_item-radio"
-                                    value={opt.value}
-                                    onChange={handleFilterChange}
-                                    checked={opt.value === active}
-                                    id={opt.value}
-                                />
-                                <Label for={opt.value} className="filter-header--filter_item-label">
-                                    <span className="form__radio-button">
-                                    </span>
-                                    {opt.label}
-                                </Label>
+                            <div onClick={() => handleFilterChange(opt.value)} className={active === opt.value ? "filter-item active" : "filter-item"} key={opt.value}>
+                                <span className="filter-item--title">{opt.label}</span>
                             </div>
                         ))}
                     </div>
-                    <Divider />
                 </div>
             </section>
         </>
