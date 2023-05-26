@@ -97,7 +97,7 @@ const DefinitionBody: React.FC = () => {
 
     return (
         <>
-            <Search handleChange={handleDataFromSearch} className="u-margin-bottom-small" isFiltering={isFiltering} />
+            <Search handleChange={handleDataFromSearch} className="u-margin-bottom-medium" isFiltering={isFiltering} />
 
             <Filter title="Or filter definitions by topic" data={DefinitionTopic} handleChange={handleDataFromFilter} isSearching={isSearching} />
             {intro && <p className="u-margin-bottom-small">{intro.body}</p>}
