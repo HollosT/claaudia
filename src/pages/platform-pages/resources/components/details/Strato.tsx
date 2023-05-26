@@ -19,6 +19,7 @@ const Strato: React.FC = () => {
             <Tab data={data.tab} />
             <Divider />
             <Options hpcs={stratos} />
+            <Divider className="u-margin-top-small" />
             <Footer shown={true} />
         </section>
 

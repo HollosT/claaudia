@@ -1,7 +1,6 @@
 
 import { HPCCategory, HPCIntroductionType } from 'src/services/types/hpc/hpc';
 import { CategoryItem } from './components';
-import { DUMMY_HPC_CATEGORY } from 'src/services/types/hpc/constant';
 import Footer from 'src/components/footer/Footer';
 import { Divider } from 'src/atoms';
 import { useFetchData } from 'src/hooks';

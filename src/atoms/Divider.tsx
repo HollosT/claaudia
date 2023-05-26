@@ -1,9 +1,9 @@
 
-const Divider: React.FC = () => {
+const Divider: React.FC<{className?: string}> = ({className}) => {
 
     return (
 
-        <div className="divider" />
+        <div className={className ? `divider ${className}` : "divider"} />
     )
 }
 

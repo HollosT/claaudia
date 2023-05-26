@@ -28,11 +28,11 @@ const OptionItem: React.FC<{hpc: HPCType}> = ({hpc}) => {
             <ComparisonIcon />
             Compare with other system
             </Button>
-            <HardwareSpec data={hpc.hardware_spec} />
+            <HardwareSpec data={hpc.hardware_spec} currHpc={hpc.name} />
             <Resource data={hpc.resource_availability} />
             <OptionData data={hpc.data} />
             <Integration data={hpc.integrations} />
-            <Skills data={hpc.skill} />
+            <Skills data={hpc.skill} currHpc={hpc.name} />
         </div>
     )
 }

@@ -14,9 +14,11 @@ const Tab: React.FC<{data: TabType}> = ({data}) => {
             case 0: 
                 return {left: `.5rem`, width: '12rem'};
             case 1: 
-                return {left: `21rem`, width: '14rem'};
+                return {left: `22rem`, width: '5rem'};
             case 2: 
-                return {left: `40.25rem`, width: '2rem'};
+                return {left: `36rem`, width: '8rem'};
+            case 3: 
+                return {left: `53rem`, width: '2rem'};
             default:
                 return {left: `2rem`, width: '12rem'};           
         }

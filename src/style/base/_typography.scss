@@ -484,6 +484,12 @@ a {
                     color: $paragraph-grey;
                   }
               }
+              &--item-buy_in {
+              
+                  .option-item--item-body {
+                    color: $dark-blue;
+                  }
+              }
           }
       }
   }

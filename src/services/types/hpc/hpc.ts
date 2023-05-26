@@ -27,9 +27,11 @@ export interface ResourceAvailabilityType {
 export interface HarwareSpecType {
   vcpu: number,
   netwrok_storage: number,
+  network_storage_plus?: boolean,
   memory: number,
   gpu: number,
   shared_temporary_storage: number,
+  shared_temporary_storage_unlimited?: boolean,
 }
 
 export interface HPCType  {
@@ -48,7 +50,7 @@ export interface HPCType  {
 
 
 export enum AllHPC {
-    AiCloud = "AI Cloud",
+    AiCloud = "AI Cloud regular",
     AiCloudBuyIn = "AI Cloud buy-in",
     AiCloudProjects = "AI Cloud projects",
     StratoRegular = "Strato regular",

@@ -1,7 +1,8 @@
-import { SkillType } from "src/services/types/hpc/hpc"
+import { AllHPC, SkillType } from "src/services/types/hpc/hpc"
 import { Check} from "../svg"
 
-const Skills: React.FC<{data: SkillType}> = ({data}) => {
+const Skills: React.FC<{data: SkillType, currHpc?: AllHPC}> = ({data, currHpc}) => {
+    const isUcloud = currHpc === AllHPC.UCloud
 
     return (
         <div className="option-item">
@@ -9,11 +10,11 @@ const Skills: React.FC<{data: SkillType}> = ({data}) => {
 
             <div className="option-item--item">
                 {data.linux  ?  <Check /> : null}
-                {data.linux  ? <p className="option-item--item-body">{data.linux}</p> : null}
+                {data.linux  ? <p className="option-item--item-body">{data.linux} terminal</p> : null}
             </div>
             <div className="option-item--item">
                 {data.programming  ?  <Check /> : null}
-                {data.programming  ? <p className="option-item--item-body">{data.programming}</p> : null}
+                {data.programming  ? <p className="option-item--item-body">{isUcloud ? data.programming : 'Programming skills'}</p> : null}
             </div>
             <div className="option-item--item">
                 {data.ssh  ?  <Check /> : null}

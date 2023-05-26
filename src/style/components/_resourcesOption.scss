@@ -54,7 +54,14 @@
                     align-items: center;
                     gap: 1rem;
                     margin-bottom: .5rem;
+                }
 
+                &--item-buy_in {
+                  margin-top: 1rem;
+                  background-color: $color-white;
+                  border: 1px solid $border-darker-grey;
+                  padding: 2rem;
+                  border-radius: 4px;
                 }
             }
         }
