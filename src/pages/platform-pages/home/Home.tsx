@@ -3,7 +3,7 @@ import { ArrowRight, Divider } from "src/atoms"
 import Footer from "src/components/footer/Footer"
 import { StepImage } from "src/pages/introduction/components/stepper"
 import platformRoutes from "src/services/router/platform-routes"
-import { Preview } from "./components"
+import { ClaaudiaIntro, Preview } from "./components"
 
 export interface PreviewType {
     icon: React.ReactNode;
@@ -55,7 +55,12 @@ const Home: React.FC = () => {
                         <p className="home-header--content-body">
                         Explore the high-performance computing possibilities available to you at Aalborg University and find out which HPC system fits your needs. Convenient cloud computing is accessible now at hand through your laptop. 
                         </p>
-                        <Link className="home-header--content-link" to={platformRoutes.quiz.path}>Find out which HPC suits you best <ArrowRight /> </Link>
+                        <ClaaudiaIntro />
+                        <div className="home-header--action-container">
+                            <Link className="home-header--content-link" to={platformRoutes.quiz.path}>Find out which HPC suits you best <ArrowRight /> </Link>
+                            <a href="#" className="home-header--content-contact">Contact CLAAUDIA </a>
+
+                        </div>
                     </div>
                     <div className="home-header--image">
                         <StepImage />

@@ -129,6 +129,30 @@ a {
         color: $blue-grey;
       }
     }
+
+    &--action_container{
+
+      .introduction-content--action_container-skip{
+        font-size: 1.6rem;
+      }
+
+      &-step{
+
+        &-current {
+          font-size: 1.6rem;
+          color: $light-blue;
+        }
+        &-slash {
+          font-size: 1.6rem;
+          color: $light-grey;
+        }
+        &-max {
+          font-size: 1.6rem;
+          color: $light-grey;
+        }
+      }
+
+    }
   }
 }
 
@@ -310,16 +334,28 @@ a {
       &-body {
         color: $paragraph-grey;
       }
+
       &-link {
         font-size: 1.6rem;
-        color: $light-blue;
+        color: $color-white;
         transition: all 150ms ease-in-out;
-
-        &:hover,
-        &:active {
-          color: $active-blue;
-        }
       }
+
+      &-contact {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $paragraph-grey;
+      }
+    }
+
+    .claaudia-intro {
+        &--title {
+          color: $dark-blue;
+        }
+
+        &--body {
+          color: $paragraph-grey;
+        }
     }
   }
 

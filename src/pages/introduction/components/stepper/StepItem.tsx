@@ -9,7 +9,7 @@ interface StepProps {
 const StepItem: React.FC<StepProps> = ({ step, active }) => {
 
     return (
-        <article className='introduction-content--body u-margin-top-big u-margin-bottom-medium'>
+        <article className='introduction-content--body u-margin-top-medium u-margin-bottom-medium'>
             <p className='introduction-content--body-question u-margin-bottom-small'>
                 {active + 1}. {step.question}
             </p>

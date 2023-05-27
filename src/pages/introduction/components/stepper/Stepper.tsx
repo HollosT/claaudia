@@ -47,7 +47,7 @@ const Stepper: React.FC<StepperProps> = ({ stps, curr }) => {
             <div className='introduction-content'>
                 <Logo />
                 <StepItem step={activeStep} active={active} />
-                <div className='introduction-content--action_container'>
+                <div className='introduction-content--action_container u-margin-top-big'>
                     <div className='introduction-content--action_container-primer'>
                         {active === 0 
                             ? 
@@ -71,13 +71,20 @@ const Stepper: React.FC<StepperProps> = ({ stps, curr }) => {
                             :
                             <Button className='btn btn-primary introduction-content--action_container-primer--btn' 
                                 onClick={() => handleActive(true)}> 
-                                <span className='btn-primary--count'>{`${active + 1} / ${maxStep}`} |</span> 
+
                                 Next 
                                 <ArrowRight /> 
                             </Button>
                         }
                     </div>
-                    <Button className='introduction-content--action_container-skip btn btn-link' onClick={() => startApp()}>Skip introduction</Button>
+                    <div className='introduction-content--action_container-container'>
+                        <Button className='introduction-content--action_container-skip btn btn-link' onClick={() => startApp()}>Skip introduction</Button>
+                        <div className='introduction-content--action_container-step'>
+                                <span className='introduction-content--action_container-step-current'>{active + 1}</span>
+                                <span className='introduction-content--action_container-step-slash'>/</span>
+                                <span className='introduction-content--action_container-step-max'>{maxStep}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='introduction-img--container'>

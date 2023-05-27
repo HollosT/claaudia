@@ -20,7 +20,7 @@
 
 .introduction {
     margin: 0 auto;
-    height: 50rem;
+    // height: 50rem;
     background-color: $color-white;
     z-index: 100;
 
@@ -53,6 +53,7 @@
                     }
                 }
 
+                
                 &--link {
                     display: flex;
                     gap: .5rem;
@@ -61,10 +62,24 @@
                 }
             }
 
-            &-skip {
-                justify-self: flex-end;
-                color: $light-blue;
+            &-container {
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+
+                .introduction-content--action_container-skip {
+                    justify-self: flex-end;
+                    color: $light-blue;
+                }
+
+                .introduction-content--action_container-step {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                }
             }
+
         }
     }
 

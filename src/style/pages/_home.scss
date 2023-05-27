@@ -10,7 +10,7 @@
 
     &-header {
         display: flex;
-        gap: 20rem;
+        gap: 5rem;
         justify-content: space-between;
         padding-bottom: 3rem;
 
@@ -19,16 +19,32 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            flex: 1;
+            flex: 3;
+
+
+            .home-header--action-container  {
+                display: flex;
+                align-items: center;
+                gap: 4rem;
+            }
 
             &-link {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
                 transition: all 150ms ease-in-out;
+                background-color: $light-blue;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                width: max-content;
+
+                &:hover {
+                    background-color: $light-blue-200;
+                }
+
 
                 .arrow-rigth {
-                    fill: $light-blue;
+                    fill: $color-white;
                     transition: all 150ms ease-in-out;
                     transform: translateX(0);
 
@@ -38,16 +54,24 @@
                     cursor: pointer;
                 }
                 &:hover .arrow-rigth {
-                    fill:  $active-blue;
                     transform: translateX(.5rem);
+                }
+            }
+
+            &-contact {
+                // border-bottom: 1px solid $paragraph-grey;
+                text-decoration: underline;
+                width: max-content;
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }
         &--image {
-            flex: 1;
-            align-self: start;
-            height: 30rem;
-            width: 40rem;
+            flex: 2;
+            align-self: stretch;
+            height: 40rem;
     
     
             image {

@@ -53,7 +53,6 @@ const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) 
             <section className="filter">
                 <div className="filter-header">
                     <p className="filter-header--title u-margin-bottom-small">{title}
-                    <ArrowRight className="filter-arrow" />
                     </p>
                     
                     <div className="filter-header--filter u-margin-bottom-medium">
