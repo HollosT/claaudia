@@ -31,6 +31,7 @@ export interface HarwareSpecType {
   network_storage_plus?: boolean,
   network_storage_budget?: boolean,
   memory: number,
+  memory_budget?: boolean,
   gpu: number,
   gpu_budget?: boolean,
   shared_temporary_storage: number,
