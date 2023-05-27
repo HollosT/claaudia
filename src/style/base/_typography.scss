@@ -561,7 +561,10 @@ a {
                   color: $dark-blue;
                   font-size: 2rem; //
                   
-              
+                  &--tooltip {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                  }
                     
                   @media (max-width: 1450px) {
                     font-size: 1.5rem; //

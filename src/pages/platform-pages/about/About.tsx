@@ -1,5 +1,6 @@
 import { Button } from 'src/atoms';
 import { addCases, addDefinitions, addQuestions, addSystemCategories } from 'src/services/firebase/firebase.utils';
+import SurveyComponent from './SurveyComponent';
 
 
 const About: React.FC = () => {
@@ -26,6 +27,8 @@ const About: React.FC = () => {
             <Button className='btn btn-primary' onClick={categories} >Add categories</Button>
             <Button className='btn btn-primary' onClick={cases} >Add use cases</Button>
             <Button className='btn btn-primary' onClick={definitons} >Add definitions</Button>
+
+            <SurveyComponent />
         </>
     )
 }

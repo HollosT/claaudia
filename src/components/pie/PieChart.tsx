@@ -3,9 +3,9 @@ import 'chart.js/auto'
 
 
 const PieChart: React.FC<{val1: number, val2: number | undefined}> = ({val1, val2}) => {
-    const value1 = val1 === -1 ? 10000000000 : val1;
+    const value1 = val1 === -1 ? 0 : val1;
     const value05 = val2 ? val2 : 0;
-    const value2 = value05 === -1 ? 10000000000 : value05;
+    const value2 = value05 === -1 ? 0 : value05;
 
     let data = value1 === value2 ? [100] :  [value1, value2]
     if(value1 === 0 && value2 === 0) {

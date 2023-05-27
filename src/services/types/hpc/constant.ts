@@ -488,7 +488,7 @@ export const STRATO_REGULAR: HPCType = {
     vcpu: 16,
     netwrok_storage: 5000,
     memory: 32,
-    gpu: -1,
+    gpu: 0,
     shared_temporary_storage: -1,
   },
   resource_availability: {
@@ -552,9 +552,12 @@ export const STRATO_BUY_IN: HPCType= {
   name: AllHPC.StratoBuyIn,
   hardware_spec: {
     vcpu: -1,
+    vcpu_budget: true,
     netwrok_storage: -1,
+    network_storage_budget: true,
     memory: -1,
     gpu: -1,
+    gpu_budget: true,
     shared_temporary_storage: -1,
   },
   resource_availability: {
@@ -651,8 +654,10 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
   hardware_spec: {
     vcpu: -1,
     netwrok_storage: -1,
+    network_storage_budget: true,
     memory: -1,
     gpu: -1,
+    gpu_budget: true,
     shared_temporary_storage: -1,
   },
   resource_availability: {

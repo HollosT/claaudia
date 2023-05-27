@@ -26,10 +26,13 @@ export interface ResourceAvailabilityType {
 
 export interface HarwareSpecType {
   vcpu: number,
+  vcpu_budget?: boolean,
   netwrok_storage: number,
   network_storage_plus?: boolean,
+  network_storage_budget?: boolean,
   memory: number,
   gpu: number,
+  gpu_budget?: boolean,
   shared_temporary_storage: number,
   shared_temporary_storage_unlimited?: boolean,
 }

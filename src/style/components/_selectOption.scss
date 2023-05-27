@@ -117,6 +117,23 @@
         
         &--item-hardware {
             margin-bottom: 1.5rem;
+
+            .select-item--item-body_content-data {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .select-item--item-body_content-data--tooltip {
+                    background-color: $light-blue-opacity-10;
+                    border-radius: 100vw;
+                    padding: .25rem .75rem;
+              
+                }
+
+                .hide {
+                    display: none;
+                }
+            }
             
             .pie {
                 width: 4.4rem !important;
