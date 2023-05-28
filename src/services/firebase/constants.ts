@@ -133,7 +133,7 @@ export const DUMMY_CASES: UseCasesType[] = [
     {
       id: uuidv4(),
       type: AllHPC.StratoRegular,
-      defaculty: UseCasesFilters.KRE,
+      defaculty: UseCasesFilters.KRR,
       title: "Graph data management and knowledge graphs ",
       hpcs: [AllHPC.StratoRegular],
       features: [
@@ -149,7 +149,7 @@ export const DUMMY_CASES: UseCasesType[] = [
     {
       id: uuidv4(),
       type: AllHPC.AiCloud,
-      defaculty: UseCasesFilters.KRE,
+      defaculty: UseCasesFilters.KRR,
       title: "Knowledge graph embedding",
       hpcs: [AllHPC.AiCloud],
       features: [

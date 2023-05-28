@@ -5,9 +5,11 @@ import {
   HPCCategoryType,
   HPCIntroductionType,
   HPCType,
+  ProcessorsType,
   SystemType,
 } from "src/services/types/hpc/hpc";
 import { v4 as uuidv4 } from "uuid";
+import { UseCasesFilters } from "../usecases";
 
 export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
   {
@@ -507,6 +509,10 @@ export const STRATO_REGULAR: HPCType = {
     programming: "C knowledge",
     ssh: true,
     containers: false
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.KRR],
+    processors: [ProcessorsType.cpu]
   }
 };
 
@@ -541,6 +547,10 @@ export const STRATO_PROJECTS: HPCType= {
     programming: "C knowledge",
     ssh: true,
     containers: false
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.KRR],
+    processors: [ProcessorsType.cpu, ProcessorsType.both]
   }
 };
 export const STRATO_BUY_IN: HPCType= {
@@ -577,6 +587,10 @@ export const STRATO_BUY_IN: HPCType= {
     programming: "C knowledge",
     ssh: true,
     containers: false
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.KRR, UseCasesFilters.MLDL],
+    processors: [ProcessorsType.cpu, ProcessorsType.both]
   }
 };
 
@@ -610,6 +624,10 @@ export const AI_CLOUD_DATA: HPCType = {
     programming: "C knowledge",
     ssh: true,
     containers: true
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.MLDL],
+    processors: [ProcessorsType.gpu]
   }
 }
 export const AI_CLOUD_PROJECTS_DATA: HPCType = {
@@ -643,6 +661,10 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
     programming: "C knowledge",
     ssh: true,
     containers: true
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.MLDL],
+    processors: [ProcessorsType.gpu]
   }
 }
 export const AI_CLOUD_BUYIN_DATA: HPCType = {
@@ -678,6 +700,10 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
     programming: "C knowledge",
     ssh: true,
     containers: true
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.MLDL],
+    processors: [ProcessorsType.gpu, ProcessorsType.both]
   }
 }
 
@@ -713,6 +739,10 @@ export const UCLOUD: HPCType = {
     programming: "Minimal programming skills",
     ssh: false,
     containers: false
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.MLDL, UseCasesFilters.KRR],
+    processors: [ProcessorsType.cpu]
   }
 }
 export const LENOVO: HPCType = {
@@ -745,6 +775,10 @@ export const LENOVO: HPCType = {
     programming: "",
     ssh: false,
     containers: false
+  },
+  quiz: {
+    scienceArea: [UseCasesFilters.MLDL, UseCasesFilters.KRR],
+    processors: [ProcessorsType.cpu, ProcessorsType.gpu, ProcessorsType.both]
   }
 }
 

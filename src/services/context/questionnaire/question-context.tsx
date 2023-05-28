@@ -1,4 +1,6 @@
 import { createContext } from "react";
+import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
+import { HPCType } from "src/services/types/hpc/hpc";
 import { QuestionType } from "src/services/types/questions";
 
 interface QuestionContextProps {

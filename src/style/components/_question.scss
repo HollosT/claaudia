@@ -77,3 +77,20 @@
         }
     }
 }
+
+.question-content {
+    // background-color: red;
+
+    .sd-radio--checked{
+       background-color: green;
+    }
+
+}
+
+.custom-radio-item {
+    background-color: orange;
+}
+
+.question-answered {
+    // background-color: green;
+}

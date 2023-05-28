@@ -1,3 +1,4 @@
+import { UseCasesFilters } from "../usecases";
 
 export enum SystemType {
   AICloud =  "AI Cloud",
@@ -38,6 +39,17 @@ export interface HarwareSpecType {
   shared_temporary_storage_unlimited?: boolean,
 }
 
+export enum ProcessorsType {
+  cpu = 'CPU',
+  gpu = 'GPU',
+  both = 'BOTH'
+}
+
+export interface QuizType {
+  scienceArea: UseCasesFilters[],
+  processors: ProcessorsType[],
+}
+
 export interface HPCType  {
   id: string,
   intro: string,
@@ -49,7 +61,8 @@ export interface HPCType  {
   resource_availability: ResourceAvailabilityType,
   data: DataLevel[],
   integrations: IntegrationType,
-  skill: SkillType
+  skill: SkillType,
+  quiz?: QuizType,
 };
 
 

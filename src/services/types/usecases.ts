@@ -4,7 +4,7 @@ import { AllHPC } from "./hpc/hpc";
 export enum UseCasesFilters {
   MLDL = 'Machine & Deep Learning', 
   NLP = 'Natural Language Processing (NLP)', 
-  KRE = 'Knowledge Representation and Reasoning', 
+  KRR = 'Knowledge Representation and Reasoning', 
   TDM = 'Text & Data Mining', 
   CV = 'Computer Vision ', 
   S = 'Simulation', 
