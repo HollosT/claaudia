@@ -10,7 +10,7 @@ interface QuestionProviderProps {
 
 const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [currentHPCs, setCUrrentHPCs] = useState([...keys(AllHPC).map(h => AllHPC[h])])
-    const [progress, setProgress] = useState("0")
+    const [progress, setProgress] = useState("9")
 
     const handleCurrentHPCs = (values: AllHPC[]) => {
         setCUrrentHPCs(values)

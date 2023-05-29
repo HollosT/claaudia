@@ -9,7 +9,7 @@ const Survey: React.FC = () => {
     return (
         <>
             <section className='quiz u-margin-bottom-medium'>
-                <h1 className='primary-header u-margin-bottom-small'>HPC Mathing quiz</h1>
+                <h1 className='primary-header u-margin-bottom-small'>HPC Matching quiz</h1>
                 <Questions />
             </section>
             <Footer shown={true} />
