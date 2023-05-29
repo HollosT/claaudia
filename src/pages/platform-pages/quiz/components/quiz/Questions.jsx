@@ -12,7 +12,7 @@ import CurrentHPCs from "./CurrentHPCs";
 export const ModelContext = createContext();
 
 const Questions = () => {
-    const {handleCurrentHPCs} = useContext(QuestionContext)
+    const {handleCurrentHPCs , handleProgress} = useContext(QuestionContext)
     const [survey, setSurvey] = useState(null);
   
     const customStyles = {
@@ -34,8 +34,10 @@ const Questions = () => {
         const choice = question.elements[0].choices.find((c) => c.value === selectedValue);
   
         if (choice) {
-          const additionalValue = choice.result;
-          handleCurrentHPCs(additionalValue);
+          // const additionalValue = choice.result;
+          const progress = choice.progress;
+          // handleCurrentHPCs(additionalValue);
+          handleProgress(progress)
         }
       }
     };
@@ -43,7 +45,6 @@ const Questions = () => {
  
     
     useEffect(() => {
-     
       const initializedSurvey = new Model(data);
       initializedSurvey.onValueChanged.add((survey, options) => {
 
