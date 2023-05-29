@@ -74,7 +74,7 @@ const HardwareContent: React.FC<{ compared?: boolean }> = ({ compared }) => {
                         <div className="select-item--item-body">
                             <div className="select-item--item-body_content">
                                 <span className="select-item--item-body_content-title">Shared temporary storage</span>
-                                <h3 className="select-item--item-body_content-data">{hpc.hardware_spec.shared_temporary_storage !== -1 ? `${hpc.hardware_spec.shared_temporary_storage} GB shared temporary storage` : `No shared temporary storage`}</h3>
+                                <h3 className="select-item--item-body_content-data">{hpc.hardware_spec.shared_temporary_storage !== -1 ? `${hpc.hardware_spec.shared_temporary_storage} GB storage` : `No shared temporary storage`}</h3>
                             </div>
                             <PieChart val1={hpc.hardware_spec.shared_temporary_storage} val2={comparedVal?.hardware_spec.shared_temporary_storage} />
                         </div>
