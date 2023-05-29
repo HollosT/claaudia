@@ -12,7 +12,6 @@ h1 {
   font-size: 3rem; //
   line-height: 1.194;
   font-weight: 600;
-
 }
 
 h2 {
@@ -24,9 +23,7 @@ h2 {
 h3 {
   font-size: 2rem; //
   line-height: 1.208;
-  font-weight:600;
-
-
+  font-weight: 600;
 }
 
 h4 {
@@ -43,7 +40,7 @@ h5 {
 
 p {
   font-size: 1.6rem; //
-  line-height: 1.8;
+  line-height: 1.7;
   font-weight: 400;
 }
 
@@ -130,14 +127,12 @@ a {
       }
     }
 
-    &--action_container{
-
-      .introduction-content--action_container-skip{
+    &--action_container {
+      .introduction-content--action_container-skip {
         font-size: 1.6rem;
       }
 
-      &-step{
-
+      &-step {
         &-current {
           font-size: 1.6rem;
           color: $light-blue;
@@ -151,7 +146,6 @@ a {
           color: $light-grey;
         }
       }
-
     }
   }
 }
@@ -186,9 +180,7 @@ a {
   &-content--body-item {
     color: $paragraph-grey;
     font-size: 1.6rem;
-
   }
-
 
   &-nav {
     color: $dark-blue;
@@ -197,36 +189,144 @@ a {
 }
 
 // *******************************************************************
-// Survey
+// Matchmaking
 
-// Survey - Questionnaire header
-.questionnarie-header {
-  color: $dark-blue;
-  font-weight: 200;
+.matchmaking {
+
+  
+  &-content {
+      align-self: center;
+      width: 80%;
+
+      &--header {
+          &-title {
+            color: $dark-blue;
+            font-size: 3.4rem;
+        
+          }
+          &-body {
+            color: $paragraph-grey;
+
+          }
+      }
+
+      &--list {
+        &-item {
+          &_body {
+            color: $dark-blue;
+            font-weight: 500;
+
+          }
+        }
+      }
+
+      &--nav {
+        font-size: 1.6rem;
+        color: $color-white;
+        font-weight: 600;
+      }
+  }
 }
 
-.question {
-  &-topic {
-    &--badge {
-      color: $color-white;
-    }
 
-    &--title {
-      color: $blue-grey;
-    }
-  }
-
-  &-question {
+// Progress bar
+.sv-progressbar-percentage {
+  &__title {
     color: $dark-blue;
+    font-size: 1.6rem;
+    font-weight: 500;
   }
 
-  &-answer {
-    &--hint {
-      color: $blue-grey;
+  &__indicator {
+    .sv-progressbar-percentage__value-bar {
+      .sv-progressbar-percentage__value {
+        color: $color-white;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Questions
+.survey {
+  .sd-container-modern {
+    .sd-title {
+      .sv-string-viewer {
+        color: $dark-blue;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+      }
+
+      .sd-element__num {
+        color: $dark-blue;
+        font-size: 2.4rem;
+        font-weight: 600;
+      }
     }
 
-    &--list {
+    .sd-element--with-frame {
+      .question-content {
+        .sd-item {
+          .sd-item__control-label {
+            font-weight: 400;
+            color: $dark-blue;
+
+          }
+
+          &:hover {
+            font-weight: 500;
+            cursor: pointer;
+          }
+          
+        }
+
+        .sd-item--checked {
+          .sd-item__control-label {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .sd-action-bar {
+    .sv-action {
+      .sd-btn {
+        color: $color-white;
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-family: "Barlow", sans-serif;
+      }
+      .sd-navigation__prev-btn {
+        color: $blue-grey;
+      }
+    }
+  }
+}
+
+// Currently advised HPCs
+.hpc-container {
+  &--header {
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 500;
       color: $dark-blue;
+    }
+    &-body {
+      color: $dark-blue;
+      font-style: italic;
+    }
+  }
+
+  &--body {
+    .current-hpc {
+      &--title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $color-black;
+      }
     }
   }
 }
@@ -251,17 +351,16 @@ a {
 
     &--filter {
       .filter-item {
-
-          &--title {
-            color: $dark-blue;
-            font-size: 1.6rem;
+        &--title {
+          color: $dark-blue;
+          font-size: 1.6rem;
           transition: all 150ms ease-in-out;
-          }
         }
       }
-      .active .filter-item--title {
-        color: $color-white;
-      }
+    }
+    .active .filter-item--title {
+      color: $color-white;
+    }
   }
 }
 
@@ -349,23 +448,16 @@ a {
     }
 
     .claaudia-intro {
-        &--title {
-          color: $dark-blue;
-        }
+      &--title {
+        color: $dark-blue;
+      }
 
-        &--body {
-          color: $paragraph-grey;
-        }
+      &--body {
+        color: $paragraph-grey;
+      }
     }
   }
 
-  &-preview {
-    &--title {
-    }
-    &--container {
-      display: flex;
-    }
-  }
 }
 
 .preview {
@@ -395,7 +487,7 @@ a {
   }
 
   &:hover {
-    .category-item--initial-title{
+    .category-item--initial-title {
       color: $color-white;
     }
   }
@@ -427,7 +519,6 @@ a {
   .category-item--initial-title {
     color: $secondary-orange;
   }
-
 }
 
 .data-level {
@@ -479,73 +570,63 @@ a {
 // *******************************************************************
 // Resources
 .resources-options {
-
   &--title {
     color: $dark-blue;
     font-size: 1.8rem;
   }
 
   &-container {
-  
     .option {
-      &-title { 
-           
+      &-title {
+        color: $dark-blue;
+        font-size: 3.4rem;
+        font-weight: 600;
+      }
+      &-body {
+        color: $light-blue;
+      }
+      &-nav {
+        color: $dark-blue;
+        font-size: 1.6rem;
+      }
+
+      &-item {
+        padding-top: 2rem;
+        &--title {
           color: $dark-blue;
-          font-size: 3.4rem;
+          font-size: 1.4rem;
           font-weight: 600;
         }
-        &-body {
-          color: $light-blue;
+        &--item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
 
-        }
-        &-nav {
-          color: $dark-blue;
-          font-size: 1.6rem;
-        }
-        
-
-          &-item {
-              padding-top: 2rem;
-              &--title {
-                color: $dark-blue;
-                font-size: 1.4rem;
-                font-weight: 600;
-              }
-              &--item {
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-
-                  &-body {
-                    color: $paragraph-grey;
-                  }
-              }
-              &--item-buy_in {
-              
-                  .option-item--item-body {
-                    color: $dark-blue;
-                  }
-              }
+          &-body {
+            color: $paragraph-grey;
           }
+        }
+        &--item-buy_in {
+          .option-item--item-body {
+            color: $dark-blue;
+          }
+        }
       }
+    }
   }
 }
 
 // *******************************************************************
 // Comparison
 .comparison {
-
   &-select {
- 
-      &--title{
-        h4 {
-          color: $dark-blue;
-        }
-
+    &--title {
+      h4 {
+        color: $dark-blue;
       }
+    }
   }
 }
-
 
 // *******************************************************************
 // Select
@@ -581,33 +662,29 @@ a {
   }
 
   &-item {
-
-      &--item {
-          
-          &-body {
-              &_content {
-                &-title {
-                  color: $paragraph-grey;
-                  font-size: 1.6rem;
-                  font-weight: 400;
-
-                  
-                }
-                &-data {
-                  color: $dark-blue;
-                  font-size: 2rem; //
-                  
-                  &--tooltip {
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                  }
-                    
-                  @media (max-width: 1450px) {
-                    font-size: 1.5rem; //
-                  }
-                }
-              }
+    &--item {
+      &-body {
+        &_content {
+          &-title {
+            color: $paragraph-grey;
+            font-size: 1.6rem;
+            font-weight: 400;
           }
+          &-data {
+            color: $dark-blue;
+            font-size: 2rem; //
+
+            &--tooltip {
+              font-size: 1.2rem;
+              font-weight: 400;
+            }
+
+            @media (max-width: 1450px) {
+              font-size: 1.5rem; //
+            }
+          }
+        }
       }
+    }
   }
 }

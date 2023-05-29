@@ -13,10 +13,8 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { firebaseConfig } from "./firebaseConfig";
-import { AllHPC, HPCIntroductionType } from "../types/hpc/hpc";
+import { HPCIntroductionType } from "../types/hpc/hpc";
 import { Step } from "../types/introduction";
-import { DUMMY_DATA } from "../context/questionnaire/question-context";
-import { QuestionType } from "../types/questions";
 import {  UseCasesType } from "../types/usecases";
 
 // deleting later
@@ -48,24 +46,6 @@ export const getAllIntroduction = async (): Promise<Step[]> => {
   })) as Step[];
 };
 
-// Will call all the questions
-export const getAllQuestions = async (): Promise<QuestionType[]> => {
-  try {
-    const questionRef = doc(db, "Questions", "GQP9Ra2sJNJnEUD34rtl");
-    const questionSnapshot = await getDoc(questionRef);
-
-    if (questionSnapshot.exists()) {
-      const questionData = questionSnapshot.data();
-      const questions: QuestionType[] = questionData.questions || [];
-      return questions;
-    } else {
-      return [];
-    }
-  } catch (error) {
-    console.error("Error fetching question from Firestore:", error);
-    return [];
-  }
-};
 
 // Will call all the usecases
 export const getAllUseCasess = async (): Promise<UseCasesType[]> => {
@@ -122,19 +102,6 @@ export const getAllSystemCategories = async (): Promise<HPCIntroductionType[]> =
     return [];
   }
 };
-
-// Add colelctions
-export const addQuestions = async () => {
-  try {
-    await setDoc(doc(db, "Questions", "GQP9Ra2sJNJnEUD34rtl"), {
-      questions: DUMMY_DATA,
-    });
-    console.log("Questions added to Firestore successfully!");
-  } catch (error) {
-    console.error("Error adding questions to Firestore:", error);
-  }
-};
-
 
 export const addCases = async () => {
   try {

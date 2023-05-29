@@ -1,0 +1,23 @@
+.hpc-container {
+    
+    &--header {
+        margin-top: 1rem;
+        &-title {
+            
+        }
+        &-body {
+            width: 80%;
+        }
+    }
+
+    &--body {
+        .current-hpc {
+            background-color: $secondary-orange-8;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding: 2rem;
+        }
+    }
+}

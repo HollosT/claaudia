@@ -6,6 +6,7 @@ import "survey-core/defaultV2.min.css";
 import data from "./constants";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import ProgressBar from "./ProgressBar";
+import CurrentHPCs from "./CurrentHPCs";
 
 
 export const ModelContext = createContext();
@@ -57,13 +58,12 @@ const Questions = () => {
 
     return (
       <ModelContext.Provider value={survey}>
-        <div className="questions-container">
             <ProgressBar />
+        <div className="quiz-body u-margin-top-small">
             <div className="survey">
-
-            {survey && <Survey model={survey} />} 
+              {survey && <Survey model={survey} />} 
             </div>
-
+            <CurrentHPCs />
         </div>
       </ModelContext.Provider>
     );

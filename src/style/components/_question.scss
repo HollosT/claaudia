@@ -1,55 +1,103 @@
-.questions-container {
 
     .survey {
-
+        width: 100%;
+        border-right: 1px solid $border-darker-grey;
+        
         .sd-container-modern {
             background-color: $color-white;
             
             .sd-body {
-                margin-left: 0;
-                margin-right: 0;
-            }
-            .question-content {
-                box-shadow: none;
-            
-                .sd-radio--checked{
-                    
-                   background-color: $light-blue-opacity-10;
-                }
-    
-                .sd-item {
-                    border-radius: 4px;
-                    border: 1px solid $border-darker-grey;
-                    margin-bottom: 1rem;
-                }
+                    min-width: 90% !important;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    .sd-title{
+                        // min-width: 80% !important;
+                        
+                        .sd-element__num {
+                            //   margin-left: -.7rem;
+                            display: none;
+                        }
+                        .sv-title-actions .sv-title-actions__title {
+                            max-width: max-content;
+                        }
+                      }
+
+                    .sd-element--with-frame {
+                        box-shadow: none;
+                        padding: 0 !important;
+                        .question-content {
+                            margin-block: 1rem 2rem;
+                        
+                            
                 
-                .sd-item--checked  {
-                    border-radius: 4px;
-                    border: 1px solid $dark-blue;
-        
-                    .sd-item__decorator {
-                        background-color: $dark-blue;
+                            .sd-item {
+                                border-radius: 4px;
+                                border: 1px solid $border-darker-grey;
+                                margin-bottom: 1.5rem;
+                                padding-left: 2rem;
+                                transition: all 150ms ease-in-out;
+
+                                &:hover {
+                                   background-color: $background-light;
+                                   cursor: pointer;
+                                }
+                            }
+
+                            .sd-radio--checked{
+                                background-color: $light-blue-opacity-10;
+                                &:hover {
+                                    background-color: $light-blue-opacity-10;
+                                 }
+                            }
+                            
+                            .sd-item--checked  {
+                                border-radius: 4px;
+                                border: 1px solid $dark-blue;
+                    
+                                .sd-item__decorator {
+                                    background-color: $dark-blue;
+                                }
+                            }
+            
+                            .sd-item__decorator {
+                                background-color: $color-white;
+                            }
+
                     }
                 }
-
-                .sd-item__decorator {
-                    background-color: $color-white;
-                }
-              
-    
-            
             
             }
 
-        }
-        
-        .custom-radio-item {
-            background-color: orange;
-        }
-        
-        .question-answered {
-            // background-color: green;
+            .sd-page {
+                padding: 0;
+            }  
+            .sd-body__navigation.sd-action-bar  {
+                padding: 0;
+            }
+
+            .sd-action-bar {
+                display: flex;
+                justify-content: space-between;
+
+                .sv-action {
+                    .sd-btn {
+                        padding: .5rem 2rem;
+                        box-shadow: none;
+                        border-radius: 4px;
+                    }
+
+                    .sd-navigation__complete-btn,
+                    .sd-navigation__next-btn {
+                        background-color: $light-blue;
+                    }
+
+                    .sd-navigation__prev-btn {
+                        padding: 0;
+                        background-color: transparent;
+                    }
+                }
+            }
         }
     }
-}
 

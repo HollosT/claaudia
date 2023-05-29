@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteList } from './routes';
-import Survey from 'src/pages/platform-pages/quiz/Quiz';
+import Matchmaking from 'src/pages/platform-pages/quiz/Matchmaking';
 import About from 'src/pages/platform-pages/about/About';
 import Cases from 'src/pages/platform-pages/cases/Cases';
 import Definition from 'src/pages/platform-pages/definition/Definition';
@@ -11,6 +11,7 @@ import AboutIcon from 'src/components/navigation/icons/About-icon';
 import Home from 'src/pages/platform-pages/home/Home';
 import { AICloud, LocalMachine, Strato, UCloud } from 'src/pages/platform-pages/resources/components/details';
 import { Comparison } from 'src/pages/platform-pages/resources/components/comparison';
+import { Quiz } from 'src/pages/platform-pages/quiz/components/quiz';
 
 
 const platformRoutes: RouteList = {
@@ -26,11 +27,11 @@ const platformRoutes: RouteList = {
         path: '/resources',
         element: <Resources />
     },
-    quiz: {
+    matchmaking: {
         icon: <SurveyIcon />,
         name: 'HPC Matching quiz',
-        path: '/quiz',
-        element: <Survey />
+        path: '/matchmaking',
+        element: <Matchmaking />
     },
     dictionary: {
         icon: <DictionaryIcon />,
@@ -56,6 +57,12 @@ const platformRoutes: RouteList = {
         name: 'Strato',
         path: '/strato',
         element: <Strato />
+    },
+    quiz: {
+        show: false,
+        name: 'Quiz',
+        path: '/quiz',
+        element: <Quiz />
     },
     aicloud: {
         show: false,
