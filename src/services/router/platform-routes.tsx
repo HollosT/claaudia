@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteList } from './routes';
-import Survey from 'src/pages/platform-pages/quiz/Survey';
+import Survey from 'src/pages/platform-pages/quiz/Quiz';
 import About from 'src/pages/platform-pages/about/About';
 import Cases from 'src/pages/platform-pages/cases/Cases';
 import Definition from 'src/pages/platform-pages/definition/Definition';

@@ -4,6 +4,8 @@ import { QuestionType } from "src/services/types/questions";
 import { getAllQuestions } from "src/services/firebase/firebase.utils";
 import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
 import { UseCasesFilters } from "src/services/types/usecases";
+import { keys } from "src/hooks";
+import { AllHPC } from "src/services/types/hpc/hpc";
 
 interface QuestionProviderProps {
     children: React.ReactNode;
@@ -15,6 +17,7 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [questions, setQuestions] = useState<QuestionType[]>(DUMMY_DATA);
     const [active, setActive] = useState(0);
     const [activeQuestion, setActiveQuestion] = useState(questions[active]);
+    const [currentHPCs, setCUrrentHPCs] = useState([...keys(AllHPC).map(h => AllHPC[h])])
 
 
     useEffect(() => {
@@ -75,6 +78,10 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
         });
     }
 
+    const handleCurrentHPCs = (values: AllHPC[]) => {
+        setCUrrentHPCs(values)
+    }
+
 
     return(
         <QuestionContextProvider
@@ -85,6 +92,8 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
                 handleActive,
                 goTo,
                 updateChecked,
+                currentHPCs,
+                handleCurrentHPCs
             }}
         >
             {props.children}

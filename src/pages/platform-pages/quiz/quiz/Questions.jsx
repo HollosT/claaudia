@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, createContext } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+
 import "survey-core/defaultV2.min.css";
-import data from "./default";
+import data from "./constants";
+import { QuestionContext } from "src/services/context/questionnaire/question-context";
+import ProgressBar from "./ProgressBar";
 
 
+export const ModelContext = createContext();
 
-const SurveyComponent = () => {
-    const [ results, setResults] = useState(null)
+const Questions = () => {
+    const {handleCurrentHPCs} = useContext(QuestionContext)
     const [survey, setSurvey] = useState(null);
-
+  
     const customStyles = {
       "question": {
         "content": "question-content",
@@ -18,7 +22,6 @@ const SurveyComponent = () => {
     };
 
     const onSurveyValueChanged = (survey, options) => {
-      console.log(options)
 
       const selectedValue = survey.getValue(options.name);
   
@@ -27,18 +30,16 @@ const SurveyComponent = () => {
       );
   
       if (question) {
-        // Find the choice object based on the selected value
         const choice = question.elements[0].choices.find((c) => c.value === selectedValue);
   
         if (choice) {
-          // Access the additional value for the selected choice
           const additionalValue = choice.result;
-          console.log(additionalValue)
-          setResults(additionalValue);
+          handleCurrentHPCs(additionalValue);
         }
       }
     };
 
+ 
     
     useEffect(() => {
      
@@ -54,22 +55,18 @@ const SurveyComponent = () => {
     }, []);
   
 
-    // console.log(results)
     return (
-      <>
+      <ModelContext.Provider value={survey}>
+        <div className="questions-container">
+            <ProgressBar />
+            <div className="survey">
 
-        {survey && <Survey model={survey} css={customStyles} />}
-        {results && results.map(r => (
-          <p key={r}>{r}</p>
-        ))}
-      </>
+            {survey && <Survey model={survey} />} 
+            </div>
+
+        </div>
+      </ModelContext.Provider>
     );
   };
   
-  export default SurveyComponent;
-
-  
-  
-  
-  
-  
+  export default Questions;

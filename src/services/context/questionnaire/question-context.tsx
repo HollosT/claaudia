@@ -1,6 +1,7 @@
 import { createContext } from "react";
-import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
-import { HPCType } from "src/services/types/hpc/hpc";
+import { keys } from "src/hooks";
+
+import { AllHPC } from "src/services/types/hpc/hpc";
 import { QuestionType } from "src/services/types/questions";
 
 interface QuestionContextProps {
@@ -10,6 +11,8 @@ interface QuestionContextProps {
     handleActive: (inc: boolean) => void;
     goTo: (index: number) => void
     updateChecked: (label: string) => void;
+    currentHPCs: AllHPC[],
+    handleCurrentHPCs: (values: AllHPC[]) => void;
 }
 
 export const DUMMY_DATA = [
@@ -158,6 +161,8 @@ export const QuestionContext = createContext<QuestionContextProps>({
     handleActive: () => {},
     goTo: () => {},
     updateChecked: () => {},
+    currentHPCs: [...keys(AllHPC).map(h => AllHPC[h])],
+    handleCurrentHPCs: () => {},
 });
 
 export const QuestionContextProvider = QuestionContext.Provider;
