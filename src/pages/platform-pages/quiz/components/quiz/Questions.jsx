@@ -34,9 +34,9 @@ const Questions = () => {
         const choice = question.elements[0].choices.find((c) => c.value === selectedValue);
   
         if (choice) {
-          // const additionalValue = choice.result;
+          const additionalValue = choice.result;
           const progress = choice.progress;
-          // handleCurrentHPCs(additionalValue);
+          handleCurrentHPCs(additionalValue);
           handleProgress(progress)
         }
       }

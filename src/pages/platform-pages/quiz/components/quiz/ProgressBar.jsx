@@ -14,9 +14,6 @@ const ProgressBar = () => {
 
   const progressVale = 100 - Math.round((Number(progress) / 9) * 100);
 
-
- 
-
   return (
     <>
       <div className="sv-progressbar-percentage u-margin-bottom-medium">
