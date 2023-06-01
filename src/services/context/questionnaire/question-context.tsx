@@ -9,6 +9,10 @@ interface QuestionContextProps {
     handleProgress: (prog: string) => void,
     currentHPCs: AllHPC[],
     handleCurrentHPCs: (values: AllHPC[]) => void;
+    handleSelectedHpc: (hpc: AllHPC) => void;
+    selectedHpc: AllHPC,
+    handleIsClose: (isClose: boolean) => void;
+    isClosed: Boolean
 }
 
 
@@ -18,6 +22,11 @@ export const QuestionContext = createContext<QuestionContextProps>({
     handleCurrentHPCs: () => {},
     handleProgress: () => {},
     progress: "10",
+    handleSelectedHpc: () => {},
+    selectedHpc: AllHPC.AiCloud,
+    handleIsClose: () => {},
+    isClosed: false
+
 });
 
 export const QuestionContextProvider = QuestionContext.Provider;

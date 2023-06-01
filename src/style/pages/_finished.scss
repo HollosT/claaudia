@@ -1,0 +1,53 @@
+.finished {
+
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5rem;
+
+        &-success {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            padding-block:  3rem;
+
+            .success-icon {
+                width: 100%;
+                align-self: center;
+            }
+        }
+
+
+        &-next {
+            padding-block:  3rem;
+
+        }
+    }
+
+
+
+    .spec {
+        padding-block: 3rem;
+
+        &-content {
+
+            &--header {
+                display: flex;
+                justify-content: space-between;
+
+                &-action {
+                    display: flex;
+                }
+            }
+
+
+            &--body {
+                display: flex;
+
+                &-data_integration {
+                    
+                }
+            }
+        }
+    }
+}

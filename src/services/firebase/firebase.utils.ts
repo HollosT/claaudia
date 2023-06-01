@@ -18,8 +18,7 @@ import { Step } from "../types/introduction";
 import {  UseCasesType } from "../types/usecases";
 
 // deleting later
-import { v4 as uuidv4 } from "uuid";
-import { DefinitionTopic, DefinitionType } from "../types/definition";
+import { DefinitionType } from "../types/definition";
 import { DUMMY_HPC_CATEGORY } from "../types/hpc/constant";
 import { DUMMY_CASES, DUMMY_DEFINITIONS } from "./constants";
 

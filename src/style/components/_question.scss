@@ -2,6 +2,7 @@
     .survey {
         width: 100%;
         border-right: 1px solid $border-darker-grey;
+        position: relative;
         
         .sd-container-modern {
             background-color: $color-white;
@@ -12,8 +13,11 @@
                     margin-right: 0;
 
                     .sd-title{
-                        // min-width: 80% !important;
-                        
+
+                        &.sd-page__title {
+                            display: none;
+                        }
+ 
                         .sd-element__num {
                             //   margin-left: -.7rem;
                             display: none;
@@ -92,12 +96,23 @@
                         background-color: $light-blue;
                     }
 
+                    .sd-navigation__complete-btn {
+                        // display: none;
+                    }
+
                     .sd-navigation__prev-btn {
                         padding: 0;
                         background-color: transparent;
                     }
                 }
             }
+        }
+
+
+        &-finish--nav {
+            position: absolute;
+            right: 0;
+            bottom: 50%;
         }
     }
 

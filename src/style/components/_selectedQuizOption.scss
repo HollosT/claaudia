@@ -1,0 +1,35 @@
+.selected-hpc {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $color-white;
+  box-shadow: -10px 0px 54px 0px rgba(33, 26, 82, 0.1);
+  transform: translateX(40vw);
+  transition: all 250ms ease-in-out;
+  max-width: 40rem;
+
+  .close-icon {
+    position: fixed;
+    top: 2%;
+    left: -4%;
+    fill: $paragraph-grey;
+
+    &:hover {
+        cursor: pointer;
+        fill: $dark-blue;
+
+    }
+  }
+
+  .selected-hpc--container {
+    padding: 6rem 2rem;
+    overflow: scroll;
+    height: 100vh;
+  }
+
+
+}
+
+.open-selected-hpc {
+  transform: translateX(0vw);
+}

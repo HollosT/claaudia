@@ -18,6 +18,22 @@
             justify-content: space-between;
             margin-bottom: 1rem;
             padding: 2rem;
+            transition: all 150ms ease-in-out;
+
+            svg {
+            transform:  translateX(0rem);
+            transition: all 150ms ease-in-out;
+
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $secondary-orange-15;
+
+                svg {
+                    transform:  translateX(.5rem);
+                }
+            }
         }
     }
 }

@@ -2,18 +2,22 @@ import React, { useEffect, useState, useContext, createContext } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 
+
+
 import "survey-core/defaultV2.min.css";
 import data from "./constants";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import ProgressBar from "./ProgressBar";
 import CurrentHPCs from "./CurrentHPCs";
+import FinishedQuiz from "./FinishedQuiz";
 
 
 export const ModelContext = createContext();
 
 const Questions = () => {
-    const {handleCurrentHPCs , handleProgress} = useContext(QuestionContext)
+    const {handleCurrentHPCs , handleProgress, currentHPCs} = useContext(QuestionContext)
     const [survey, setSurvey] = useState(null);
+    const [finished, setFinished] = useState(true);
   
     const customStyles = {
       "question": {
@@ -52,21 +56,40 @@ const Questions = () => {
       });
 
       initializedSurvey.css = customStyles;
-  
+      
       setSurvey(initializedSurvey);
     }, []);
-  
+
+    if(survey) {
+      survey.onAfterRenderQuestion.add( () => {
+        const completeButton = document.querySelector(".sd-navigation__complete-btn");
+        completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
+      });
+      survey.onComplete.add(() => {
+        setFinished(true)
+        
+      });
+      
+      const completeButton = document.querySelector(".sd-navigation__complete-btn");
+      if(completeButton) {
+        completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
+      }
+    }
 
     return (
-      <ModelContext.Provider value={survey}>
-            <ProgressBar />
-        <div className="quiz-body u-margin-top-small">
-            <div className="survey">
-              {survey && <Survey model={survey} />} 
-            </div>
-            <CurrentHPCs />
-        </div>
-      </ModelContext.Provider>
+      <>
+        <ProgressBar />
+        { finished ?
+          <FinishedQuiz />
+          :
+          <div className="quiz-body u-margin-top-small">
+              <div className="survey">
+                {survey && <Survey model={survey} />} 
+              </div>
+              <CurrentHPCs />
+          </div>
+        }
+      </>
     );
   };
   

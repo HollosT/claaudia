@@ -5,7 +5,7 @@ const Integration: React.FC<{ data: IntegrationType }> = ({ data }) => {
 
     return (
         <div className="option-item">
-            <p className="option-item--title">DATA</p>
+            <p className="option-item--title">INTEGRATIONS</p>
 
             <div className="option-item--item">
                 {data.gui ? <Check /> : <X />}

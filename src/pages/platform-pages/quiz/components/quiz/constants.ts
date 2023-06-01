@@ -1,12 +1,5 @@
 import { AllHPC } from "src/services/types/hpc/hpc";
-
-//  "progress": "8",
-//  "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
-
-
 const data = {
-  "title": "CLAAUDIA 2nd",
-  "logoPosition": "right",
   "pages": [
    {
     "name": "Q1 - page",

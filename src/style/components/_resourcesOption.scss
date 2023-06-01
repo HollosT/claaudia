@@ -12,58 +12,66 @@
 
       }
         
-        .option {
-            padding: 3rem 2rem;
-            border: 1px solid $border-darker-grey;
-            border-radius: 4px;
-            border-top: 3px solid $dark-blue;
-            min-width: 30rem;
-            max-width: 50rem;
-
-              &-title {
-                @include centerOptions();
-                padding-bottom: .5rem;
-                min-width: max-content;
-
-              }
-              &-body {
-                @include centerOptions();
-                min-width: max-content;
-                padding-bottom: 1rem;  
-              }
-              &-nav {
-                @include centerOptions();
-                display: flex;
-                align-items: center;
-                gap: .5rem;
-                background-color: $light-grey-200;
-                padding:  1rem;
-                border-radius: 4px;
-                justify-content: center;
-                min-width: 27rem;
-
-              }
-
-            &-item {
-                @include centerOptions();
-                min-width: 27rem;
-
-    
-                &--item {
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    margin-bottom: .5rem;
-                }
-
-                &--item-buy_in {
-                  margin-top: 1rem;
-                  background-color: $color-white;
-                  border: 1px solid $border-darker-grey;
-                  padding: 2rem;
-                  border-radius: 4px;
-                }
-            }
-        }
     }
-}
+  }
+  .option {
+      padding: 3rem 2rem;
+      border: 1px solid $border-darker-grey;
+      border-radius: 4px;
+      border-top: 3px solid $light-blue;
+      min-width: 30rem;
+      max-width: 50rem;
+
+        &-title {
+          @include centerOptions();
+          padding-bottom: .5rem;
+          min-width: max-content;
+
+        }
+        &-body {
+          @include centerOptions();
+          min-width: max-content;
+          padding-bottom: 1rem;  
+        }
+        
+
+      &-item {
+          @include centerOptions();
+          min-width: 27rem;
+
+
+          &--item {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              margin-bottom: .5rem;
+          }
+
+          &--item-buy_in {
+            margin-top: 1rem;
+            background-color: $color-white;
+            border: 1px solid $border-darker-grey;
+            padding: 2rem;
+            border-radius: 4px;
+          }
+      }
+  }
+
+  .option-nav {
+    @include centerOptions();
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: $light-grey-200;
+    padding:  1rem;
+    border-radius: 4px;
+    justify-content: center;
+    min-width: 27rem;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $light-grey; 
+    }
+
+  }
