@@ -214,6 +214,9 @@ import { AllHPC } from "src/services/types/hpc/hpc";
    }
   ]
  }
+//  "progress": "8",
+//  "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
+
 
 const data = {
   "title": "CLAAUDIA 2nd",
@@ -236,6 +239,8 @@ const data = {
        },
        {
         "value": "Q1.MLDLCV",
+        "progress": "5",
+        "result": [AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.LocalMachine],
         "text": "Machine learning and deep learning or Computer vision"
        },
        {
@@ -370,10 +375,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.0-1",
+        "progress": "4",
+        "result": [AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.b.2-3",
+        "progress": "1",
+        "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
         "text": "I will include data levels 2 , 3"
        }
       ]
@@ -393,10 +402,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.1.a.Yes",
+        "progress": "3",
+        "result": [AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q2.b.1.a.No",
+        "progress": "0",
+        "result": [ AllHPC.AiCloud],
         "text": "No"
        }
       ]
@@ -416,10 +429,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.1.a.1.Yes",
+        "progress": "0",
+        "result": [AllHPC.StratoBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q2.b.1.a.1.No",
+        "progress": "2",
+        "result": [ AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "No"
        }
       ]
@@ -439,10 +456,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.1.b.4",
+        "progress": "0",
+        "result": [AllHPC.AiCloudProjects],
         "text": "Up to 4 GPUs"
        },
        {
         "value": "Q2.b.1.b.+4",
+        "progress": "0",
+        "result": [AllHPC.AiCloudBuyIn],
         "text": "More than 4 GPUs"
        }
       ]
@@ -462,14 +483,20 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.1.a.1.1.16",
+        "progress": "1",
+        "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
         "text": "Up to 16 GPUs"
        },
        {
         "value": "Q2.b.1.a.1.1.+16",
+        "progress": "0",
+        "result": [AllHPC.AiCloudBuyIn],
         "text": "More than 16 GPUs"
        },
        {
         "value": "Q2.b.1.a.1.1.IDK",
+        "progress": "1",
+        "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
         "text": "I don't know"
        }
       ]
@@ -489,10 +516,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.b.1.a.1.1.1.Yes",
+        "progress": "0",
+        "result": [AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q2.b.1.a.1.1.1.No",
+        "progress": "0",
+        "result": [AllHPC.AiCloudProjects],
         "text": "No"
        }
       ]
