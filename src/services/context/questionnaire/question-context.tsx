@@ -17,7 +17,7 @@ export const QuestionContext = createContext<QuestionContextProps>({
     currentHPCs: [...keys(AllHPC).map(h => AllHPC[h])],
     handleCurrentHPCs: () => {},
     handleProgress: () => {},
-    progress: "0",
+    progress: "10",
 });
 
 export const QuestionContextProvider = QuestionContext.Provider;

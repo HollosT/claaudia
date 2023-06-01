@@ -1,219 +1,5 @@
 import { AllHPC } from "src/services/types/hpc/hpc";
 
- const data2 = {
-  "pages": [
-   {
-    "name": "Q1 - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q1",
-      "title": "Which data science area matches your project?",
-      "choices": [
-       {
-        "value": "Q1.KPR",
-        "progress": "8",
-        "text": "Knowledge representation and reasoning"
-       },
-       {
-        "value": "Q1.MLDLCV",
-        "progress": "50",
-        "text": "Machine learning and deep learning or Computer vision"
-       },
-       {
-        "value": "Q1.All",
-        "progress": "33",
-        "text": "Natural language processing or Text and data mining or Simulation or Other"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "name": "Q1.1 - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q1.1",
-      "title": "Is your project CPU-focused (are you going to run many independent tasks) or GPU-focused (are you going to have few tasks running together at once)?",
-      "choices": [
-       {
-        "value": "Q1.1.CPU",
-        "progress": "66",
-        "text": "CPU-focused"
-       },
-       {
-        "value": "Q1.1.GPU",
-        "progress": "66",
-        "text": "GPU-focused"
-       },
-       {
-        "value": "Q1.1.Both",
-        "progress": "66",
-        "text": "It requires efficiency of both processors (CPU and GPU) equally"
-       },
-       {
-        "value": "Q1.1.IDK",
-        "progress": "66",
-        "text": "I don't know"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1} = 'Q1.All'",
-   },
-   {
-    "name": "Q2.a- page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.a",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.a.0-1",
-        "progress": "7",
-
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.a.2-3",
-        "progress": "2",
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1} = 'Q1.KPR'",
-   },
-   {
-    "name": "Q2.b - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.b",
-      "progress": "100",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.b.0-1",
-        "progress": "100",
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.b.2-3",
-        "progress": "100",
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1} = 'Q1.MLDLCV'",
-   },
-   {
-    "name": "Q2.c - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.c",
-      "progress": "100",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.c.0-1",
-        "progress": "100",
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.c.2-3",
-        "progress": "100",
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1.1} = 'Q1.1.CPU'",
-   },
-   {
-    "name": "Q2.d - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.d",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.d.0-1",
-      "progress": "100",
-
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.d.2-3",
-      "progress": "100",
-
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1.1} = 'Q1.1.GPU'",
-    "title": "Q2.d - page"
-   },
-   {
-    "name": "Q2.e - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.e",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.e.0-1",
-      "progress": "100",
-
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.e.2-3",
-      "progress": "100",
-
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1.1} = 'Q1.1.Both'",
-    "title": "Q2.e - page"
-   },
-   {
-    "name": "Q2.f - page",
-    "elements": [
-     {
-      "type": "radiogroup",
-      "name": "Q2.f",
-      "title": "What kind of data levels are you working on?",
-      "choices": [
-       {
-        "value": "Q2.f.0-1",
-      "progress": "100",
-
-        "text": "I’m only working on data levels 0, 1"
-       },
-       {
-        "value": "Q2.f.2-3",
-      "progress": "100",
-
-        "text": "I will include data levels 2 , 3"
-       }
-      ]
-     }
-    ],
-    "visibleIf": "{Q1.1} = 'Q1.1.IDK'",
-    "title": "Q2.f - page"
-   }
-  ]
- }
 //  "progress": "8",
 //  "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
 
@@ -245,6 +31,8 @@ const data = {
        },
        {
         "value": "Q1.All",
+        "progress": "9",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "Natural language processing or Text and data mining or Simulation or Other"
        }
       ]
@@ -263,18 +51,28 @@ const data = {
       "choices": [
        {
         "value": "Q1.1.CPU",
+        "progress": "8",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "CPU-focused"
        },
        {
         "value": "Q1.1.GPU",
+        "progress": "6",
+        "result": [ AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn,AllHPC.LocalMachine],
+       
         "text": "GPU-focused"
        },
        {
         "value": "Q1.1.Both",
+        "progress": "3",
+        "result": [AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloudBuyIn,AllHPC.LocalMachine],
+
         "text": "It requires efficiency of both processors (CPU and GPU) equally"
        },
        {
         "value": "Q1.1.IDK",
+        "progress": "8",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I don't know"
        }
       ]
@@ -543,10 +341,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.c.0-1",
+        "progress": "7",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.c.2-3",
+        "progress": "2",
+        "result": [AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I will include data levels 2 , 3"
        }
       ]
@@ -566,10 +368,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.d.0-1",
+        "progress": "4",
+        "result": [ AllHPC.AiCloud, AllHPC.AiCloudBuyIn,],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.d.2-3",
+        "progress": "1",
+        "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn,],
         "text": "I will include data levels 2 , 3"
        }
       ]
@@ -589,10 +395,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.e.0-1",
+        "progress": "2",
+        "result": [AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloudBuyIn],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.e.2-3",
+        "progress": "0",
+        "result": [AllHPC.AiCloudBuyIn],
         "text": "I will include data levels 2 , 3"
        }
       ]
@@ -612,10 +422,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.e.1.0-1",
+        "progress": "1",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q2.e.1.2-3",
+        "progress": "0",
+        "result": [AllHPC.StratoProjects],
         "text": "No"
        }
       ]
@@ -635,10 +449,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.e.1.1.Yes",
+        "progress": "0",
+        "result": [ AllHPC.StratoBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q2.e.1.1.No",
+        "progress": "0",
+        "result": [ AllHPC.AiCloudBuyIn],
         "text": "No"
        }
       ]
@@ -659,10 +477,14 @@ const data = {
       "choices": [
        {
         "value": "Q2.f.0-1",
+        "progress": "7",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.f.2-3",
+        "progress": "3",
+        "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I will include data levels 2 , 3"
        }
       ]
@@ -990,14 +812,20 @@ const data = {
       "choices": [
        {
         "value": "Q3.b.No",
+        "progress": "2",
+        "result": [ AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I have no experience with HPC"
        },
        {
         "value": "Q3.b.Medium",
+        "progress": "6",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.b.Advance",
+        "progress": "6",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
       ]
@@ -1017,10 +845,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.b.256",
+        "progress": "1",
+        "result": [ AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "Up to 256 GB"
        },
        {
         "value": "Q3.b.+256",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 256 GB"
        }
       ]
@@ -1040,10 +872,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.b.1.1.8",
+        "progress": "0",
+        "result": [AllHPC.LocalMachine],
         "text": "Up to 8 GB"
        },
        {
         "value": "Q3.b.1.1.+8",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 8 GB"
        }
       ]
@@ -1063,14 +899,20 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.No",
+        "progress": "2",
+        "result": [ AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I have no experience with HPC"
        },
        {
         "value": "Q3.d.Medium",
+        "progress": "6",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.d.Advance",
+        "progress": "6",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
       ]
@@ -1090,10 +932,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.1.256",
+        "progress": "1",
+        "result": [ AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "Up to 256 GB"
        },
        {
         "value": "Q3.d.1.+256",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 256 GB"
        }
       ]
@@ -1113,10 +959,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.1.1.8",
+        "progress": "0",
+        "result": [AllHPC.LocalMachine],
         "text": "Up to 8 GB"
        },
        {
         "value": "Q3.d.1.1.+8",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 8 GB"
        }
       ]
@@ -1136,10 +986,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.Yes",
+        "progress": "4",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.No",
+        "progress": "5",
+        "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "No"
        }
       ]
@@ -1159,10 +1013,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.a.Yes",
+        "progress": "3",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.a.No",
+        "progress": "0",
+        "result": [AllHPC.AiCloud],
         "text": "No"
        }
       ]
@@ -1182,10 +1040,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.a.1.Yes",
+        "progress": "0",
+        "result": [ AllHPC.StratoBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.a.1.No",
+        "progress": "2",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "No"
        }
       ]
@@ -1205,10 +1067,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.a.1.1.1000",
+        "progress": "0",
+        "result": [AllHPC.AiCloud],
         "text": "Up to 1000 GB"
        },
        {
         "value": "Q3.d.2.a.1.1.+1000",
+        "progress": "1",
+        "result": [ AllHPC.StratoBuyIn,AllHPC.AiCloudBuyIn],
         "text": "More than 1000 GB"
        }
       ]
@@ -1228,10 +1094,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.a.1.1.1.Yes",
+        "progress": "0",
+        "result": [ AllHPC.StratoBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.a.1.1.1.No",
+        "progress": "0",
+        "result": [ AllHPC.AiCloudBuyIn],
         "text": "No"
        }
       ]
@@ -1251,10 +1121,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.Yes",
+        "progress": "4",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.StratoProjects, AllHPC.StratoRegular, AllHPC.UCloud],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.b.No",
+        "progress": "2",
+        "result": [AllHPC.StratoProjects, AllHPC.StratoRegular, AllHPC.UCloud],
         "text": "No"
        }
       ]
@@ -1274,10 +1148,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.1.5000",
+        "progress": "0",
+        "result": [AllHPC.StratoRegular],
         "text": "Up to 5000 GB"
        },
        {
         "value": "Q3.d.2.b.1.+5000",
+        "progress": "2",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.StratoProjects, AllHPC.UCloud],
         "text": "More than 5000 GB"
        }
       ]
@@ -1297,10 +1175,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.1.1.240",
+        "progress": "0",
+        "result": [AllHPC.StratoProjects],
         "text": "Up to 240 GB"
        },
        {
         "value": "Q3.d.2.b.1.1.+240",
+        "progress": "1",
+        "result": [ AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "More than 240 GB"
        }
       ]
@@ -1320,10 +1202,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.1.1.1.Yes",
+        "progress": "0",
+        "result": [ AllHPC.StratoBuyIn,],
         "text": "Yes"
        },
        {
         "value": "Q3.d.2.b.1.1.1.No",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "No"
        }
       ]
@@ -1343,10 +1229,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.2.5000",
+        "progress": "0",
+        "result": [AllHPC.StratoRegular],
         "text": "Up to 5000 GB"
        },
        {
         "value": "Q3.d.2.b.2.+5000",
+        "progress": "1",
+        "result": [AllHPC.StratoProjects, AllHPC.UCloud],
         "text": "More than 5000 GB"
        }
       ]
@@ -1366,10 +1256,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.d.2.b.2.1.240",
+        "progress": "0",
+        "result": [ AllHPC.StratoProjects,],
         "text": "Up to 240 GB"
        },
        {
         "value": "Q3.d.2.b.2.1.+240",
+        "progress": "0",
+        "result": [AllHPC.UCloud],
         "text": "More than 240 GB"
        }
       ]
@@ -1389,14 +1283,20 @@ const data = {
       "choices": [
        {
         "value": "Q3.e.No",
+        "progress": "3",
+        "result": [AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I have no experience with HPC"
        },
        {
         "value": "Q3.e.Medium",
+        "progress": "3",
+        "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.e.Advance",
+        "progress": "3",
+        "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
       ]
@@ -1416,10 +1316,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.e.1.256",
+        "progress": "2",
+        "result": [AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "Up to 256 GB"
        },
        {
         "value": "Q3.e.1.+256",
+        "progress": "0",
+        "result": [AllHPC.UCloud],
         "text": "More than 256 GB"
        }
       ]
@@ -1439,10 +1343,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.e.1.1.8",
+        "progress": "0",
+        "result": [AllHPC.LocalMachine],
         "text": "Up to 8 GB"
        },
        {
         "value": "Q3.e.1.1.+8",
+        "progress": "0",
+        "result": [AllHPC.UCloud,],
         "text": "More than 8 GB"
        }
       ]
@@ -1462,10 +1370,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.e.2.Yes",
+        "progress": "1",
+        "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
         "text": "Yes"
        },
        {
         "value": "Q3.e.2.No",
+        "progress": "0",
+        "result": [AllHPC.UCloud],
         "text": "No"
        }
       ]
@@ -1485,10 +1397,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.e.2.1.4",
+        "progress": "0",
+        "result": [ AllHPC.AiCloudProjects],
         "text": "Up to 4 GB"
        },
        {
         "value": "Q3.e.2.1.+4",
+        "progress": "0",
+        "result": [ AllHPC.AiCloudBuyIn],
         "text": "More than 4 GB"
        }
       ]
@@ -1508,10 +1424,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.c.No",
+        "progress": "1",
+        "result": [ AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "Up to 256 GB"
        },
        {
         "value": "Q3.c.Medium",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 256 GB"
        }
       ]
@@ -1531,10 +1451,14 @@ const data = {
       "choices": [
        {
         "value": "Q3.c.1.8",
+        "progress": "0",
+        "result": [AllHPC.LocalMachine],
         "text": "Up to 8 GB"
        },
        {
         "value": "Q3.c.1.+8",
+        "progress": "0",
+        "result": [ AllHPC.UCloud],
         "text": "More than 8GB"
        }
       ]
@@ -1692,7 +1616,7 @@ const data = {
    {
     "type": "complete",
     "expression": "{Q3.e.2.1} = 'Q3.e.2.1.4' or {Q3.e.2.1} = 'Q3.e.2.1.+4'"
-   }
+   },
   ]
  }
 

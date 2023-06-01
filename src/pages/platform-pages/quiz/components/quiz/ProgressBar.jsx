@@ -12,7 +12,7 @@ Serializer.addProperty("survey", "progressTitle");
 const ProgressBar = () => {
   const {progress} = useContext(QuestionContext);
 
-  const progressVale = 100 - Math.round((Number(progress) / 9) * 100);
+  const progressVale = 100 - Math.round((Number(progress) / 10) * 100);
 
   return (
     <>
