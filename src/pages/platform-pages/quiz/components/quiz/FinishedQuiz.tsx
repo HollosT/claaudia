@@ -11,12 +11,10 @@ import FinishedHeader from "./FinishedHeader";
 
 const FinishedQuiz: React.FC = () => {
     const {currentHPCs} = useContext(QuestionContext)
-   
-    // const hpcs = currentHPCs[0]
-    const hpcs = AllHPC.AiCloud
+    const hpcs = currentHPCs[0]
     const hpc = ALL_HPCS_DATA.find(allHpc => allHpc.name === hpcs)
 
-    if(!hpc ) {
+    if(!hpc || currentHPCs.length !== 1 ) {
         return <Loading />
     }
     

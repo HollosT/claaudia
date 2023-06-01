@@ -338,6 +338,73 @@ a {
   }
 }
 
+// Finsihed quiz page
+
+.finished {
+  .content {
+      &-success {
+
+        &--content {
+          &-title {
+            color: $dark-blue;
+          }
+          &-body {
+            color: $paragraph-grey;
+          }
+          &-nav {
+            color: $light-blue;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            &:hover {
+              color: $active-blue;
+            }
+          }
+        }
+      }
+
+
+      &-next {
+          &--title {
+            color: $dark-blue;
+            font-weight: 600;
+          }
+          &--body {
+            color: $paragraph-grey;
+          }
+          &--nav {
+            color: $dark-blue;
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+
+      }
+  }
+
+
+
+  .spec {
+    &-title  {
+      color: $dark-blue;
+    }
+
+      &-content {
+          &--header {
+            &-title {
+              &_title {
+                color: $dark-blue;
+              }
+              &_body {
+                color: $secondary-orange;
+                font-weight: 600;
+              }
+            }
+
+          }
+      }
+  }
+}
+
 // *******************************************************************
 // Use cases page
 .cases {

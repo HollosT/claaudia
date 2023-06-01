@@ -12,7 +12,9 @@ interface QuestionContextProps {
     handleSelectedHpc: (hpc: AllHPC) => void;
     selectedHpc: AllHPC,
     handleIsClose: (isClose: boolean) => void;
-    isClosed: Boolean
+    isClosed: boolean,
+    finished: boolean,
+    handleFinished: (isFinished: boolean) => void;
 }
 
 
@@ -25,7 +27,9 @@ export const QuestionContext = createContext<QuestionContextProps>({
     handleSelectedHpc: () => {},
     selectedHpc: AllHPC.AiCloud,
     handleIsClose: () => {},
-    isClosed: false
+    isClosed: false,
+    handleFinished: () => {},
+    finished: false,
 
 });
 

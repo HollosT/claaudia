@@ -15,12 +15,53 @@
                 width: 100%;
                 align-self: center;
             }
+
+            &--content {
+
+                &-nav {
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    transition: all 150ms ease-in-out;
+
+                    .left-arrow {
+                        fill: $light-blue;
+                        transition: all 150ms ease-in-out;
+                        transform: translateX(0);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        .left-arrow {
+                            fill: $active-blue;
+                            transform: translateX(-.5rem);
+                        }
+                    }
+                    
+                }
+            };
         }
 
 
         &-next {
             padding-block:  3rem;
 
+            &--nav {
+                margin-top: 2rem;
+                background-color: $light-grey-200;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                transition: all 150ms ease-in-out;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $border-darker-grey;
+
+                }
+            }
         }
     }
 
@@ -30,20 +71,33 @@
         padding-block: 3rem;
 
         &-content {
+            background-color: $secondary-orange-8;
+            border-top: 3px solid $secondary-orange;
+            border-radius: 4px;
+            padding: 4rem 3rem;
 
             &--header {
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
 
                 &-action {
                     display: flex;
+                    justify-content: space-between;
+                    gap: 5rem;
+                    align-items: center;
+
+                    .option-nav {
+                        min-width: max-content;
+                        padding: 1rem 4rem;
+                        height: max-content;
+
+                    }
                 }
             }
 
-
             &--body {
                 display: flex;
-
+                gap: 1rem;
                 &-data_integration {
                     
                 }

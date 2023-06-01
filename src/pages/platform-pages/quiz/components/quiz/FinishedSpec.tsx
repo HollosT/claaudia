@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { Button } from "src/atoms"
+import { Button, Divider } from "src/atoms"
 import { HardwareSpec, Integration, OptionData, Resource, Skills } from "src/pages/platform-pages/resources/components/details"
 import { ComparisonIcon } from "src/pages/platform-pages/resources/components/svg"
 import { ComparisonContext } from "src/services/context/comparison/comparison-context"
@@ -37,19 +37,19 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
 
     return (
         <div className="spec">
-            <h4>Based on your quiz results, we advise you to apply for:</h4>
+            <h4 className="spec-title u-margin-bottom-medium">Based on your quiz results, we advise you to apply for:</h4>
             <div className="spec-content">
-                <div className="spec-content--header">
+                <div className="spec-content--header u-margin-bottom-medium">
                     <div className="spec-content--header-title">
-                        <h1>{hpc.name}</h1>
-                        <p>{hpc.intro}</p>
+                        <h1 className="spec-content--header-title_title u-margin-bottom-small">{hpc.name}</h1>
+                        <p className="spec-content--header-title_body">{hpc.intro}</p>
                     </div>
                     <div className="spec-content--header-action">
                         <Button className="option-nav" onClick={handleNav}>
                             <ComparisonIcon />
                             Compare with other system
                         </Button>
-                        <Button className="option-nav" onClick={handlePageNav}> Go to {hpc.type}
+                        <Button className="option-nav" onClick={handlePageNav}> Go to {hpc.type} page
 
                         </Button>
                         <Link className="option-nav" to={platformRoutes.cases.path}> View use case
@@ -57,6 +57,7 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
 
                     </div>
                 </div>
+                <Divider />
                 <div className="spec-content--body">
                     <HardwareSpec data={hpc.hardware_spec} />
                     <Resource data={hpc.resource_availability} />

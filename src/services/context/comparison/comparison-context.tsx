@@ -8,7 +8,9 @@ interface ComparisonContextProps {
     comparedHPC: AllHPC | boolean;
     handleSelectedHPC: (value: AllHPC) => void;
     handleComparedHPC: (value: AllHPC) => void;
-    allHPC: HPCType[]
+    allHPC: HPCType[],
+
+
 }
 
 export const ComparisonContext = createContext<ComparisonContextProps>({
@@ -17,6 +19,7 @@ export const ComparisonContext = createContext<ComparisonContextProps>({
     handleSelectedHPC: () => {},
     handleComparedHPC: () => {},
     allHPC: ALL_HPCS_DATA,
+ 
 });
 
 export const ComparisonContextProvider = ComparisonContext.Provider;

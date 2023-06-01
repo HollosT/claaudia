@@ -13,6 +13,7 @@ const ComparisonProvider: React.FC<ComparisonProviderProps>= (props) => {
     const [comparedHPC, setComparedHPC] = useState<AllHPC | false>(false)
     const [allHPC, setAllHPC] = useState(ALL_HPCS_DATA)
 
+
     const handleSelectedHPC = (value: AllHPC) => {
         setSelectedHPC(value)
     }
@@ -33,7 +34,8 @@ const ComparisonProvider: React.FC<ComparisonProviderProps>= (props) => {
                handleSelectedHPC,
                allHPC,
                comparedHPC,
-               handleComparedHPC
+               handleComparedHPC,
+               
             }}
         >
             {props.children}

@@ -15,9 +15,8 @@ import FinishedQuiz from "./FinishedQuiz";
 export const ModelContext = createContext();
 
 const Questions = () => {
-    const {handleCurrentHPCs , handleProgress, currentHPCs} = useContext(QuestionContext)
+    const {handleCurrentHPCs , handleProgress, currentHPCs, finished, handleFinished} = useContext(QuestionContext)
     const [survey, setSurvey] = useState(null);
-    const [finished, setFinished] = useState(true);
   
     const customStyles = {
       "question": {
@@ -66,7 +65,7 @@ const Questions = () => {
         completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
       });
       survey.onComplete.add(() => {
-        setFinished(true)
+        handleFinished(true)
         
       });
       

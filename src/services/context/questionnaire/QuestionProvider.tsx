@@ -13,6 +13,8 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [progress, setProgress] = useState("10");
     const [selectedHpc, setSelectedHpc] = useState(AllHPC.AiCloud)
     const [isClosed, setIsClosed] = useState(true)
+    const [finished, setFinished] = useState(false)
+    
 
 
     const handleCurrentHPCs = (values: AllHPC[]) => {
@@ -28,6 +30,9 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const handleIsClose = (isClose: boolean) => {
         setIsClosed(isClose)
     }
+    const handleFinished = (isFinished: boolean) => {
+        setFinished(isFinished)
+    }
 
 
     return(
@@ -40,7 +45,9 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
                 selectedHpc,
                 handleSelectedHpc,
                 isClosed,
-                handleIsClose
+                handleIsClose,
+                finished,
+               handleFinished
             }}
         >
             {props.children}
