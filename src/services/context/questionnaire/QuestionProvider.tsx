@@ -15,8 +15,6 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [isClosed, setIsClosed] = useState(true)
     const [finished, setFinished] = useState(false)
     
-
-
     const handleCurrentHPCs = (values: AllHPC[]) => {
         setCUrrentHPCs(values)
     }

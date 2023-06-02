@@ -17,16 +17,25 @@
                         &.sd-page__title {
                             display: none;
                         }
- 
+
+                        
                         .sd-element__num {
                             //   margin-left: -.7rem;
                             display: none;
                         }
+
+
+                        
+
                         .sv-title-actions .sv-title-actions__title {
                             max-width: max-content;
-                        }
-                      }
+                            // display: grid;
+                            // grid-template-columns: 99% 1fr;
 
+                        }
+                    }
+
+                   
                     .sd-element--with-frame {
                         box-shadow: none;
                         padding: 0 !important;
@@ -41,6 +50,15 @@
                                 margin-bottom: 1.5rem;
                                 padding-left: 2rem;
                                 transition: all 150ms ease-in-out;
+
+                                .sd-selectbase__label {
+                                    display: flex;
+                                    align-items: center;
+
+                                    .sd-item__control-label {
+                                        width: max-content;
+                                    }
+                                }
 
                                 &:hover {
                                    background-color: $background-light;
@@ -116,3 +134,51 @@
         }
     }
 
+
+
+    .survey-tooltip {
+        background-color: $light-grey-200;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: relative;
+        
+        span {
+            font-size: 1.2rem;
+            color: $dark-blue;
+            font-weight: 600;
+            @include center();
+        }
+
+        &:hover .tooltip-text {
+            visibility: visible;
+          }
+    }
+
+    .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        width: max-content;
+        color: $color-white;
+        background-color: $dark-blue;
+        border-radius: 4px;
+        bottom: 2rem;
+        max-width: 35rem;
+        white-space: normal;
+        left: -2rem; 
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        &::before {
+            content: "";
+            position: absolute;
+            transform: rotate(45deg);
+            background-color: $dark-blue;
+            padding: 6px;
+            z-index: -1;
+            bottom: -2.5%;
+            left: 6.5%;
+        }
+      }

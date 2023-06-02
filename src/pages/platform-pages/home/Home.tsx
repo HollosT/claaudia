@@ -38,10 +38,10 @@ const Home: React.FC = () => {
             linkTitle: 'See HPC Resources'
         },
         {
-            icon: platformRoutes.quiz.icon,
+            icon: platformRoutes.matchmaking.icon,
             title: 'Match the HPC with your needs ',
             body: 'Complete a quick quiz and find most suitable HPC for your work.',
-            link: platformRoutes.quiz.path,
+            link: platformRoutes.matchmaking.path,
             linkTitle: 'Take the HPC Matchmaking Quiz'
         },
     ]

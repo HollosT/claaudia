@@ -13,12 +13,12 @@ const Accordion: React.FC<AccordionInput> = ({title, body, isOpen=false}) => {
     }
 
     return (
-        <div className="accordion">
+        <div className="accordion" style={open ? {minHeight: '22rem'} : {minHeight: '6.5rem'}}>
             <div onClick={toggle} className="accordion-header">
                 <p className={`accordion-header__title ${open ? 'accordion-title-open' : ''}`}>{title}</p>
                 <span className={`accordion-header__arrow material-symbols-outlined ${open ? 'accordion-header__arrow-open' : 'accordion-header__close-close'}`}>expand_more</span>
             </div>
-            <div className={`accordion-body ${open ? 'accordion-body__open' : 'accordion-body__close'}`}>
+            <div className="accordion-body" style={open ? {minHeight: '20rem'} : {minHeight: '0rem'}}>
                 {open && <p className="accordion-body__text">{body}</p>}
             </div>
         </div>

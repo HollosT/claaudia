@@ -4,6 +4,8 @@
     border-radius: 3px;
     overflow: hidden;
     border-left: 3px solid $light-blue;
+    height: 6.5rem;
+    transition: all 250ms ease-in-out;
     
     &-header {
         padding: 1rem;
@@ -11,6 +13,7 @@
         justify-content: space-between;
         align-items: center;
         transition: all .3s ease-in;
+
         
         &__arrow {
             font-size: 4rem;
@@ -35,17 +38,12 @@
     &-body {
         padding-inline: 1rem;
         transition: all .3s ease-in;
+        transition: all 250ms ease-in-out;
 
         &__text {
             padding: .5rem;
         }
 
-        &__open {
-            height: max-content;
-        }
-
-        &__close {
-            height: 0rem; 
-        }
+      
     }
 }

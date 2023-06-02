@@ -31,7 +31,7 @@ const data = {
       ]
      }
     ],
-    "title": "Q1 - page"
+    "title": "Q1 - page",
    },
    {
     "name": "Q1.1 - page",
@@ -45,12 +45,14 @@ const data = {
        {
         "value": "Q1.1.CPU",
         "progress": "8",
+        "popupdescription": "Central Processing Unit (CPU) is the primary component of a computer that performs calculations, instructions, logic, input/output operations, and manages data flow within a computer system.",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "CPU-focused"
        },
        {
         "value": "Q1.1.GPU",
         "progress": "6",
+        "popupdescription": "Graphics Processing Unit (GPU) is a specialised processor designed to handle arithmetic calculations well suited for graphics rendering and parallel processing tasks.",
         "result": [ AllHPC.AiCloud,AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn,AllHPC.LocalMachine],
        
         "text": "GPU-focused"
@@ -86,12 +88,14 @@ const data = {
        {
         "value": "Q2.a.0-1",
         "progress": "7",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.a.2-3",
         "progress": "2",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I will include data levels 2 , 3"
        }
@@ -167,12 +171,14 @@ const data = {
        {
         "value": "Q2.b.0-1",
         "progress": "4",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
         "result": [AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.b.2-3",
         "progress": "1",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
         "text": "I will include data levels 2 , 3"
        }
@@ -335,12 +341,14 @@ const data = {
        {
         "value": "Q2.c.0-1",
         "progress": "7",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.c.2-3",
         "progress": "2",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I will include data levels 2 , 3"
        }
@@ -362,12 +370,15 @@ const data = {
        {
         "value": "Q2.d.0-1",
         "progress": "4",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
+
         "result": [ AllHPC.AiCloud, AllHPC.AiCloudBuyIn,],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.d.2-3",
         "progress": "1",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn,],
         "text": "I will include data levels 2 , 3"
        }
@@ -389,12 +400,15 @@ const data = {
        {
         "value": "Q2.e.0-1",
         "progress": "2",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
+
         "result": [AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloudBuyIn],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.e.2-3",
         "progress": "0",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [AllHPC.AiCloudBuyIn],
         "text": "I will include data levels 2 , 3"
        }
@@ -471,12 +485,15 @@ const data = {
        {
         "value": "Q2.f.0-1",
         "progress": "7",
+        "popupdescription": "Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.",
+
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I’m only working on data levels 0, 1"
        },
        {
         "value": "Q2.f.2-3",
         "progress": "3",
+        "popupdescription": "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
         "result": [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud, AllHPC.LocalMachine],
         "text": "I will include data levels 2 , 3"
        }
@@ -503,12 +520,14 @@ const data = {
        {
         "value": "Q3.a.Medium",
         "progress": "6",
+        "popupdescription": "I have understanding of Linux, command-line or/and I have worked with HPC(s) from CLAAUDIA",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],     
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.a.Advance",
         "progress": "6",
+        "popupdescription": "I have experience working with HPC(s), I have programming skills, I know how to operate Linux terminal, I understand containerisation concept, I have experience with command-line",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],     
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
@@ -812,12 +831,14 @@ const data = {
        {
         "value": "Q3.b.Medium",
         "progress": "6",
+        "popupdescription": "I have understanding of Linux, command-line or/and I have worked with HPC(s) from CLAAUDIA",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.b.Advance",
         "progress": "6",
+        "popupdescription": "I have experience working with HPC(s), I have programming skills, I know how to operate Linux terminal, I understand containerisation concept, I have experience with command-line",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
@@ -899,12 +920,14 @@ const data = {
        {
         "value": "Q3.d.Medium",
         "progress": "6",
+        "popupdescription": "I have understanding of Linux, command-line or/and I have worked with HPC(s) from CLAAUDIA",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.d.Advance",
         "progress": "6",
+        "popupdescription": "I have experience working with HPC(s), I have programming skills, I know how to operate Linux terminal, I understand containerisation concept, I have experience with command-line",
         "result": [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn, AllHPC.AiCloud, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }
@@ -1283,12 +1306,15 @@ const data = {
        {
         "value": "Q3.e.Medium",
         "progress": "3",
+        "popupdescription": "I have understanding of Linux, command-line or/and I have worked with HPC(s) from CLAAUDIA",
+
         "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have scarce/mediocre experience (I have understanding of Linux/command-line or/andI have worked with some HPCs from CLAAUDIA)"
        },
        {
         "value": "Q3.e.Advance",
         "progress": "3",
+        "popupdescription": "I have experience working with HPC(s), I have programming skills, I know how to operate Linux terminal, I understand containerisation concept, I have experience with command-line",
         "result": [ AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn, AllHPC.UCloud],
         "text": "I have vast experience (I have worked with system(s) from HPCs; programming skills, operating Linux terminal, understand containerisation concept, experience with command-line)"
        }

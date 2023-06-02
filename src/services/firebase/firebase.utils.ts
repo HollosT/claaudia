@@ -14,7 +14,7 @@ import {
 } from "firebase/firestore";
 import { firebaseConfig } from "./firebaseConfig";
 import { HPCIntroductionType } from "../types/hpc/hpc";
-import { Step } from "../types/introduction";
+import { INTRODUCTION_DATA, Step } from "../types/introduction";
 import {  UseCasesType } from "../types/usecases";
 
 // deleting later
@@ -36,13 +36,23 @@ export const db = getFirestore();
 //   })) as HPC[];
 // };
 
-// Will call all the HPCs data
+// Will call all the Introduction data
 export const getAllIntroduction = async (): Promise<Step[]> => {
-  const querySnapshot = await getDocs(collection(db, "Introduction"));
-  return querySnapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
-  })) as Step[];
+  try {
+    const defRef = doc(db, "Introduction", "OXdSuMBzljrkq486FUlH");
+    const introductionSnapshot = await getDoc(defRef);
+
+    if (introductionSnapshot.exists()) {
+      const introData = introductionSnapshot.data();
+      const introduction: Step[] = introData.introduction || [];
+      return introduction;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching introduction from Firestore:", error);
+    return [];
+  }
 };
 
 
@@ -134,5 +144,17 @@ export const addSystemCategories = async () => {
     console.log("Categories added to Firestore successfully!");
   } catch (error) {
     console.error("Error adding Categories to Firestore:", error);
+  }
+};
+
+
+export const addIntorduction = async () => {
+  try {
+    await setDoc(doc(db, "Introduction", "OXdSuMBzljrkq486FUlH"), {
+      introduction: INTRODUCTION_DATA,
+    });
+    console.log("Introduction added to Firestore successfully!");
+  } catch (error) {
+    console.error("Error adding Introduction to Firestore:", error);
   }
 };

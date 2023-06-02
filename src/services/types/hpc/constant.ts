@@ -753,9 +753,9 @@ export const LENOVO: HPCType = {
   type: SystemType.LocalMachine,
   name: AllHPC.LocalMachine,
   hardware_spec: {
-    vcpu: 1,
+    vcpu: 8,
     netwrok_storage: 256,
-    memory: 8,
+    memory: 32,
     gpu: 1,
     shared_temporary_storage: 0,
   },
