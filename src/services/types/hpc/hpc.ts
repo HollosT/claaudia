@@ -130,7 +130,7 @@ export interface TabType {
 
 export interface HPCCategoryType {
   id: string;
-  name: string;
+  name: SystemType;
   introduction: string;
   tab: TabType;
   subs?: AllHPC[];

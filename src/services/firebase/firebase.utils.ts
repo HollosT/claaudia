@@ -13,13 +13,13 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { firebaseConfig } from "./firebaseConfig";
-import { HPCIntroductionType } from "../types/hpc/hpc";
+import { HPCCategoryType, HPCIntroductionType } from "../types/hpc/hpc";
 import { INTRODUCTION_DATA, Step } from "../types/introduction";
 import {  UseCasesType } from "../types/usecases";
 
 // deleting later
 import { DefinitionType } from "../types/definition";
-import { DUMMY_HPC_CATEGORY } from "../types/hpc/constant";
+import { DUMMY_HPC_CATEGORY, SYSTEM_DATA } from "../types/hpc/constant";
 import { DUMMY_CASES, DUMMY_DEFINITIONS } from "./constants";
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -51,6 +51,24 @@ export const getAllIntroduction = async (): Promise<Step[]> => {
     }
   } catch (error) {
     console.error("Error fetching introduction from Firestore:", error);
+    return [];
+  }
+};
+// Will call all the Introduction data
+export const getAllSystemData = async (): Promise<HPCCategoryType[]> => {
+  try {
+    const systemRef = doc(db, "SystemData", "FHmyx9w3tkdmDFylEZ2B");
+    const systemDataSnapshot = await getDoc(systemRef);
+
+    if (systemDataSnapshot.exists()) {
+      const systemDataData = systemDataSnapshot.data();
+      const systemData: HPCCategoryType[] = systemDataData.systemData || [];
+      return systemData;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching System Data from Firestore:", error);
     return [];
   }
 };
@@ -148,6 +166,7 @@ export const addSystemCategories = async () => {
 };
 
 
+
 export const addIntorduction = async () => {
   try {
     await setDoc(doc(db, "Introduction", "OXdSuMBzljrkq486FUlH"), {
@@ -156,5 +175,16 @@ export const addIntorduction = async () => {
     console.log("Introduction added to Firestore successfully!");
   } catch (error) {
     console.error("Error adding Introduction to Firestore:", error);
+  }
+};
+
+export const addSystemData = async () => {
+  try {
+    await setDoc(doc(db, "SystemData", "FHmyx9w3tkdmDFylEZ2B"), {
+      systemData: SYSTEM_DATA,
+    });
+    console.log("System data added to Firestore successfully!");
+  } catch (error) {
+    console.error("Error adding System data to Firestore:", error);
   }
 };

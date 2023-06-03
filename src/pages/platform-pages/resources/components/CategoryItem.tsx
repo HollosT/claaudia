@@ -14,6 +14,9 @@ const CategoryItem: React.FC<CategoryItemProps> = ({cat, className}) => {
     const navigate = useNavigate();
 
     const goTo = () => {
+        if(cat.name === "Local machine") {
+            return
+        }
         navigate(cat.link)
     }
 
@@ -34,9 +37,13 @@ const CategoryItem: React.FC<CategoryItemProps> = ({cat, className}) => {
                             {cat.additionalInfo ? <AdditionalInfo info={cat.additionalInfo} /> : null}
                         </div>
                     </div>
-                    <Link to={cat.link}>
-                        <ResourcesRightArrow />
-                    </Link>
+                    {cat.name === "Local machine" ?
+                        null 
+                        :
+                        <Link to={cat.link}>
+                            <ResourcesRightArrow />
+                        </Link>
+                    }
                 </div>
             </div>
     )

@@ -1,21 +1,24 @@
 import { Button } from 'src/atoms';
-import { addCases, addDefinitions, addSystemCategories } from 'src/services/firebase/firebase.utils';
+import { addCases, addDefinitions, addSystemCategories, addSystemData } from 'src/services/firebase/firebase.utils';
 
 
 
 const About: React.FC = () => {
     
 
-const categories = async () => {
-    await addSystemCategories();
-}
+    const categories = async () => {
+        await addSystemCategories();
+    }
 
-const cases = async () => {
-    await addCases();
-}
-const definitons = async () => {
-    await addDefinitions();
-}
+    const cases = async () => {
+        await addCases();
+    }
+    const definitons = async () => {
+        await addDefinitions();
+    }
+    const systemData = async () => {
+        await addSystemData();
+    }
     
     return (
         <>
@@ -23,6 +26,7 @@ const definitons = async () => {
             <Button className='btn btn-primary' onClick={categories} >Add categories</Button>
             <Button className='btn btn-primary' onClick={cases} >Add use cases</Button>
             <Button className='btn btn-primary' onClick={definitons} >Add definitions</Button>
+            <Button className='btn btn-primary' onClick={systemData} >Add System data</Button>
 
         </>
     )

@@ -607,7 +607,7 @@ a {
 
         .addtional-info {
           &--body {
-            color: $dark-blue;
+            color: $color-white;
           }
         }
       }
@@ -617,7 +617,13 @@ a {
 
 .no-hpc {
   .category-item--initial-title {
-    color: $secondary-orange;
+    color: $light-blue;
+  }
+
+  &:hover {
+    .category-item--initial-title{
+      color: $light-blue;
+    }
   }
 }
 

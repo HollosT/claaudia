@@ -63,7 +63,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
 
 export const STRATO_DATA: HPCCategoryType = {
   id: uuidv4(),
-  name: "Strato",
+  name: SystemType.Strato,
   introduction:
     "Strato is an on-premise cloud platform based on servers with CPU and GPU components that enable you to solve both generic and specific computational problems using virtual machines that you can configure yourself. This can be for both short-term problem solving, as well as work that takes a long time.",
   tab: {
@@ -181,9 +181,9 @@ export const STRATO_DATA: HPCCategoryType = {
   subs: [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn],
 };
 
-export const AICLOUD_DATA = {
+export const AICLOUD_DATA: HPCCategoryType = {
   id: uuidv4(),
-  name: "AI Cloud",
+  name: SystemType.AICloud,
   introduction:
     "AI Cloud holds the university's largest collection of GPU resources and is specifically designed for running machine learning workloads. It's particularly well suited for researchers that work with large processes that can be run in parallel.",
   tab: {
@@ -280,9 +280,9 @@ export const AICLOUD_DATA = {
   subs: [AllHPC.StratoRegular, AllHPC.StratoProjects, AllHPC.StratoBuyIn],
 };
 
-export const LOCALMACHINE_DATA = {
+export const LOCALMACHINE_DATA: HPCCategoryType = {
   id: uuidv4(),
-  name: "Local machine",
+  name: SystemType.LocalMachine,
   introduction:
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 tab: {
@@ -404,9 +404,9 @@ tab: {
 },
 subs: [AllHPC.LocalMachine],
 };
-export const UCLOUD_DATA = {
+export const UCLOUD_DATA: HPCCategoryType = {
   id: uuidv4(),
-  name: "UCloud",
+  name: SystemType.UCloud,
   introduction: "Interactive HPC via the UCloud platform, allows the user to interact with a high-performance computer that is allocated purely to them. The platform offers web-hosted applications or access to dedicated virtual machines. In both cases CLAAUDIA can quickly and easily help users get access to additional resources.  ",
   tab: {
   tab_header: [
@@ -472,6 +472,8 @@ export const UCLOUD_DATA = {
 },
   subs: [AllHPC.UCloud],
 };
+
+export const SYSTEM_DATA: HPCCategoryType[] = [STRATO_DATA, AICLOUD_DATA, UCLOUD_DATA]
 
 export const STRATO_REGULAR: HPCType = {
   id: uuidv4(),
