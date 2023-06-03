@@ -1,7 +1,7 @@
 import { SystemType } from "src/services/types/hpc/hpc";
 import DetailsHeader from "./DeailsHeader";
 import { 
-    ALL_HPCS_DATA,  UCLOUD_DATA } from "src/services/types/hpc/constant";
+    ALL_HPCS_DATA} from "src/services/types/hpc/constant";
 import { Tab } from "../tab";
 import { Divider, Loading } from "src/atoms";
 import Options from "./Options";

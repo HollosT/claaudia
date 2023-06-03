@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import Provider from '../services/router/createRouter';
 import QuestionProvider from 'src/services/context/questionnaire/QuestionProvider';
 import DefinitionProvider from 'src/services/context/definition/DefinitionProvider';
@@ -6,10 +6,6 @@ import ComparisonProvider from 'src/services/context/comparison/ComparisonProvid
 import {SkeletonTheme} from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import HPCProvider from 'src/services/context/hpc/HPCProvider';
-import { HPCContext } from 'src/services/context/hpc/hpc-context';
-import { useFetchData } from 'src/hooks';
-import { getAllSystemData } from 'src/services/firebase/firebase.utils';
-import { Loading } from 'src/atoms';
 const App: React.FC = () => {
  
 

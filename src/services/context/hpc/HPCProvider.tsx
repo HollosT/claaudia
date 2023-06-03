@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { HPCContextProvider } from "./hpc-context";
-import { SYSTEM_DATA } from "src/services/types/hpc/constant";
-import { HPCCategory, HPCCategoryType, SystemType } from "src/services/types/hpc/hpc";
+import { HPCCategoryType, SystemType } from "src/services/types/hpc/hpc";
 import { getAllSystemData } from "src/services/firebase/firebase.utils";
 import { useFetchData } from "src/hooks";
 
