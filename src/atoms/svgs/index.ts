@@ -1,5 +1,6 @@
 export {default as ArrowRight} from './ArrowRight';
 export {default as ArrowLeft} from './ArrowLeft';
+export {default as ArrowDown} from './ArrowDown';
 export {default as BottomWave} from './BottomWave';
 export {default as TopWave} from './TopWave';
 export {default as DoneCheck} from './DoneCheck';

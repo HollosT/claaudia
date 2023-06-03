@@ -8,7 +8,7 @@ export const DUMMY_CASES: UseCasesType[] = [
     {
       id: uuidv4(),
       type: AllHPC.AiCloudBuyIn,
-      img: 'assets/usecases.png',
+      img: '/assets/usecases/case-1.png',
       defaculty: UseCasesFilters.MLDL,
       title: "Transformer methods with large amount of data",
       hpcs: [AllHPC.AiCloudBuyIn],
@@ -29,6 +29,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoProjects,
       defaculty: UseCasesFilters.MLDL,
+      img: '/assets/usecases/case-2.png',
       title: "Synthetic data generation and probabilistic graphical model ",
       hpcs: [AllHPC.StratoProjects],
       features: [
@@ -48,6 +49,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.AiCloudProjects,
       defaculty: UseCasesFilters.MLDL,
+      img: '/assets/usecases/case-3.png',
       title: "Synthetic data generation and probabilistic graphical model ",
       hpcs: [AllHPC.AiCloudProjects],
       features: [
@@ -64,6 +66,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.AiCloud,
       defaculty: UseCasesFilters.MLDL,
+      img: '/assets/usecases/case-4.png',
       title: "Electricity price forecasting",
       hpcs: [AllHPC.AiCloud],
       features: [
@@ -96,6 +99,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoProjects,
       defaculty: UseCasesFilters.NLP,
+      img: '/assets/usecases/case-5.png',
       title: "Developing natural language processing pipelines ",
       hpcs: [AllHPC.StratoProjects],
       features: [

@@ -2,6 +2,8 @@ import { createContext } from "react";
 import { keys } from "src/hooks";
 
 import { AllHPC } from "src/services/types/hpc/hpc";
+import { Model } from "survey-core";
+
 
 
 interface QuestionContextProps {
@@ -15,6 +17,8 @@ interface QuestionContextProps {
     isClosed: boolean,
     finished: boolean,
     handleFinished: (isFinished: boolean) => void;
+    survey: Model | null;
+    handleSurvey: (survey: Model) => void
 }
 
 
@@ -30,6 +34,8 @@ export const QuestionContext = createContext<QuestionContextProps>({
     isClosed: false,
     handleFinished: () => {},
     finished: false,
+    handleSurvey: () => {},
+    survey: null,
 
 });
 

@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import {useState } from "react"
 import { QuestionContextProvider } from "./question-context"
 
 import { keys } from "src/hooks";
 import { AllHPC } from "src/services/types/hpc/hpc";
+import { Model } from "survey-core";
+
 
 interface QuestionProviderProps {
     children: React.ReactNode;
@@ -14,6 +16,7 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const [selectedHpc, setSelectedHpc] = useState(AllHPC.AiCloud)
     const [isClosed, setIsClosed] = useState(true)
     const [finished, setFinished] = useState(false)
+    const [survey, setSurvey] = useState<Model | null>(null)
     
     const handleCurrentHPCs = (values: AllHPC[]) => {
         setCUrrentHPCs(values)
@@ -31,6 +34,9 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
     const handleFinished = (isFinished: boolean) => {
         setFinished(isFinished)
     }
+    const handleSurvey = (survey: Model) => {
+        setSurvey(survey)
+    }
 
 
     return(
@@ -45,7 +51,9 @@ const QuestionProvider: React.FC<QuestionProviderProps>= (props) => {
                 isClosed,
                 handleIsClose,
                 finished,
-               handleFinished
+               handleFinished,
+               survey,
+               handleSurvey
             }}
         >
             {props.children}

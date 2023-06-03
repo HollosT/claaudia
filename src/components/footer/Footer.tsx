@@ -1,11 +1,19 @@
-import { Divider } from "src/atoms";
+import { Button, Divider } from "src/atoms";
 import { UpArrow } from "./icons";
+import { useNavigate } from "react-router-dom";
 
 interface FooterProps {
     shown: boolean,
 }
 
 const Footer: React.FC<FooterProps> = ({ shown}) => {
+    const navigate = useNavigate()
+
+    const handleIntro = () => {
+        localStorage.removeItem('introduction');
+        navigate('/')
+    }
+
     return (
         <>
         <footer className="footer u-margin-bottom-medium">
@@ -13,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ shown}) => {
             <div className="footer-content">
                 <div className="footer-content--body">
                     <div className="footer-content--body-container">
-                        <a href="#" className="footer-content--body-item footer-content--body-item_nav">About HPC Matchmaker</a>
+                        <p onClick={handleIntro} className="footer-content--body-item footer-content--body-item_nav">About HPC Matchmaker</p>
                         <a href="#"  className="footer-content--body-item footer-content--body-item_nav">Contact CLAAUDIA</a>
                     </div>
                     <p  className="footer-content--body-item footer-content--body-item_rights">All rights reserved to CLAAUDIA © 2023</p>

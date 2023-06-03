@@ -1,5 +1,25 @@
 .quiz {
     width: 100%;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--btn {
+            border: 1px solid $border-darker-grey;
+            background-color: transparent;
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            height: max-content;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+            cursor: pointer;
+            background-color: $background-light; 
+            }
+        }
+    }
     
     &-body {
         display: grid;

@@ -37,7 +37,7 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
 
     return (
         <div className="spec">
-            <h4 className="spec-title u-margin-bottom-medium">Based on your quiz results, we advise you to apply for:</h4>
+            <h4 className="spec-title u-margin-bottom-medium">Based on your answers, you might consider: </h4>
             <div className="spec-content">
                 <div className="spec-content--header u-margin-bottom-medium">
                     <div className="spec-content--header-title">

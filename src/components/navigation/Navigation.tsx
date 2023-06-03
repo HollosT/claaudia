@@ -5,10 +5,25 @@ import { SidebarWave } from "./icons";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
+  const isQuiz = localStorage.getItem("isQuiz")
 
   const isRouteActive = (routePath: string): boolean => {
+    if (isQuiz && routePath === platformRoutes.matchmaking.path) {
+      return location.pathname === platformRoutes.quiz.path
+    }
+
+    if (routePath === platformRoutes.resources.path) {
+      return  location.pathname === platformRoutes.resources.path || 
+              location.pathname === platformRoutes.aicloud.path || 
+              location.pathname ===   platformRoutes.strato.path || 
+              location.pathname ===   platformRoutes.ucloud.path || 
+              location.pathname ===   platformRoutes.localmachine.path ||
+              location.pathname ===   platformRoutes.comparison.path
+         
+    }
     return location.pathname === routePath;
   };
+
 
   return (
     <nav className="sidebar">
@@ -18,14 +33,25 @@ const Navigation: React.FC = () => {
           route.show === false ?
           null
           :
-          <Link
-            className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
-            key={route.name}
-            to={route.path}
-          >
-            {route.icon}
-            {route.name}
-          </Link>
+          (route.path === platformRoutes.matchmaking.path ?
+            <Link
+              className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
+              key={route.name}
+              to={isQuiz ? platformRoutes.quiz.path : route.path}
+            >
+              {route.icon}
+              {route.name}
+            </Link>
+            :
+            <Link
+              className={`sidebar-list--link ${isRouteActive(route.path) ? "active-link" : ""}`}
+              key={route.name}
+              to={route.path}
+            >
+              {route.icon}
+              {route.name}
+            </Link>
+          )
         ))}
       </ul>
       {/* <div className="contact">

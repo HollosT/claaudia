@@ -130,6 +130,14 @@ a {
     &--action_container {
       .introduction-content--action_container-skip {
         font-size: 1.6rem;
+        color: $dark-blue;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: $light-blue;
+        }
+
       }
 
       &-step {
@@ -180,6 +188,10 @@ a {
   &-content--body-item {
     color: $paragraph-grey;
     font-size: 1.6rem;
+
+    &_nav {
+      font-weight: 400;
+    }
   }
 
   &-nav {
@@ -187,6 +199,20 @@ a {
     font-size: 1.6rem;
   }
 }
+
+// *******************************************************************
+// Quiz - page 
+
+.quiz {
+  &-header {
+    &--btn {
+      color: $light-blue;
+    }
+  }
+}
+
+
+
 
 // *******************************************************************
 // Matchmaking
@@ -221,7 +247,7 @@ a {
       &--nav {
         font-size: 1.6rem;
         color: $color-white;
-        font-weight: 600;
+        font-weight:400;
       }
   }
 }

@@ -1,5 +1,4 @@
 import { Divider, FeatureDataIcon, FeatureIcon } from "src/atoms";
-import { StepImage } from "src/pages/introduction/components/stepper";
 import { UseCasesType } from "src/services/types/usecases";
 
 const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
@@ -14,6 +13,8 @@ const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
                 return <FeatureIcon />;
         }
     }
+
+    const random = Math.floor(Math.random() * 5) + 1;
 
     return (
 
@@ -39,7 +40,7 @@ const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
                     <p className="case-body--content-body">{useCase.body}</p>
                 </div>
                 <div className="case-body--image">
-                    {useCase.img ? <img src={`/${useCase.img}`} />  : <StepImage />}
+                  <img src={useCase.img ? useCase.img : `/assets/usecases/case-${random}.png`} />
                 </div>
 
             </div>

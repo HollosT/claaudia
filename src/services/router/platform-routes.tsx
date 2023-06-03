@@ -29,7 +29,7 @@ const platformRoutes: RouteList = {
     },
     matchmaking: {
         icon: <SurveyIcon />,
-        name: 'HPC Matching quiz',
+        name: 'HPC Matchmaking quiz',
         path: '/matchmaking',
         element: <Matchmaking />
     },

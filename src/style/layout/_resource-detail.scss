@@ -3,6 +3,19 @@
 
     &--header {
         width: 80%;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -5rem;
+            left: -36rem;
+            width: 99.5vw;
+            height: 130%;
+            background-color: $light-grey-200;
+            z-index: -1;
+        }
+
 
         @media (max-width: 1450px) {
             width: 100%

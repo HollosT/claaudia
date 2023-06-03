@@ -9,11 +9,11 @@ const router = createBrowserRouter([
     {
         path: "/",
         loader: () => {
-            const isIntroduction = localStorage.getItem('introduction') === "1"
-            if(isIntroduction) {
-                return redirect(platformRoutes.home.path)
+            const isIntroduction = localStorage.getItem('introduction') === "1";
+            if (isIntroduction) {
+                return redirect(platformRoutes.home.path);
             } else {
-                return redirect(introductionRoutes.introduction.path)
+                return redirect(introductionRoutes.introduction.path);
             }
         },
         errorElement: <ErrorPage/>

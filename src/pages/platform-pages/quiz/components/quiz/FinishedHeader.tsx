@@ -25,14 +25,14 @@ const FinishedHeader: React.FC = () => {
                 <FinishedSuccessIcon />
                 <div className="content-success--content">
                     <p className="content-success--content-title p-huge u-margin-bottom-small">
-                        You have succesfully finished HPC Matching quiz
+                        You have completed the HPC Matchmaking Quiz
                     </p>
                     <p className="content-success--content-body u-margin-bottom-small">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and.
+                        Based on your answers, the selection of HPC has been tailored to the option fitting your needs. You may now take a closer look at the result of the quiz and make sure it fulfils your expectations as well as suits your project requirements.
                     </p>
                     <Button className="content-success--content-nav u-margin-bottom-small" onClick={handleReset}>
                         <ArrowLeft /> 
-                        Re-take the quiz
+                        Retake the quiz
                     </Button>
                 </div>
             </div>
@@ -41,7 +41,7 @@ const FinishedHeader: React.FC = () => {
                         What to do next?
                     </p>
                     <p className="content-next--body u-margin-bottom-small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.  
+                    If you wish to utilize the given high-performance computing system in your project, you should now send a request to CLAAUDIA - Research Data Services at Aalborg University, who will handle your access to the system and answer all your questions regarding its later usage. 
                     </p>
                     <a className="content-next--nav p-big u-margin-bottom-small" href="#"> Contact CLAAUDIA</a>
             </div>

@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, Divider } from "src/atoms"
 import Footer from "src/components/footer/Footer"
-import { StepImage } from "src/pages/introduction/components/stepper"
 import platformRoutes from "src/services/router/platform-routes"
-import { ClaaudiaIntro, Preview } from "./components"
+import { HomeImage, Preview } from "./components"
 
 export interface PreviewType {
     icon: React.ReactNode;
@@ -18,29 +17,29 @@ const Home: React.FC = () => {
     const previews: PreviewType[] = [
         {
             icon: platformRoutes.dictionary.icon,
-            title: 'Find out what is high-performance computing ',
-            body: 'Learn more about HPC and related definitions. ',
+            title: 'Explore HPC Definitions ',
+            body: 'Expand your knowledge of HPC and related terms.',
             link: platformRoutes.dictionary.path,
             linkTitle: 'See Definitions Library'
         },
         {
             icon: platformRoutes.cases.icon,
-            title: 'See use cases',
-            body: "Identify different practices of how the HPC can be utilised in your work. ",
+            title: 'Discover HPC Applications ',
+            body: "Dive into diverse examples of how HPC can enhance your research and work. ",
             link: platformRoutes.cases.path,
             linkTitle: 'See Use Cases'
         },
         {
             icon: platformRoutes.resources.icon,
-            title: 'View the HPC resources',
-            body: 'Find all HPC resources available to you',
+            title: 'Access HPC Resources',
+            body: 'View a collection of available HPC resources and compare the systems for a better overview of their characteristics.',
             link: platformRoutes.resources.path,
             linkTitle: 'See HPC Resources'
         },
         {
             icon: platformRoutes.matchmaking.icon,
-            title: 'Match the HPC with your needs ',
-            body: 'Complete a quick quiz and find most suitable HPC for your work.',
+            title: 'Find Your Ideal HPC Solution',
+            body: 'Take a matchmaking quiz to identify the most suitable HPC option for your specific needs.',
             link: platformRoutes.matchmaking.path,
             linkTitle: 'Take the HPC Matchmaking Quiz'
         },
@@ -52,18 +51,15 @@ const Home: React.FC = () => {
                 <div className="home-header u-margin-bottom-small">
                     <div className="home-header--content">
                         <h1 className='primary-header u-margin-bottom-small'>Welcome to HPC Matchmaker</h1>
-                        <p className="home-header--content-body">
-                        Explore the high-performance computing possibilities available to you at Aalborg University and find out which HPC system fits your needs. Convenient cloud computing is accessible now at hand through your laptop. 
-                        </p>
-                        <ClaaudiaIntro />
+                        <p className="home-header--content-body u-margin-bottom-small">
+                            CLAAUDIA is a research support unit at Aalborg University which provides you with assistance in accessing and using high-performance computing (HPC) resources in your work and projects.  
+                            Explore the computing possibilities available to you at AAU and find out which HPC system fits your individual needs. Convenient cloud computing is accessible now at hand through your laptop.                         </p>
                         <div className="home-header--action-container">
                             <Link className="home-header--content-link" to={platformRoutes.quiz.path}>Find out which HPC suits you best <ArrowRight /> </Link>
-                            <a href="#" className="home-header--content-contact">Contact CLAAUDIA </a>
-
                         </div>
                     </div>
                     <div className="home-header--image">
-                        <StepImage />
+                        <HomeImage />
                     </div>
                 </div>
                 <div className="home-preview u-margin-top-small u-margin-bottom-medium">

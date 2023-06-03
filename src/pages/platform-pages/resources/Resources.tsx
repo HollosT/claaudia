@@ -41,19 +41,7 @@ const Resources: React.FC = () => {
                 <p className="resources-header--body">Find out more about high-performance computing resources available for you. See an overview of the offered hardware, operating systems and possible skills required to interact with the machines. Explore the benefits of each of the systems or run a comparison query to have a better understanding of the differences. </p>
             </div>
             <div>
-                <div className='resources-category u-margin-bottom-medium'>
-                    <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
-                    {loading ?
-
-                        <SkeletonCat />
-                        : 
-                        <>
-                            {noHpc.map(category => (
-                                <CategoryItem key={category.id} cat={category} className="no-hpc" />
-                            ))}
-                        </>
-                    }
-                </div>
+            
                 <div className='resources-category u-margin-bottom-medium'>
                     <h4 className='resources-category--title u-margin-bottom-small'>Internal AAU resources</h4>
                     {loading ?
@@ -74,6 +62,19 @@ const Resources: React.FC = () => {
                         <>
                             {danishHpc.map(category => (
                                 <CategoryItem key={category.id} cat={category} />
+                            ))}
+                        </>
+                    }
+                </div>
+                <div className='resources-category u-margin-bottom-medium'>
+                    <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
+                    {loading ?
+
+                        <SkeletonCat />
+                        : 
+                        <>
+                            {noHpc.map(category => (
+                                <CategoryItem key={category.id} cat={category} className="no-hpc" />
                             ))}
                         </>
                     }

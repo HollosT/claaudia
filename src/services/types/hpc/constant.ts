@@ -94,17 +94,17 @@ export const STRATO_DATA: HPCCategoryType = {
         value: 0,
         data: [
           {
-            img: "https://www.atominfo.hu/files/linux.png",
-            title: " Instances available at hand ",
+            img: "/assets/resources/resources-1.png",
+            title: " Instances available at hand",
             body: "The Strato platform is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment. Strato Instances are virtual machines, that can be launched by the user when they need it. When the instance has been created, it can be accessed from a terminal application on the user's local computer. The required software can then be installed and configured to the user's needs.",
           },
           {
-            img: "https://www.atominfo.hu/files/linux.png",
+            img: "/assets/resources/linux.png",
             title: "Linux based virtual computer",
             body: "Strato is a linux based virtual computer platform to support data driven research that needs additional processing capacity.",
           },
           {
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+            img: "/assets/resources/open-stack.png",
             title: "OpenStack platform flexibility ",
             body: "The OpenStack platform allows the user to change the size of the computer (processing capacity) that is connected to their boot disk. ",
           },
@@ -114,12 +114,10 @@ export const STRATO_DATA: HPCCategoryType = {
         value: 1,
         data: [
           {
-            img: "https://www.atominfo.hu/files/linux.png",
             title: "Hardware possibilities",
             body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power when your research needs it. Additionally, network storage allows users to store and process large datasets.",
           },
           {
-            img: "https://www.atominfo.hu/files/linux.png",
             title: "Adjust the size of the computer without losing your data ",
             body: "A major advantage is that it is possible to keep your setup and data and reduce the size of the computer again when you are done with heavy processing jobs (delete your instance and start a small computer from the boot disk), ensuring that all researchers have access to processing capacity when they need it.",
           }
@@ -216,12 +214,12 @@ export const AICLOUD_DATA = {
         value: 0,
         data: [
           {
-            img: "https://www.atominfo.hu/files/linux.png",
+            img: "/assets/resources/resources-1.png",
             title: "Resource-sharing system",
             body: "Accessing AI Cloud is done from a terminal application found on your local computer. From here you log into a front-end node, where you can manage your files and submit your jobs to a queueing mechanism (Slurm). The job is then distributed to one of the GPU nodes in the cluster. Given that AI Cloud is a platform shared among many users, it is not a system where you install your software directly onto the system. Instead, you rely on software containers, that have all the necessary software libraries bundled up in a single file. ",
           },
           {
-            img: "https://www.atominfo.hu/files/linux.png",
+            img: "/assets/resources/resources-1.png",
             title: "Flexible platform",
             body: "AI Cloud is a collection – a cluster – of large GPU servers and typically requires that users provide a container required to run their job. This makes the platform exceptionally flexible to your individual needs. That flexibility requires you to be able to create or download the container delivering the software that you need.",
           }
@@ -231,7 +229,6 @@ export const AICLOUD_DATA = {
         value: 1,
         data: [
           {
-            img: "https://www.atominfo.hu/files/linux.png",
             title: "Powerful GPU processing",
             body: "The powerful GPU processors allow users to store and process large datasets much more efficiently than would be the case with pure CPU processing. At the same time, the AI Cloud platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as UCloud or Strato for those needs. ",
           }
@@ -311,27 +308,27 @@ tab: {
       value: 0,
       data: [
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Linux based virtual computer",
           body: "Strato is a linux based virtual computer platform to support data driven research that needs additional processing capacity.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Network storage",
           body: "Network storage allows users to store and process large datasets.",
         },
         {
-          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
+          img: "/assets/resources/resources-1.png",
           title: "OpenStack platform",
           body: "The OpenStack platform allows the user to change the size of the computer (processing capacity) that is connected to their boot disk.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Virtualized cluster of hardware",
           body: "The Strato platform is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Accessed on the local computer",
           body: "Strato can be accessed from a terminal application on the user's local computer. The required software can then be installed and configured to the user's needs.",
         },
@@ -341,12 +338,12 @@ tab: {
       value: 1,
       data: [
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+   
           title: "Additional RAM, CPU and GPU hardware",
           body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power, when your research needs it.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+
           title: "CPU Heavy tasks",
           body: "Collaboration on code development, creation of Jupyter Notebook and RStudio Server hosts, testing of web applications.",
         },
@@ -356,7 +353,7 @@ tab: {
           body: "Training of models on GPUs, simulation of physics and biomolecular models, teaching of advanced computational methods and testing of distributed computing systems.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+
           title: "Adjust the size of computer without losing data",
           body: "It is possible to keep your setup and data and reduce the size of the computer again, when you are done with heavy processing jobs. This ensures that all researchers have access to processing capacity when they need it.",
         },
@@ -434,12 +431,12 @@ export const UCLOUD_DATA = {
       value: 0,
       data: [
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Intuitive and user-friendly interface ",
           body: "UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand. UCloud gives researchers access to the computing power they need, whenever they need it.",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
+          img: "/assets/resources/resources-1.png",
           title: "Good fit for first-time interaction with HPC",
           body: "UCloud platform is designed to make the interaction with high-performance computing more convenient and easier to understand. If you don't have a prior experience with any other HPC system, UCloud might be a perfect choice for you. ",
         }
@@ -449,17 +446,14 @@ export const UCLOUD_DATA = {
       value: 1,
       data: [
         {
-          img: "https://www.atominfo.hu/files/linux.png",
           title: "High accessibility ",
           body: "All cloud services are accessible via every type of device, from workstations to laptops and tablets. ",
         },
         {
-          img: "https://www.atominfo.hu/files/linux.png",
           title: "Possibilities to work with different data levels ",
           body: "UCloud is highly secure and provides a safe environment to analyse each of the data levels, including sensitive and confidential data.",
         },
         {
-          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/OpenStack%C2%AE_Logo_2016.svg/1200px-OpenStack%C2%AE_Logo_2016.svg.png",
           title: "Collaboration tool",
           body: "UCloud makes it easy to share data with your collaborators in secure virtual environments. With UCloud you can create and manage virtual workspaces dedicated to your projects, to share resources and work together with your collaborators. There is no limit to how many projects you create and how many team members you have in your project.",
         }
@@ -481,7 +475,7 @@ export const UCLOUD_DATA = {
 
 export const STRATO_REGULAR: HPCType = {
   id: uuidv4(),
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   useCase: 'Strato is a good choice for CPU-intensive processes. It allows for explorative research thanks to its interactive environment - for example running queries or specialized algorithms or working on descriptive data exploration.',
   application: 'No application process',
   type: SystemType.Strato,
@@ -519,7 +513,7 @@ export const STRATO_REGULAR: HPCType = {
 export const STRATO_PROJECTS: HPCType= {
   id: uuidv4(),
   type: SystemType.Strato,
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   useCase: 'Strato Projects is a great solution for those who work with machine learning and need to run their experiments on servers with many CPU cores, for example for creating synthetic data',
   application: 'Internal application process',
   name: AllHPC.StratoProjects,
@@ -555,7 +549,7 @@ export const STRATO_PROJECTS: HPCType= {
 };
 export const STRATO_BUY_IN: HPCType= {
   id: uuidv4(),
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   useCase: 'Strato buy-in is a great for those whose projects require the interactivity of the Strato virtual machines’ environment but at the same time working with large amount of data. Starto buy-in enables you to add the hardware you need, so you can specify your own needs, which will be connected to the system.',
   application: 'Internal application process',
   type: SystemType.Strato,
@@ -596,7 +590,7 @@ export const STRATO_BUY_IN: HPCType= {
 
 export const AI_CLOUD_DATA: HPCType = {
   id: uuidv4(),
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   useCase: 'AI Cloud is a great tool for training large language models – thanks to the powerful GPU processors it provides, it is possible to accelerate various cloud workloads via parallel data processing.',
   application: 'Internal application process',
   type: SystemType.AICloud,
@@ -632,7 +626,7 @@ export const AI_CLOUD_DATA: HPCType = {
 }
 export const AI_CLOUD_PROJECTS_DATA: HPCType = {
   id: uuidv4(),
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   type: SystemType.AICloud,
   useCase: 'AI Cloud Projects is the most fitting choice when it comes to intensive parallel processing with sensitive or confidential data, as this option can be tailored to suit for all data levels.',
   application: 'Internal application process',
@@ -669,7 +663,7 @@ export const AI_CLOUD_PROJECTS_DATA: HPCType = {
 }
 export const AI_CLOUD_BUYIN_DATA: HPCType = {
   id: uuidv4(),
-  intro: 'Self-manage software',
+  intro: 'Self-managed software',
   useCase: 'AI Cloud buy-in offers the opportunity to purchase the hardware that best suits your needs and to include it in the AI Cloud platform. It is convenient for transformer methods in deep learning, particularly when the analysis requires processing of exceptionally large datasets– particularly image or high definition video data.',
   application: 'Internal application process',
   type: SystemType.AICloud,
@@ -709,7 +703,7 @@ export const AI_CLOUD_BUYIN_DATA: HPCType = {
 
 export const UCLOUD: HPCType = {
   id: uuidv4(),
-  intro: 'Not self managed',
+  intro: 'Not self-managed',
   useCase: 'AI Cloud is a great tool for training large language models – thanks to the powerful GPU processors it provides, it is possible to accelerate various cloud workloads via parallel data processing.',
   application: 'No application process',
   type: SystemType.UCloud,
@@ -747,7 +741,7 @@ export const UCLOUD: HPCType = {
 }
 export const LENOVO: HPCType = {
   id: uuidv4(),
-  intro: 'Mobile worksation',
+  intro: 'Mobile workstaion',
   useCase: 'No data available',
   application: 'Through AAU library',
   type: SystemType.LocalMachine,

@@ -1,40 +1,29 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+
 
 import "survey-core/defaultV2.min.css";
 import data from "./constants";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import ProgressBar from "./ProgressBar";
-import { Serializer } from "survey-core";
 import CurrentHPCs from "./CurrentHPCs";
 import FinishedQuiz from "./FinishedQuiz";
 
-Serializer.addProperty("question", "popupdescription:text");
-Serializer.addProperty("page", "popupdescription:text");
-
-function showDescription(element) {
-    document.getElementById("questionDescriptionText").innerHTML = element.popupdescription;
-    var popupEl = document.getElementById("questionDescriptionPopup");
-    document.getElementById("questionDescriptionPopupClose").onclick = () => { popupEl.close(); }
-    popupEl.showModal();
-}
 
 
 const Questions = () => {
-    const {handleCurrentHPCs , handleProgress, currentHPCs, finished, handleFinished} = useContext(QuestionContext)
-    const [survey, setSurvey] = useState(null);
+    const {handleCurrentHPCs , handleProgress, currentHPCs, finished, handleFinished, survey, handleSurvey} = useContext(QuestionContext)
+
   
     const customStyles = {
       "question": {
         "content": "question-content",
         "answered": "question-answered",
-        "tooltip": "question-tooltip"
     }
     };
 
     const onSurveyValueChanged = (survey, options) => {
-
       const selectedValue = survey.getValue(options.name);
   
       const question = data.pages.find((page) =>
@@ -47,8 +36,9 @@ const Questions = () => {
         if (choice) {
           const additionalValue = choice.result;
           const progress = choice.progress;
+
           handleCurrentHPCs(additionalValue);
-          handleProgress(progress)
+          handleProgress(progress);
         }
       }
     };
@@ -62,13 +52,12 @@ const Questions = () => {
 
       initializedSurvey.css = customStyles;
       
-      setSurvey(initializedSurvey);
+      handleSurvey(initializedSurvey);
     }, []);
 
 
 
     if(survey) {
-
       survey.onAfterRenderQuestion.add( () => {
         const completeButton = document.querySelector(".sd-navigation__complete-btn");
         if(completeButton) {
@@ -77,7 +66,6 @@ const Questions = () => {
       });
       survey.onComplete.add(() => {
         handleFinished(true)
-
         survey.clear();
         survey.render();
         
@@ -120,11 +108,7 @@ const Questions = () => {
           }
         }
       });
-
-
-      
     }
-
 
     return (
       <>
@@ -134,7 +118,10 @@ const Questions = () => {
           :
           <div className="quiz-body u-margin-top-small">
               <div className="survey">
-                {survey && <Survey model={survey} />} 
+                {survey && 
+                <Survey
+                 model={survey} 
+                 />} 
               </div>
               <CurrentHPCs />
           </div>
