@@ -9,7 +9,7 @@ import { AllHPC } from 'src/services/types/hpc/hpc';
 
 
 const Survey: React.FC = () => {
-    const { selectedHpc, survey, handleProgress, handleCurrentHPCs } = useContext(QuestionContext)
+    const { selectedHpc, survey, handleProgress, handleCurrentHPCs, progress } = useContext(QuestionContext)
 
     const handleReset = () => {
         if(survey) {
@@ -25,7 +25,7 @@ const Survey: React.FC = () => {
             <section className='quiz u-margin-bottom-medium'>
                 <div className='quiz-header'>
                     <h1 className='primary-header u-margin-bottom-small'>HPC Matchmaking quiz</h1>
-                    <Button className='quiz-header--btn' onClick={handleReset}>Reset</Button>
+                   {progress !== "10" ?  <Button className='quiz-header--btn' onClick={handleReset}>Reset</Button> : null}
                 </div>
                 <Questions/>
                 <SelectedHPC name={selectedHpc} />

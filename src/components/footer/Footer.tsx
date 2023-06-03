@@ -1,4 +1,4 @@
-import { Button, Divider } from "src/atoms";
+import { Divider } from "src/atoms";
 import { UpArrow } from "./icons";
 import { useNavigate } from "react-router-dom";
 

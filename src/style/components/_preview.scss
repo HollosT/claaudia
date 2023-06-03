@@ -36,6 +36,7 @@
 
     &:hover,
     &:active {
+        cursor: pointer;
         background-color: $background-light;
     }
 }

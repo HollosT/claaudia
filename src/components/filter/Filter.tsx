@@ -1,13 +1,14 @@
-import { Fragment, useContext, useEffect, useState } from "react";
-import { ArrowRight, Divider, Input, Label } from "src/atoms";
+import { useContext, useEffect, useState } from "react";
 import { keys } from "src/hooks";
 import { DefinitonContext } from "src/services/context/definition/definition-context";
+import FilterArrow from "./FilterArrow";
 
 interface FilterProps<T> {
     data: T;
     handleChange: (data: string) => void;
-    title: string
-    isSearching?: boolean
+    title: string;
+    isSearching?: boolean;
+    isDefinition?: boolean
 }
 
 interface OptionType {
@@ -15,7 +16,7 @@ interface OptionType {
     value: string
 }
 
-const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) => {
+const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: FilterProps<T>) => {
     const [active, setActive] = useState<string | T>("All")
     const { filtering } = useContext(DefinitonContext);
 
@@ -52,15 +53,19 @@ const Filter = <T,>({ data, handleChange, title, isSearching }: FilterProps<T>) 
         <>
             <section className="filter">
                 <div className="filter-header">
-                    <p className="filter-header--title u-margin-bottom-small">{title}
+                    <p className={isDefinition ? "filter-header--title u-margin-bottom-small fitler-definition--header" : "filter-header--title u-margin-bottom-small"}>
+                        {title}
+                        <FilterArrow />
                     </p>
                     
-                    <div className="filter-header--filter u-margin-bottom-medium">
-                        {options.map(opt => (
-                            <div onClick={() => handleFilterChange(opt.value)} className={active === opt.value ? "filter-item active" : "filter-item"} key={opt.value}>
-                                <span className="filter-item--title">{opt.label}</span>
-                            </div>
-                        ))}
+                    <div className={isDefinition ? "filter-header--filter u-margin-bottom-medium definition-filter"  : "filter-header--filter u-margin-bottom-medium"}>
+                        <div className="filter-header--filter-container">
+                            {options.map(opt => (
+                                <div onClick={() => handleFilterChange(opt.value)} className={active === opt.value ? "filter-item active" : "filter-item"} key={opt.value}>
+                                    <span className="filter-item--title">{opt.label}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

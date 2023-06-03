@@ -43,6 +43,19 @@
         width: max-content;
         align-items: center;
         padding: .5rem 1rem;
+
+        svg {
+           transition: all 150ms ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $background-light;
+
+            svg {
+                transform: translateX(-.5rem);
+            }
+        }
     }
 }
 

@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PreviewType } from "../Home";
 
 const Preview: React.FC<{prev: PreviewType}> = ({prev}) => {
+    const navigate = useNavigate()
+
+    const handleNav = () => {
+        navigate(prev.link)
+    }
+
     return (
-        <article className="preview">
+        <article onClick={handleNav} className="preview">
             <div className="preview-icon">
                 {prev.icon}
             </div>

@@ -16,7 +16,7 @@ const DetailsHeader: React.FC<{title: string, body: string, path?: string}> = ({
             {path ? 
                 <Link className="btn-outline u-margin-bottom-medium" to={path}> <BackLeftArrow /> Back to AAU HPC Resources</Link>
                 :  
-                <a className="btn-outline u-margin-bottom-medium" onClick={goBack}> <BackLeftArrow /> Back to AAU HPC Resources</a>
+                <a className="btn-outline u-margin-bottom-medium" onClick={goBack}> <BackLeftArrow /> Go back</a>
             }
             <h1 className="primary-header u-margin-bottom-small">{title}</h1>
             <p className="resource-detail--body u-margin-bottom-small">{body}</p>
