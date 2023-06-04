@@ -1,184 +1,167 @@
+.survey {
+  width: 100%;
+  border-right: 1px solid $border-darker-grey;
+  position: relative;
 
-    .survey {
-        width: 100%;
-        border-right: 1px solid $border-darker-grey;
-        position: relative;
-        
-        .sd-container-modern {
-            background-color: $color-white;
-            
-            .sd-body {
-                    min-width: 90% !important;
-                    margin-left: 0;
-                    margin-right: 0;
+  .sd-container-modern {
+    background-color: $color-white;
 
-                    .sd-title{
+    .sd-body {
+      min-width: 90% !important;
+      margin-left: 0;
+      margin-right: 0;
 
-                        &.sd-page__title {
-                            display: none;
-                        }
-
-                        
-                        .sd-element__num {
-                            //   margin-left: -.7rem;
-                            display: none;
-                        }
-
-
-                        
-
-                        .sv-title-actions .sv-title-actions__title {
-                            max-width: max-content;
-                            // display: grid;
-                            // grid-template-columns: 99% 1fr;
-
-                        }
-                    }
-
-                   
-                    .sd-element--with-frame {
-                        box-shadow: none;
-                        padding: 0 !important;
-                        .question-content {
-                            margin-block: 1rem 2rem;
-                        
-                            
-                
-                            .sd-item {
-                                border-radius: 4px;
-                                border: 1px solid $border-darker-grey;
-                                margin-bottom: 1.5rem;
-                                padding-left: 2rem;
-                                transition: all 150ms ease-in-out;
-
-                                .sd-selectbase__label {
-                                    display: flex;
-                                    align-items: center;
-
-                                    .sd-item__control-label {
-                                        width: max-content;
-                                    }
-                                }
-
-                                &:hover {
-                                   background-color: $background-light;
-                                   cursor: pointer;
-                                }
-                            }
-
-                            .sd-radio--checked{
-                                background-color: $light-blue-opacity-10;
-                                &:hover {
-                                    background-color: $light-blue-opacity-10;
-                                 }
-                            }
-                            
-                            .sd-item--checked  {
-                                border-radius: 4px;
-                                border: 1px solid $dark-blue;
-                    
-                                .sd-item__decorator {
-                                    background-color: $dark-blue;
-                                }
-                            }
-            
-                            .sd-item__decorator {
-                                background-color: $color-white;
-                            }
-
-                    }
-                }
-            
-            }
-
-            .sd-page {
-                padding: 0;
-            }  
-            .sd-body__navigation.sd-action-bar  {
-                padding: 0;
-            }
-
-            .sd-action-bar {
-                display: flex;
-                justify-content: space-between;
-
-                .sv-action {
-                    .sd-btn {
-                        padding: .5rem 2rem;
-                        box-shadow: none;
-                        border-radius: 4px;
-                    }
-
-                    .sd-navigation__complete-btn,
-                    .sd-navigation__next-btn {
-                        background-color: $light-blue;
-                    }
-
-                    .sd-navigation__complete-btn {
-                        // display: none;
-                    }
-
-                    .sd-navigation__prev-btn {
-                        padding: 0;
-                        background-color: transparent;
-                    }
-                }
-            }
+      .sd-title {
+        &.sd-page__title {
+          display: none;
         }
 
-
-        &-finish--nav {
-            position: absolute;
-            right: 0;
-            bottom: 50%;
-        }
-    }
-
-
-
-    .survey-tooltip {
-        background-color: $light-grey-200;
-        border-radius: 50%;
-        width: 1.5rem;
-        height: 1.5rem;
-        position: relative;
-        
-        span {
-            font-size: 1.2rem;
-            color: $dark-blue;
-            font-weight: 600;
-            @include center();
+        .sd-element__num {
+          display: none;
         }
 
-        &:hover .tooltip-text {
-            visibility: visible;
-          }
-    }
-
-    .tooltip-text {
-        visibility: hidden;
-        position: absolute;
-        z-index: 1;
-        width: max-content;
-        color: $color-white;
-        background-color: $dark-blue;
-        border-radius: 4px;
-        bottom: 2rem;
-        max-width: 35rem;
-        white-space: normal;
-        left: -2rem; 
-        padding: 1rem;
-        font-size: 1.6rem;
-        font-weight: 400;
-
-        &::before {
-            content: "";
-            position: absolute;
-            transform: rotate(45deg);
-            background-color: $dark-blue;
-            padding: 6px;
-            z-index: -1;
-            bottom: -2.5%;
-            left: 6.5%;
+        .sv-title-actions .sv-title-actions__title {
+          max-width: max-content;
         }
       }
+
+      .sd-element--with-frame {
+        box-shadow: none;
+        padding: 0 !important;
+        .question-content {
+          margin-block: 1rem 2rem;
+
+          .sd-item {
+            border-radius: 4px;
+            border: 1px solid $border-darker-grey;
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            padding-right: .5rem;
+            transition: all 150ms ease-in-out;
+
+            .sd-selectbase__label {
+              display: flex;
+              align-items: center;
+
+              .sd-item__control-label {
+                width: max-content;
+              }
+            }
+
+            &:hover {
+              background-color: $background-light;
+              cursor: pointer;
+            }
+          }
+
+          .sd-radio--checked {
+            background-color: $light-blue-opacity-10;
+            &:hover {
+              background-color: $light-blue-opacity-10;
+            }
+          }
+
+          .sd-item--checked {
+            border-radius: 4px;
+            border: 1px solid $dark-blue;
+
+            .sd-item__decorator {
+              background-color: $dark-blue;
+            }
+          }
+
+          .sd-item__decorator {
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+
+    .sd-page {
+      padding: 0;
+    }
+    .sd-body__navigation.sd-action-bar {
+      padding: 0;
+    }
+
+    .sd-action-bar {
+      display: flex;
+      justify-content: space-between;
+
+      .sv-action {
+        .sd-btn {
+          padding: 0.5rem 2rem;
+          box-shadow: none;
+          border-radius: 4px;
+        }
+
+        .sd-navigation__complete-btn,
+        .sd-navigation__next-btn {
+          background-color: $light-blue;
+        }
+
+        .sd-navigation__complete-btn {
+          // display: none;
+        }
+
+        .sd-navigation__prev-btn {
+          padding: 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &-finish--nav {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
+}
+
+.survey-tooltip {
+  background-color: $light-grey-200;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+
+  span {
+    font-size: 1.2rem;
+    color: $dark-blue;
+    font-weight: 600;
+    @include center();
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+  }
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  color: $color-white;
+  background-color: $dark-blue;
+  border-radius: 4px;
+  bottom: 2rem;
+  max-width: 35rem;
+  white-space: normal;
+  left: -2rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: $dark-blue;
+    padding: 6px;
+    z-index: -1;
+    bottom: -2.5%;
+    left: 6.5%;
+  }
+}

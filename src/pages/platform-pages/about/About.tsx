@@ -1,5 +1,5 @@
 import { Button } from 'src/atoms';
-import { addCases, addDefinitions, addSystemCategories, addSystemData } from 'src/services/firebase/firebase.utils';
+import { addCases, addDefinitions, addHPCs, addSystemCategories, addSystemData } from 'src/services/firebase/firebase.utils';
 
 
 
@@ -19,6 +19,9 @@ const About: React.FC = () => {
     const systemData = async () => {
         await addSystemData();
     }
+    const addHpcsdata = async () => {
+        await addHPCs();
+    }
     
     return (
         <>
@@ -27,6 +30,7 @@ const About: React.FC = () => {
             <Button className='btn btn-primary' onClick={cases} >Add use cases</Button>
             <Button className='btn btn-primary' onClick={definitons} >Add definitions</Button>
             <Button className='btn btn-primary' onClick={systemData} >Add System data</Button>
+            <Button className='btn btn-primary' onClick={addHpcsdata} >Add HPCs</Button>
 
         </>
     )

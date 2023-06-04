@@ -6,20 +6,18 @@ import { initializeApp } from "firebase/app";
 // For the firestore
 import {
   getFirestore,
-  getDocs,
-  collection,
   setDoc,
   doc,
   getDoc,
 } from "firebase/firestore";
 import { firebaseConfig } from "./firebaseConfig";
-import { HPCCategoryType, HPCIntroductionType } from "../types/hpc/hpc";
+import { HPCCategoryType, HPCIntroductionType, HPCType } from "../types/hpc/hpc";
 import { INTRODUCTION_DATA, Step } from "../types/introduction";
 import {  UseCasesType } from "../types/usecases";
 
 // deleting later
 import { DefinitionType } from "../types/definition";
-import { DUMMY_HPC_CATEGORY, SYSTEM_DATA } from "../types/hpc/constant";
+import { ALL_HPCS_DATA, DUMMY_HPC_CATEGORY, SYSTEM_DATA } from "../types/hpc/constant";
 import { DUMMY_CASES, DUMMY_DEFINITIONS } from "./constants";
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -27,15 +25,26 @@ const firebaseApp = initializeApp(firebaseConfig);
 // Init the DB
 export const db = getFirestore();
 
-// Will call all the HPCs data
-// export const getAllHPCs = async (): Promise<HPC[]> => {
-//   const querySnapshot = await getDocs(collection(db, "HPCs"));
-//   return querySnapshot.docs.map((doc) => ({
-//     id: doc.id,
-//     ...doc.data(),
-//   })) as HPC[];
-// };
 
+
+// Will call all the HPCs data
+export const getAllHPCs = async (): Promise<HPCType[]> => {
+  try {
+    const hpcsRef = doc(db, "HPCs", "uhnO1m0Nweyuk1GD8GX9");
+    const hpcsSnapshot = await getDoc(hpcsRef);
+
+    if (hpcsSnapshot.exists()) {
+      const hpcsData = hpcsSnapshot.data();
+      const hpcs: HPCType[] = hpcsData.hpcs || [];
+      return hpcs;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching HPCs from Firestore:", error);
+    return [];
+  }
+};
 // Will call all the Introduction data
 export const getAllIntroduction = async (): Promise<Step[]> => {
   try {
@@ -186,5 +195,15 @@ export const addSystemData = async () => {
     console.log("System data added to Firestore successfully!");
   } catch (error) {
     console.error("Error adding System data to Firestore:", error);
+  }
+};
+export const addHPCs = async () => {
+  try {
+    await setDoc(doc(db, "HPCs", "uhnO1m0Nweyuk1GD8GX9"), {
+      hpcs: ALL_HPCS_DATA,
+    });
+    console.log("HPCs data added to Firestore successfully!");
+  } catch (error) {
+    console.error("Error adding HPCs data to Firestore:", error);
   }
 };

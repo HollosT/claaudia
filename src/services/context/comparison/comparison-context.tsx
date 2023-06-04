@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
 import { AllHPC, HPCType } from "src/services/types/hpc/hpc";
 
 
@@ -18,7 +17,7 @@ export const ComparisonContext = createContext<ComparisonContextProps>({
     comparedHPC: false,
     handleSelectedHPC: () => {},
     handleComparedHPC: () => {},
-    allHPC: ALL_HPCS_DATA,
+    allHPC: [],
  
 });
 

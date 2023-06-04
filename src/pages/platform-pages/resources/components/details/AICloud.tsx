@@ -1,6 +1,6 @@
 import { SystemType } from "src/services/types/hpc/hpc";
 import DetailsHeader from "./DeailsHeader";
-import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
+
 import { Tab } from "../tab";
 import { Divider, Loading } from "src/atoms";
 import Options from "./Options";
@@ -10,14 +10,14 @@ import { HPCContext } from "src/services/context/hpc/hpc-context";
 import { useContext } from "react";
 
 const AICloud: React.FC = () => {
-  const {getCurrentSytemData} = useContext(HPCContext)
+  const {getCurrentSytemData, allHPCs} = useContext(HPCContext)
 
     const data = getCurrentSytemData(SystemType.AICloud);
-    if(!data) {
+    if(!data || !allHPCs) {
         return <Loading />
     }
 
-    const aiclouds = ALL_HPCS_DATA.filter(hpc => hpc.type === SystemType.AICloud)
+    const aiclouds = allHPCs.filter(hpc => hpc.type === SystemType.AICloud)
 
     return (
         <section className="resource-detail">

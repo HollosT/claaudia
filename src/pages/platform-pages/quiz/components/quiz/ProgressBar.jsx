@@ -1,12 +1,8 @@
 import React, {useContext } from "react";
 
-import { Serializer } from "survey-core";
-import { ReactSurveyElement, ReactElementFactory } from "survey-react-ui";
-import { ModelContext } from "./Questions";
 import { Divider } from "src/atoms";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 
-Serializer.addProperty("survey", "progressTitle");
 
 
 const ProgressBar = () => {
@@ -35,8 +31,3 @@ const ProgressBar = () => {
 };
 
 export default ProgressBar;
-
-
-ReactElementFactory.Instance.registerElement("sv-progressbar-percentage", props => {
-    return React.createElement(ProgressBar, props);
-  });

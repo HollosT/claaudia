@@ -1,6 +1,4 @@
 
-
-import {ALL_HPCS_DATA} from "src/services/types/hpc/constant";
 import { Tab } from "../tab";
 import { Divider, Loading } from "src/atoms";
 import DetailsHeader from "./DeailsHeader";
@@ -12,14 +10,14 @@ import { useContext } from "react";
 import { HPCContext } from "src/services/context/hpc/hpc-context";
 
 const Strato: React.FC = () => {
-        const {getCurrentSytemData} = useContext(HPCContext)
+        const {getCurrentSytemData, allHPCs} = useContext(HPCContext)
 
         const data = getCurrentSytemData(SystemType.Strato);
-        if(!data) {
+        if(!data || !allHPCs) {
             return <Loading />
         }
 
-    const stratos = ALL_HPCS_DATA.filter(hpc => hpc.type === SystemType.Strato)
+    const stratos = allHPCs.filter(hpc => hpc.type === SystemType.Strato)
   
     return (
         <section className="resource-detail">

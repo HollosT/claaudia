@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { HPCContextProvider } from "./hpc-context";
-import { HPCCategoryType, SystemType } from "src/services/types/hpc/hpc";
-import { getAllSystemData } from "src/services/firebase/firebase.utils";
+import { HPCCategoryType, HPCType, SystemType } from "src/services/types/hpc/hpc";
+import { getAllHPCs, getAllSystemData } from "src/services/firebase/firebase.utils";
 import { useFetchData } from "src/hooks";
 
 
@@ -11,7 +11,9 @@ interface HPCProviderProps {
 }
 
 const HPCProvider: React.FC<HPCProviderProps>= (props) => {
+    const [allHPCs, setAllHPCs] = useState<HPCType[] | []>([])
     const {data} = useFetchData(getAllSystemData)
+    const {data: hpcsData} = useFetchData(getAllHPCs)
     const [systemData, setSystemData] = useState<HPCCategoryType[] | []>([])
     const [currentSystemData, setCurrentSystemData] = useState<HPCCategoryType | {}>({})
     useEffect(() => {
@@ -19,6 +21,11 @@ const HPCProvider: React.FC<HPCProviderProps>= (props) => {
         handleSystemData(data)
       }
     }, [data])
+    useEffect(() => {
+      if(hpcsData) {
+        setAllHPCs(hpcsData)
+      }
+    }, [hpcsData])
   
    
     const getCurrentSytemData = (type: SystemType): HPCCategoryType | null => {
@@ -40,6 +47,7 @@ const HPCProvider: React.FC<HPCProviderProps>= (props) => {
                 systemData,
                 currentSystemData,
                 getCurrentSytemData,
+                allHPCs
             }}
         >
             {props.children}

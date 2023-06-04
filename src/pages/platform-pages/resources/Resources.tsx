@@ -1,17 +1,30 @@
 
-import { HPCCategory, HPCIntroductionType } from 'src/services/types/hpc/hpc';
+import { AllHPC, HPCCategory, HPCIntroductionType } from 'src/services/types/hpc/hpc';
 import { CategoryItem } from './components';
 import Footer from 'src/components/footer/Footer';
-import { Divider } from 'src/atoms';
+import { Button, Divider } from 'src/atoms';
 import { useFetchData } from 'src/hooks';
 import { getAllSystemCategories } from 'src/services/firebase/firebase.utils';
 import { SkeletonCat } from './skeleton';
+import { ComparisonContext } from 'src/services/context/comparison/comparison-context';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import platformRoutes from 'src/services/router/platform-routes';
+import { ComparisonIcon } from './components/svg';
 
 
 
 
 const Resources: React.FC = () => {
     const {data, loading} = useFetchData(getAllSystemCategories);
+    const {handleSelectedHPC} = useContext(ComparisonContext);
+    const navigate = useNavigate();
+
+    const handleNav = () => {
+        handleSelectedHPC(AllHPC.LocalMachine)
+        navigate(platformRoutes.comparison.path)
+    }
+
 
     const noHpc: HPCIntroductionType[] = [];
     const internalHpc: HPCIntroductionType[] = [];
@@ -66,8 +79,16 @@ const Resources: React.FC = () => {
                         </>
                     }
                 </div>
-                <div className='resources-category u-margin-bottom-medium'>
-                    <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
+                <Divider />
+                <div className='resources-category u-margin-bottom-big u-margin-top-medium'>
+                    <div className='no-hpc--header u-margin-bottom-medium'>
+                        <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
+                        <p className='resources-category--body u-margin-bottom-small'>Sometimes, it might turn out your project does not require high-performance computing. In order to examine whether or not the resources you need are beyond HPC, you can compare specifications of Lenovo ThinkPad P53 (available to loan through AAU Library) with any chosen system.</p>
+                        <Button className="resources-category--nav option-nav" onClick={handleNav}>
+                            <ComparisonIcon />
+                            Compare with other system
+                        </Button>
+                    </div>
                     {loading ?
 
                         <SkeletonCat />

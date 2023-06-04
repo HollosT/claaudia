@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ComparisonContextProvider } from "./comparison-context";
 import { AllHPC } from "src/services/types/hpc/hpc";
-import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
+import { HPCContext } from "../hpc/hpc-context";
 
 
 interface ComparisonProviderProps {
@@ -9,9 +9,18 @@ interface ComparisonProviderProps {
 }
 
 const ComparisonProvider: React.FC<ComparisonProviderProps>= (props) => {
+    const {allHPCs: fetchedAllHPCs} = useContext(HPCContext)
+
+
     const [selectedHPC, setSelectedHPC] = useState(AllHPC.AiCloud)
     const [comparedHPC, setComparedHPC] = useState<AllHPC | false>(false)
-    const [allHPC, setAllHPC] = useState(ALL_HPCS_DATA)
+    const [allHPC, setAllHPC] = useState(fetchedAllHPCs)
+
+    useEffect(() => {
+        if(fetchedAllHPCs) {
+            setAllHPC(fetchedAllHPCs)
+        }
+    }, [fetchedAllHPCs])
 
 
     const handleSelectedHPC = (value: AllHPC) => {

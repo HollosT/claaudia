@@ -9,7 +9,7 @@ import { DictionaryIcon, HomeIcon, ResourcesIcon, SurveyIcon } from 'src/compone
 import CasesIcon from 'src/components/navigation/icons/Cases-icon';
 import AboutIcon from 'src/components/navigation/icons/About-icon';
 import Home from 'src/pages/platform-pages/home/Home';
-import { AICloud, LocalMachine, Strato, UCloud } from 'src/pages/platform-pages/resources/components/details';
+import { AICloud, Strato, UCloud } from 'src/pages/platform-pages/resources/components/details';
 import { Comparison } from 'src/pages/platform-pages/resources/components/comparison';
 import { Quiz } from 'src/pages/platform-pages/quiz/components/quiz';
 
@@ -75,12 +75,6 @@ const platformRoutes: RouteList = {
         name: 'UCloud',
         path: '/ucloud',
         element: <UCloud />
-    },
-    localmachine: {
-        show: false,
-        name: 'Local Machine',
-        path: '/localmachine',
-        element: <LocalMachine />
     },
     comparison: {
         show: false,

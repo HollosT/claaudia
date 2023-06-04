@@ -579,6 +579,16 @@ a {
   &-header {
     color: $paragraph-grey;
   }
+
+  &-category--title {
+    color: $dark-blue;
+  }
+
+  .no-hpc--header {
+    .resources-category--body {
+      color: $paragraph-grey;
+    }
+  }
 }
 
 .category-item {
@@ -607,7 +617,7 @@ a {
 
         .addtional-info {
           &--body {
-            color: $color-white;
+            color: $dark-blue;
           }
         }
       }

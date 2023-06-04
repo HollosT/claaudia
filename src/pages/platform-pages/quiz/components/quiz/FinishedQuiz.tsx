@@ -3,15 +3,17 @@ import { Divider, Loading } from "src/atoms";
 
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 
-import { ALL_HPCS_DATA } from "src/services/types/hpc/constant";
 import FinishedSpec from "./FinishedSpec";
 import FinishedHeader from "./FinishedHeader";
+import { HPCContext } from "src/services/context/hpc/hpc-context";
 
 const FinishedQuiz: React.FC = () => {
+    const {allHPCs} = useContext(HPCContext)
+
     const {currentHPCs} = useContext(QuestionContext)
     const hpcs = currentHPCs[0]
-    const hpc = ALL_HPCS_DATA.find(allHpc => allHpc.name === hpcs)
-
+    const hpc = allHPCs.find(allHpc => allHpc.name === hpcs)
+    
     if(!hpc || currentHPCs.length !== 1 ) {
         return <Loading />
     }

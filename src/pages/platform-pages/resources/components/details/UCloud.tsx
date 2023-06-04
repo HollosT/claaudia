@@ -1,7 +1,5 @@
 import { SystemType } from "src/services/types/hpc/hpc";
 import DetailsHeader from "./DeailsHeader";
-import { 
-    ALL_HPCS_DATA} from "src/services/types/hpc/constant";
 import { Tab } from "../tab";
 import { Divider, Loading } from "src/atoms";
 import Options from "./Options";
@@ -11,14 +9,14 @@ import { HPCContext } from "src/services/context/hpc/hpc-context";
 import { useContext } from "react";
 
 const UCloud: React.FC = () => {
-    const {getCurrentSytemData} = useContext(HPCContext)
+    const {getCurrentSytemData, allHPCs} = useContext(HPCContext)
 
     const data = getCurrentSytemData(SystemType.UCloud);
-    if(!data) {
+    if(!data || !allHPCs) {
         return <Loading />
     }
 
-    const uclouds = ALL_HPCS_DATA.filter(hpc => hpc.type === SystemType.UCloud)
+    const uclouds = allHPCs.filter(hpc => hpc.type === SystemType.UCloud)
 
     return (
         <section className="resource-detail">

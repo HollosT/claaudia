@@ -76,7 +76,7 @@ const Questions = () => {
         completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
       }
 
-      survey.onAfterRenderPage.add((survey, options) => {
+      survey.onAfterRenderPage.add((_, options) => {
         const currentPage = data.pages.find((page) => page.title === options.page.name);
         if (currentPage && currentPage.elements) {
           const choices = currentPage.elements[0].choices;
