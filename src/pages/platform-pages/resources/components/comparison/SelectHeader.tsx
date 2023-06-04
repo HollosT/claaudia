@@ -24,9 +24,9 @@ const SelectHeader: React.FC<{ name: string | boolean }> = ({ name }) => {
                     }
                 case SystemType.LocalMachine:
                     return {
-                        label: "Local Machine",
-                        nav: platformRoutes.strato.path
-                    }
+                        label: "",
+                        nav: ""
+                    };
                 case SystemType.UCloud:
                     return {
                         label: "UCloud",
@@ -50,7 +50,7 @@ const SelectHeader: React.FC<{ name: string | boolean }> = ({ name }) => {
                     <p className="select-header--intro u-margin-bottom-small">{hpc.intro}</p>
                     <div className="select-header--nav u-margin-bottom-small">
                         <Link to={platformRoutes.cases.path}>View use cases</Link>
-                        <Link to={handleType().nav}>Go to {handleType().label} page</Link>
+                        {hpc.type === SystemType.LocalMachine ? null : <Link to={handleType().nav}>Go to {handleType().label} page</Link>}
                     </div>
                     <Divider />
                 </div>
