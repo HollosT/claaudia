@@ -1,5 +1,5 @@
 import {useNavigate } from "react-router-dom";
-import { HPCType, SystemType } from "src/services/types/hpc/hpc";
+import { HPCType } from "src/services/types/hpc/hpc";
 import HardwareSpec from "./HardwareSpec";
 import Resource from "./Resource";
 import OptionData from "./OptionData";

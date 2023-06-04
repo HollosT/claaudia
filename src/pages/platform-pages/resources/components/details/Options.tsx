@@ -1,6 +1,5 @@
 import { HPCType } from "src/services/types/hpc/hpc";
 import OptionItem from "./OptionItem";
-import { Loading } from "src/atoms";
 
 const Options: React.FC<{hpcs: HPCType[]}> = ({hpcs}) => {
 
