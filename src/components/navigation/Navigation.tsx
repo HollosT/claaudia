@@ -17,7 +17,6 @@ const Navigation: React.FC = () => {
               location.pathname === platformRoutes.aicloud.path || 
               location.pathname ===   platformRoutes.strato.path || 
               location.pathname ===   platformRoutes.ucloud.path || 
-              location.pathname ===   platformRoutes.localmachine.path ||
               location.pathname ===   platformRoutes.comparison.path
          
     }

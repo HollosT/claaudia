@@ -25,8 +25,7 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
                 navigate(platformRoutes.strato.path)
                 break;
             case SystemType.LocalMachine:
-                navigate(platformRoutes.localmachine.path)
-                break;
+                return
             case SystemType.UCloud:
                 navigate(platformRoutes.ucloud.path)
                 break;
@@ -49,9 +48,13 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
                             <ComparisonIcon />
                             Compare with other system
                         </Button>
-                        <Button className="option-nav" onClick={handlePageNav}> Go to {hpc.type} page
+                        {
+                            hpc.type === SystemType.LocalMachine ?
+                            null
+                            :
+                            <Button className="option-nav" onClick={handlePageNav}> Go to {hpc.type} page</Button>
+                        }
 
-                        </Button>
                         <Link className="option-nav" to={platformRoutes.cases.path}> View use case
                         </Link>
 

@@ -17,8 +17,8 @@ const Strato: React.FC = () => {
             return <Loading />
         }
 
+
     const stratos = allHPCs.filter(hpc => hpc.type === SystemType.Strato)
-  
     return (
         <section className="resource-detail">
             <DetailsHeader title={data.name} body={data.introduction} path={platformRoutes.resources.path} />
