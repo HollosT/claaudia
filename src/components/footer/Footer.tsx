@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ shown}) => {
                 <div className="footer-content--body">
                     <div className="footer-content--body-container">
                         <p onClick={handleIntro} className="footer-content--body-item footer-content--body-item_nav">About HPC Matchmaker</p>
-                        <a href="#"  className="footer-content--body-item footer-content--body-item_nav">Contact CLAAUDIA</a>
+                        <a href="mailto:support@its.aau.dk"  className="footer-content--body-item footer-content--body-item_nav">Contact CLAAUDIA</a>
                     </div>
                     <p  className="footer-content--body-item footer-content--body-item_rights">All rights reserved to CLAAUDIA © 2023</p>
                 </div>

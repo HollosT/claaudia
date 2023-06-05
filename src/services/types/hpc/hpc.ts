@@ -74,7 +74,7 @@ export enum AllHPC {
     StratoProjects = "Strato projects",
     StratoBuyIn = "Strato buy-in",
     UCloud = "UCloud",
-    LocalMachine = "Lenovo Thinpad P53",
+    LocalMachine = "Lenovo Thinkpad P53",
 }
 
 

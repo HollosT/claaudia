@@ -1,7 +1,6 @@
 import { Case } from ".";
 import { useFetchData } from "src/hooks";
 import { getAllUseCasess } from "src/services/firebase/firebase.utils";
-import { Loading } from "src/atoms";
 import { UseCasesFilters } from "src/services/types/usecases";
 import SkeletonCase from "./skeleton/SkeletonCase";
 

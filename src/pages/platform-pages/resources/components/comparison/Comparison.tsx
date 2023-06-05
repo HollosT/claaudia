@@ -1,4 +1,3 @@
-import platformRoutes from "src/services/router/platform-routes"
 import { DetailsHeader } from "../details"
 import SelectOption from "./SelectOption";
 import { ComparisonContext } from "src/services/context/comparison/comparison-context";
@@ -15,7 +14,7 @@ const Comparison: React.FC = () => {
 
     return (
         <section className="comparison">
-            <DetailsHeader title="Compare two HPC systems" body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" />
+            <DetailsHeader title="Compare two HPC systems" body="Dive into the characteristics of two selected systems for a comprehensive overview of their differences in contrast to each other." />
             <div className="comparison-select u-margin-bottom-medium">
                 <div className="comparison-select--title">
                     <h4 className="comparison-select--title-item comparison-select--title-item_1">Select sytems to compare</h4>

@@ -108,6 +108,17 @@ const Questions = () => {
           }
         }
       });
+      survey.onAfterRenderPage.add(() => {
+        const parentEl = document.querySelector('.sv-title-actions__title');
+        const hint = document.createElement("p");
+        hint.className = "quiz-title--hint-body"
+        hint.innerHTML = "Select a single answer from the provided options"
+
+        if(parentEl && !parentEl.dataset.addedHint) {
+          parentEl.appendChild(hint)
+          parentEl.dataset.addedHint = true
+        }
+      });
     }
 
     return (

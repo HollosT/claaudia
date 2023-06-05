@@ -43,7 +43,7 @@ const FinishedHeader: React.FC = () => {
                     <p className="content-next--body u-margin-bottom-small">
                     If you wish to utilize the given high-performance computing system in your project, you should now send a request to CLAAUDIA - Research Data Services at Aalborg University, who will handle your access to the system and answer all your questions regarding its later usage. 
                     </p>
-                    <a className="content-next--nav p-big u-margin-bottom-small" href="#"> Contact CLAAUDIA</a>
+                    <a className="content-next--nav p-big u-margin-bottom-small" href="mailto:support@its.aau.dk"> Contact CLAAUDIA</a>
             </div>
         </div>
 

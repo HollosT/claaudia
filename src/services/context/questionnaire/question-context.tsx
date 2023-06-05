@@ -27,7 +27,7 @@ export const QuestionContext = createContext<QuestionContextProps>({
     currentHPCs: [...keys(AllHPC).map(h => AllHPC[h])],
     handleCurrentHPCs: () => {},
     handleProgress: () => {},
-    progress: "10",
+    progress: "",
     handleSelectedHpc: () => {},
     selectedHpc: AllHPC.AiCloud,
     handleIsClose: () => {},

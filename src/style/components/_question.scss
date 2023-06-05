@@ -22,6 +22,10 @@
 
         .sv-title-actions .sv-title-actions__title {
           max-width: max-content;
+
+          .quiz-title--hint-body {
+            margin-top: 1rem;
+          }
         }
       }
 

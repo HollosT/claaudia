@@ -23,25 +23,25 @@ const platformRoutes: RouteList = {
     },
     resources: {
         icon: <ResourcesIcon />,
-        name: 'AAU HPC Resources',
+        name: 'HPC Resources',
         path: '/resources',
         element: <Resources />
     },
     matchmaking: {
         icon: <SurveyIcon />,
-        name: 'HPC Matchmaking quiz',
+        name: 'HPC Matchmaking Quiz',
         path: '/matchmaking',
         element: <Matchmaking />
     },
     dictionary: {
         icon: <DictionaryIcon />,
-        name: 'Definition library',
+        name: 'Definition Library',
         path: '/definition',
         element: <Definition />
     },
     cases: {
         icon: <CasesIcon />,
-        name: 'Use cases',
+        name: 'Use Cases',
         path: '/cases',
         element: <Cases />
     },

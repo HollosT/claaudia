@@ -34,6 +34,22 @@ body {
     }
 }
 
+   
+body::-webkit-scrollbar-thumb {
+    background-color: $color-black;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar{
+    height: 2px;
+    width: 2px;
+    background: $color-white;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: $color-black;
+    border-radius: 10px;
+}
+
 
 input {
     border: none;

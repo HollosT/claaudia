@@ -17,7 +17,7 @@ const Cases: React.FC = () => {
         <>
             <section className="cases">
                 <div className="cases-header u-margin-bottom-small">
-                    <h1 className='primary-header u-margin-bottom-small'>Use cases</h1>
+                    <h1 className='primary-header u-margin-bottom-small'>Use Cases</h1>
                     <p>Find out how high-performance computing systems and their characteristics can be effectively utilized in certain computing practices. </p>
                 </div>
                 <Filter title="Filter use cases by used PC" data={UseCasesFilters} handleChange={handleDataFromChild} />
