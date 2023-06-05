@@ -55,8 +55,6 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
                             <Button className="option-nav" onClick={handlePageNav}> Go to {hpc.type} page</Button>
                         }
 
-                        <Link className="option-nav" to={platformRoutes.cases.path}> View use case
-                        </Link>
 
                     </div>
                 </div>
