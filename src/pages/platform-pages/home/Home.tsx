@@ -20,7 +20,7 @@ const Home: React.FC = () => {
             title: 'Explore HPC Definitions ',
             body: 'Expand your knowledge of HPC and related terms.',
             link: platformRoutes.dictionary.path,
-            linkTitle: 'See Definitions Library'
+            linkTitle: 'See Definition Library'
         },
         {
             icon: platformRoutes.cases.icon,

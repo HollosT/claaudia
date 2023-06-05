@@ -24,6 +24,7 @@ const OptionItem: React.FC<{hpc: HPCType}> = ({hpc}) => {
         navigate(platformRoutes.comparison.path)
     }
 
+
     return (
         <div className="option">
            <h2 className="option-title">{hpc.name}</h2>
