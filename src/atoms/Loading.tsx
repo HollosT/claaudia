@@ -1,9 +1,10 @@
-
+// https://dev.to/j471n/css-gradient-loading-animation-2695
+// Used for handeling loading state
 
 const Loading: React.FC = () => {
 
     return (
-        <div>Loading...</div>
+        <div className="loader"></div>
     )
 }
 

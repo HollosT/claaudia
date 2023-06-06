@@ -17,6 +17,14 @@
       background-color: $light-blue;
 
     }
+
+    .category-content--arrow {
+      svg {
+        transform: translateX(.5rem);
+        transition: all 150ms ease-in-out;
+
+      }
+    }
   }
 
   
@@ -68,6 +76,8 @@
         }
       }
     }
+
+    
     
   }
 

@@ -19,6 +19,7 @@ import {  UseCasesType } from "../types/usecases";
 import { DefinitionType } from "../types/definition";
 import { ALL_HPCS_DATA, DUMMY_HPC_CATEGORY, SYSTEM_DATA } from "../types/hpc/constant";
 import { DUMMY_CASES, DUMMY_DEFINITIONS } from "./constants";
+import SURVEY_DATA, { SurveyType } from "src/pages/platform-pages/quiz/components/quiz/constants";
 
 const firebaseApp = initializeApp(firebaseConfig);
 
@@ -27,6 +28,24 @@ export const db = getFirestore();
 
 
 
+// Will call all the Survey data
+export const getAllSurvey = async (): Promise<SurveyType | null> => {
+  try {
+    const surveyRef = doc(db, "Survey", "i7d54LLqVZnapNNskOfn");
+    const surveySnapshot = await getDoc(surveyRef);
+
+    if (surveySnapshot.exists()) {
+      const surveyData = surveySnapshot.data();
+      const survey: SurveyType = surveyData.survey || null;
+      return survey;
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching Survey from Firestore:", error);
+    return null;
+  }
+};
 // Will call all the HPCs data
 export const getAllHPCs = async (): Promise<HPCType[]> => {
   try {
@@ -205,5 +224,16 @@ export const addHPCs = async () => {
     console.log("HPCs data added to Firestore successfully!");
   } catch (error) {
     console.error("Error adding HPCs data to Firestore:", error);
+  }
+};
+
+export const addSurvey = async () => {
+  try {
+    await setDoc(doc(db, "Survey", "i7d54LLqVZnapNNskOfn"), {
+      survey: SURVEY_DATA,
+    });
+    console.log("Survey data added to Firestore successfully!");
+  } catch (error) {
+    console.error("Error adding Survey data to Firestore:", error);
   }
 };

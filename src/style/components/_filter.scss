@@ -4,42 +4,25 @@
   
   &-header {
     &--title {
-      width: 110rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      @media (max-width: 1500px ){
-        width: 100rem;
-
-      }
-      @media (max-width: 1420px ){
-        width: 80rem;
-
-      }
+      width: 100%;
     }
     
     &--filter {
-      width: 110rem;
-      overflow: scroll;
+      width: 100%;
+      display: grid;
+      // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      grid-template-columns: repeat(5, max-content);
+      gap: 1rem;
 
-      @media (max-width: 1500px ){
-        width: 100rem;
+      @media (max-width: 1550px) {
+      grid-template-columns: repeat(4, max-content);
 
       }
-      @media (max-width: 1420px ){
-        width: 80rem;
+      @media (max-width: 1400px) {
+      grid-template-columns: repeat(3, max-content);
 
       }
-
      
-      
-      &-container {
-        display: flex;
-        gap: 1rem;
-        width: max-content;
-
-  
         .filter-item{
           background-color: $light-grey-200;
           border-radius: 100vw;
@@ -61,7 +44,7 @@
         .active:hover {
           background-color: $light-blue;
         }
-      }
+
 
     }
 

@@ -4,18 +4,17 @@ import { Survey } from "survey-react-ui";
 
 
 import "survey-core/defaultV2.min.css";
-import data from "./constants";
 import { QuestionContext } from "src/services/context/questionnaire/question-context";
 import ProgressBar from "./ProgressBar";
 import CurrentHPCs from "./CurrentHPCs";
 import FinishedQuiz from "./FinishedQuiz";
+import { Loading } from "src/atoms";
 
 
 
-const Questions = () => {
-    const {handleCurrentHPCs , handleProgress, currentHPCs, finished, handleFinished, survey, handleSurvey} = useContext(QuestionContext)
+const Questions: React.FC = () => {
+    const {surveyData,handleCurrentHPCs , handleProgress, currentHPCs, finished, handleFinished, survey, handleSurvey} = useContext(QuestionContext)
 
-  
     const customStyles = {
       "question": {
         "content": "question-content",
@@ -23,10 +22,29 @@ const Questions = () => {
     }
     };
 
-    const onSurveyValueChanged = (survey, options) => {
+    useEffect(() => {
+      const initializedSurvey  = new Model(surveyData);
+      initializedSurvey.onValueChanged.add((survey, options) => {
+
+        onSurveyValueChanged(survey, options)
+      });
+
+      initializedSurvey.css = customStyles;
+      
+      handleSurvey(initializedSurvey);
+
+    }, [surveyData]);
+
+    if(!surveyData) {
+      return <Loading />
+    }
+
+
+
+    const onSurveyValueChanged = (survey: Model, options: { name: string }) => {
       const selectedValue = survey.getValue(options.name);
   
-      const question = data.pages.find((page) =>
+      const question = surveyData.pages.find((page) =>
         page.elements.some((element) => element.name === options.name && element.type === 'radiogroup')
       );
   
@@ -43,23 +61,10 @@ const Questions = () => {
       }
     };
 
-    useEffect(() => {
-      const initializedSurvey = new Model(data);
-      initializedSurvey.onValueChanged.add((survey, options) => {
-
-        onSurveyValueChanged(survey, options)
-      });
-
-      initializedSurvey.css = customStyles;
-      
-      handleSurvey(initializedSurvey);
-    }, []);
-
-
-
+   
     if(survey) {
       survey.onAfterRenderQuestion.add( () => {
-        const completeButton = document.querySelector(".sd-navigation__complete-btn");
+        const completeButton = document.querySelector(".sd-navigation__complete-btn") as HTMLElement;
         if(completeButton) {
           completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
         }
@@ -71,20 +76,20 @@ const Questions = () => {
         
       });
       
-      const completeButton = document.querySelector(".sd-navigation__complete-btn");
+      const completeButton = document.querySelector(".sd-navigation__complete-btn") as HTMLElement;
       if(completeButton) {
         completeButton.style.display = currentHPCs.length === 1 ? "block" : "none";
       }
 
       survey.onAfterRenderPage.add((_, options) => {
-        const currentPage = data.pages.find((page) => page.title === options.page.name);
+        const currentPage = surveyData.pages.find((page) => page.title === options.page.name);
         if (currentPage && currentPage.elements) {
           const choices = currentPage.elements[0].choices;
           if (choices) {
             choices.forEach((choice) => {
               if (choice.popupdescription) {
-                const choiceElement = document.querySelector('input[type="radio"][value="' + choice.value + '"]');
-                if (choiceElement && !choiceElement.parentNode.dataset.tooltipAdded) {
+                const choiceElement = document.querySelector('input[type="radio"][value="' + choice.value + '"]') as HTMLElement;
+                if (choiceElement && choiceElement.parentNode instanceof HTMLElement &&!choiceElement.parentNode.dataset.tooltipAdded) {
                   const tooltip = document.createElement("div")
                   tooltip.className = "survey-tooltip";
                   const questionMark = document.createElement("span");
@@ -101,7 +106,7 @@ const Questions = () => {
                   const parentElement = choiceElement.parentNode;
                   parentElement.appendChild(tooltip)
                   
-                  parentElement.dataset.tooltipAdded = true;
+                  parentElement.dataset.tooltipAdded = "true";
                 }
               }
             });
@@ -109,17 +114,18 @@ const Questions = () => {
         }
       });
       survey.onAfterRenderPage.add(() => {
-        const parentEl = document.querySelector('.sv-title-actions__title');
+        const parentEl = document.querySelector('.sv-title-actions__title') as HTMLElement;
         const hint = document.createElement("p");
         hint.className = "quiz-title--hint-body"
         hint.innerHTML = "Select a single answer from the provided options"
 
         if(parentEl && !parentEl.dataset.addedHint) {
           parentEl.appendChild(hint)
-          parentEl.dataset.addedHint = true
+          parentEl.dataset.addedHint = "true"
         }
       });
     }
+
 
     return (
       <>
@@ -131,8 +137,9 @@ const Questions = () => {
               <div className="survey">
                 {survey && 
                 <Survey
-                 model={survey} 
+                  model={survey} 
                  />} 
+        
               </div>
               <CurrentHPCs />
           </div>

@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { keys } from "src/hooks";
+import { SurveyType } from "src/pages/platform-pages/quiz/components/quiz/constants";
 
 import { AllHPC } from "src/services/types/hpc/hpc";
 import { Model } from "survey-core";
@@ -18,7 +19,8 @@ interface QuestionContextProps {
     finished: boolean,
     handleFinished: (isFinished: boolean) => void;
     survey: Model | null;
-    handleSurvey: (survey: Model) => void
+    handleSurvey: (survey: Model) => void,
+    surveyData: SurveyType | null
 }
 
 
@@ -36,7 +38,7 @@ export const QuestionContext = createContext<QuestionContextProps>({
     finished: false,
     handleSurvey: () => {},
     survey: null,
-
+    surveyData: null
 });
 
 export const QuestionContextProvider = QuestionContext.Provider;

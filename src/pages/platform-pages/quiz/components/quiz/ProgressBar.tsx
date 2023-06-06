@@ -5,7 +5,7 @@ import { QuestionContext } from "src/services/context/questionnaire/question-con
 
 
 
-const ProgressBar = () => {
+const ProgressBar: React.FC = () => {
   const {progress} = useContext(QuestionContext);
 
   const progressVale = 100 - Math.round((Number(progress) / 10) * 100);

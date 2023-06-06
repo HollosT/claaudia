@@ -40,7 +40,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({cat, className}) => {
                     {cat.name === "Local machine" ?
                         null 
                         :
-                        <Link to={cat.link}>
+                        <Link to={cat.link} className='category-content--arrow'>
                             <ResourcesRightArrow />
                         </Link>
                     }

@@ -37,7 +37,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
   },
   {
     id: uuidv4(),
-    initial: "AL",
+    initial: "AI",
     name: "AI Cloud",
     category: HPCCategory.Internal,
     link: "/aicloud",
@@ -48,7 +48,7 @@ export const DUMMY_HPC_CATEGORY: HPCIntroductionType[] = [
   {
     id: uuidv4(),
     initial: "UC",
-    name: "UCLoud",
+    name: "UCloud",
     category: HPCCategory.Danish,
     link: "/ucloud",
     subHpcs: [],

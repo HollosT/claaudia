@@ -1,0 +1,31 @@
+.loader {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10rem;
+    background: linear-gradient(#594FBF, rgba(89, 79, 191, 0));
+    animation: animate 2s linear infinite;
+    margin-inline: auto;
+    top: 25%;
+  }
+  
+  .loader::before {
+    position: absolute;
+    content: "";
+    background: $color-white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 10rem;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

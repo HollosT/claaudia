@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 import { Button, Divider } from "src/atoms"
 import { HardwareSpec, Integration, OptionData, Resource, Skills } from "src/pages/platform-pages/resources/components/details"
 import { ComparisonIcon } from "src/pages/platform-pages/resources/components/svg"
@@ -60,7 +60,7 @@ const FinishedSpec: React.FC<{ hpc: HPCType }> = ({ hpc }) => {
                 </div>
                 <Divider />
                 <div className="spec-content--body">
-                    <HardwareSpec data={hpc.hardware_spec} />
+                    <HardwareSpec data={hpc.hardware_spec} currHpc={hpc.name} />
                     <Resource data={hpc.resource_availability} />
                     <div className="spec-content--body-data_integration">
                         <OptionData data={hpc.data} />

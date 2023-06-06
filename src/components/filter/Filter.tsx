@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { keys } from "src/hooks";
 import { DefinitonContext } from "src/services/context/definition/definition-context";
-import FilterArrow from "./FilterArrow";
+
 
 interface FilterProps<T> {
     data: T;
@@ -55,17 +55,15 @@ const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: Fi
                 <div className="filter-header">
                     <p className={isDefinition ? "filter-header--title u-margin-bottom-small fitler-definition--header" : "filter-header--title u-margin-bottom-small"}>
                         {title}
-                        <FilterArrow />
                     </p>
                     
                     <div className={isDefinition ? "filter-header--filter u-margin-bottom-medium definition-filter"  : "filter-header--filter u-margin-bottom-medium"}>
-                        <div className="filter-header--filter-container">
+                        
                             {options.map(opt => (
                                 <div onClick={() => handleFilterChange(opt.value)} className={active === opt.value ? "filter-item active" : "filter-item"} key={opt.value}>
                                     <span className="filter-item--title">{opt.label}</span>
                                 </div>
                             ))}
-                        </div>
                     </div>
                 </div>
             </section>
