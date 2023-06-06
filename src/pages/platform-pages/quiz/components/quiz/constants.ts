@@ -188,7 +188,7 @@ export const SURVEY_DATA: SurveyType = {
               popupdescription:
                 "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
               result: [AllHPC.UCloud, AllHPC.LocalMachine],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },
@@ -273,7 +273,7 @@ export const SURVEY_DATA: SurveyType = {
               popupdescription:
                 "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
               result: [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },
@@ -455,7 +455,7 @@ export const SURVEY_DATA: SurveyType = {
               popupdescription:
                 "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
               result: [AllHPC.UCloud, AllHPC.LocalMachine],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },
@@ -487,7 +487,7 @@ export const SURVEY_DATA: SurveyType = {
               popupdescription:
                 "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
               result: [AllHPC.AiCloudProjects, AllHPC.AiCloudBuyIn],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },
@@ -523,7 +523,7 @@ export const SURVEY_DATA: SurveyType = {
               popupdescription:
                 "Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.",
               result: [AllHPC.AiCloudBuyIn],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },
@@ -625,7 +625,7 @@ export const SURVEY_DATA: SurveyType = {
                 AllHPC.UCloud,
                 AllHPC.LocalMachine,
               ],
-              text: "I will include data levels 2 , 3",
+              text: "I will include data levels 2, 3",
             },
           ],
         },

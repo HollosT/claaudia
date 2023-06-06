@@ -4,17 +4,18 @@ import { DefinitonContext } from "src/services/context/definition/definition-con
 
 
 interface FilterProps<T> {
-    data: T;
-    handleChange: (data: string) => void;
-    title: string;
-    isSearching?: boolean;
-    isDefinition?: boolean
+    data: T; // an array of elements that will be used for filtering
+    handleChange: (data: string) => void; // the callback that will handle the change event
+    title: string; // Customizable title
+    isSearching?: boolean; // used when there is searching possbility alongside the filtering --> to be able to reset one and the other
+    isDefinition?: boolean // responsible for assigning possible class names if it is needed
 }
 
 interface OptionType {
     label: string;
     value: string
 }
+
 
 const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: FilterProps<T>) => {
     const [active, setActive] = useState<string | T>("All")
@@ -27,6 +28,7 @@ const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: Fi
     }, [isSearching, active])
 
 
+    // Generating the filter options
     const options = [
         {
             value: "All",
@@ -41,9 +43,8 @@ const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: Fi
         )
     )] as OptionType[];
 
+
     const handleFilterChange = (value: string) => {
-
-
         filtering()
         setActive(value)
         handleChange(value)

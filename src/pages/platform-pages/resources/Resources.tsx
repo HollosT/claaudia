@@ -8,12 +8,10 @@ import { getAllSystemCategories } from 'src/services/firebase/firebase.utils';
 import { SkeletonCat } from './skeleton';
 import { ComparisonContext } from 'src/services/context/comparison/comparison-context';
 import { useContext } from 'react';
+// https://reactrouter.com/en/main
 import { useNavigate } from 'react-router-dom';
 import platformRoutes from 'src/services/router/platform-routes';
 import { ComparisonIcon } from './components/svg';
-
-
-
 
 const Resources: React.FC = () => {
     const {data, loading} = useFetchData(getAllSystemCategories);
@@ -24,7 +22,6 @@ const Resources: React.FC = () => {
         handleSelectedHPC(AllHPC.LocalMachine)
         navigate(platformRoutes.comparison.path)
     }
-
 
     const noHpc: HPCIntroductionType[] = [];
     const internalHpc: HPCIntroductionType[] = [];
@@ -45,7 +42,6 @@ const Resources: React.FC = () => {
             break;
         }
     });
-
 
     return (
         <section className="resources">
@@ -102,8 +98,8 @@ const Resources: React.FC = () => {
                 </div>
             </div>
 
-                <Divider />
-                <Footer shown={false} />
+            <Divider />
+            <Footer shown={false} />
         </section>
     )
 }

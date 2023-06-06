@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ComparisonContext } from "src/services/context/comparison/comparison-context";
-import { GuiIcon, TimeIcon } from "../svg";
+import { GuiIcon, WebIcon } from "../svg";
 
 
 const SelectIntegration: React.FC<{compared?:  boolean}> = ({compared})=> {
@@ -26,7 +26,7 @@ const SelectIntegration: React.FC<{compared?:  boolean}> = ({compared})=> {
                 </div>
                 <div className={hpc.integrations.web_browser ? `select-item--item select-item--item-resource no-apply` : `select-item--item select-item--item-resource apply`}>
                     <div className="select-item--item-body-icon">
-                        <TimeIcon />
+                        <WebIcon />
                     </div>
                     <div className="select-item--item-body">
                         <div className="select-item--item-body_content">

@@ -1,4 +1,6 @@
 import React from 'react';
+// https://www.npmjs.com/package/react-loading-skeleton
+// For handeling the loading state
 import Skeleton from 'react-loading-skeleton';
 
 

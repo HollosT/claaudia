@@ -1,7 +1,9 @@
+// https://console.firebase.google.com/
+// Serving the back end
+
 import { initializeApp } from "firebase/app";
 
 // For authentication
-// import { getAuth, signInWithRedirect } from 'firebase/auth';
 
 // For the firestore
 import {
@@ -15,7 +17,6 @@ import { HPCCategoryType, HPCIntroductionType, HPCType } from "../types/hpc/hpc"
 import { INTRODUCTION_DATA, Step } from "../types/introduction";
 import {  UseCasesType } from "../types/usecases";
 
-// deleting later
 import { DefinitionType } from "../types/definition";
 import { ALL_HPCS_DATA, DUMMY_HPC_CATEGORY, SYSTEM_DATA } from "../types/hpc/constant";
 import { DUMMY_CASES, DUMMY_DEFINITIONS } from "./constants";

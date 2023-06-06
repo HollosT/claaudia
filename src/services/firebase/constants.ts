@@ -1,6 +1,9 @@
 import { DefinitionTopic, DefinitionType } from "../types/definition";
 import { AllHPC } from "../types/hpc/hpc";
 import { UseCasesFilters, UseCasesType } from "../types/usecases";
+
+// https://www.npmjs.com/package/uuid?activeTab=readme
+// Allocating unique id
 import { v4 as uuidv4 } from "uuid";
 
 
@@ -83,6 +86,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.AiCloud,
       defaculty: UseCasesFilters.NLP,
+      img: '/assets/usecases/case-6.png',
       title: "Training large language models ",
       hpcs: [AllHPC.AiCloud],
       features: [
@@ -99,7 +103,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoProjects,
       defaculty: UseCasesFilters.NLP,
-      img: '/assets/usecases/case-5.png',
+      img: '/assets/usecases/case-7.png',
       title: "Developing natural language processing pipelines ",
       hpcs: [AllHPC.StratoProjects],
       features: [
@@ -119,6 +123,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.UCloud,
       defaculty: UseCasesFilters.NLP,
+      img: '/assets/usecases/case-8.png',
       title: "Developing natural language processing frameworks ",
       hpcs: [AllHPC.UCloud],
       features: [
@@ -138,6 +143,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoRegular,
       defaculty: UseCasesFilters.KRR,
+      img: '/assets/usecases/case-5.png',
       title: "Graph data management and knowledge graphs ",
       hpcs: [AllHPC.StratoRegular],
       features: [
@@ -155,6 +161,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       type: AllHPC.AiCloud,
       defaculty: UseCasesFilters.KRR,
       title: "Knowledge graph embedding",
+      img: '/assets/usecases/case-15.png',
       hpcs: [AllHPC.AiCloud],
       features: [
           {
@@ -170,6 +177,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoRegular,
       defaculty: UseCasesFilters.TDM,
+      img: '/assets/usecases/case-14.png',
       title: "Text mining",
       hpcs: [AllHPC.StratoRegular],
       features: [
@@ -187,6 +195,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       type: AllHPC.StratoBuyIn,
       defaculty: UseCasesFilters.TDM,
       title: "Data mining",
+      img: '/assets/usecases/case-13.png',
       hpcs: [AllHPC.StratoBuyIn],
       features: [
           {
@@ -206,6 +215,7 @@ export const DUMMY_CASES: UseCasesType[] = [
       type: AllHPC.AiCloud,
       defaculty: UseCasesFilters.CV,
       title: "Object recognition ",
+      img: '/assets/usecases/case-11.png',
       hpcs: [AllHPC.AiCloud],
       features: [
           {
@@ -221,7 +231,8 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoProjects,
       defaculty: UseCasesFilters.CV,
-      title: "Training object detection model  ",
+      title: "Training object detection model",
+      img: '/assets/usecases/case-9.png',
       hpcs: [AllHPC.StratoProjects],
       features: [
         {
@@ -240,7 +251,8 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.StratoProjects,
       defaculty: UseCasesFilters.S,
-      title: "Running parallel simulations ",
+      title: "Running parallel simulations",
+      img: '/assets/usecases/case-12.png',
       hpcs: [AllHPC.StratoProjects],
       features: [
         {
@@ -259,7 +271,8 @@ export const DUMMY_CASES: UseCasesType[] = [
       id: uuidv4(),
       type: AllHPC.AiCloud,
       defaculty: UseCasesFilters.S,
-      title: "Running atomistic simulations ",
+      title: "Running atomistic simulations",
+      img: '/assets/usecases/case-10.png',
       hpcs: [AllHPC.AiCloud],
       features: [
         {

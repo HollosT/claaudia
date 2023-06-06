@@ -1,3 +1,5 @@
+// https://www.npmjs.com/package/uuid?activeTab=readme
+// Allocating unique id
 import { v4 as uuidv4 } from "uuid";
 
 export interface Step {

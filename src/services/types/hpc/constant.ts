@@ -8,6 +8,9 @@ import {
   ProcessorsType,
   SystemType,
 } from "src/services/types/hpc/hpc";
+
+// https://www.npmjs.com/package/uuid?activeTab=readme
+// Allocating unique id
 import { v4 as uuidv4 } from "uuid";
 import { UseCasesFilters } from "../usecases";
 
@@ -94,7 +97,7 @@ export const STRATO_DATA: HPCCategoryType = {
         value: 0,
         data: [
           {
-            img: "/assets/resources/resources-1.png",
+            img: "/assets/resources/resources-3.png",
             title: " Instances available at hand",
             body: "The Strato platform is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment. Strato Instances are virtual machines, that can be launched by the user when they need it. When the instance has been created, it can be accessed from a terminal application on the user's local computer. The required software can then be installed and configured to the user's needs.",
           },
@@ -114,10 +117,12 @@ export const STRATO_DATA: HPCCategoryType = {
         value: 1,
         data: [
           {
+            img: "/assets/resources/resources-1.png",
             title: "Hardware possibilities",
             body: "By using Strato your research can benefit from additional RAM, CPU and GPU hardware. Strato can thus provide you with flexibility and additional computational power when your research needs it. Additionally, network storage allows users to store and process large datasets.",
           },
           {
+            img: "/assets/resources/resources-2.png",
             title: "Adjust the size of the computer without losing your data ",
             body: "A major advantage is that it is possible to keep your setup and data and reduce the size of the computer again when you are done with heavy processing jobs (delete your instance and start a small computer from the boot disk), ensuring that all researchers have access to processing capacity when they need it.",
           }
@@ -214,12 +219,12 @@ export const AICLOUD_DATA: HPCCategoryType = {
         value: 0,
         data: [
           {
-            img: "/assets/resources/resources-1.png",
+            img: "/assets/resources/resources-4.png",
             title: "Resource-sharing system",
             body: "Accessing AI Cloud is done from a terminal application found on your local computer. From here you log into a front-end node, where you can manage your files and submit your jobs to a queueing mechanism (Slurm). The job is then distributed to one of the GPU nodes in the cluster. Given that AI Cloud is a platform shared among many users, it is not a system where you install your software directly onto the system. Instead, you rely on software containers, that have all the necessary software libraries bundled up in a single file. ",
           },
           {
-            img: "/assets/resources/resources-1.png",
+            img: "/assets/resources/resources-5.png",
             title: "Flexible platform",
             body: "AI Cloud is a collection – a cluster – of large GPU servers and typically requires that users provide a container required to run their job. This makes the platform exceptionally flexible to your individual needs. That flexibility requires you to be able to create or download the container delivering the software that you need.",
           }
@@ -229,6 +234,7 @@ export const AICLOUD_DATA: HPCCategoryType = {
         value: 1,
         data: [
           {
+            img: "/assets/resources/resources-10.png",
             title: "Powerful GPU processing",
             body: "The powerful GPU processors allow users to store and process large datasets much more efficiently than would be the case with pure CPU processing. At the same time, the AI Cloud platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as UCloud or Strato for those needs. ",
           }
@@ -431,12 +437,12 @@ export const UCLOUD_DATA: HPCCategoryType = {
       value: 0,
       data: [
         {
-          img: "/assets/resources/resources-1.png",
+          img: "/assets/resources/resources-12.png",
           title: "Intuitive and user-friendly interface ",
           body: "UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand. UCloud gives researchers access to the computing power they need, whenever they need it.",
         },
         {
-          img: "/assets/resources/resources-1.png",
+          img: "/assets/resources/resources-11.png",
           title: "Good fit for first-time interaction with HPC",
           body: "UCloud platform is designed to make the interaction with high-performance computing more convenient and easier to understand. If you don't have a prior experience with any other HPC system, UCloud might be a perfect choice for you. ",
         }
@@ -446,14 +452,17 @@ export const UCLOUD_DATA: HPCCategoryType = {
       value: 1,
       data: [
         {
+          img: "/assets/resources/resources-13.png",
           title: "High accessibility ",
           body: "All cloud services are accessible via every type of device, from workstations to laptops and tablets. ",
         },
         {
+          img: "/assets/resources/resources-14.png",
           title: "Possibilities to work with different data levels ",
           body: "UCloud is highly secure and provides a safe environment to analyse each of the data levels, including sensitive and confidential data.",
         },
         {
+          img: "/assets/resources/resources-15.png",
           title: "Collaboration tool",
           body: "UCloud makes it easy to share data with your collaborators in secure virtual environments. With UCloud you can create and manage virtual workspaces dedicated to your projects, to share resources and work together with your collaborators. There is no limit to how many projects you create and how many team members you have in your project.",
         }

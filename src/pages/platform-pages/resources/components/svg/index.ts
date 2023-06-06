@@ -16,3 +16,4 @@ export {default as DataIcon} from './DataIcon';
 export {default as OperatingSystemIcon} from './OperatingSystemIcon';
 export {default as ProgrammingIcon} from './ProgrammingIcon';
 export {default as SshIcon} from './SshIcon';
+export {default as WebIcon} from './WebIcon';

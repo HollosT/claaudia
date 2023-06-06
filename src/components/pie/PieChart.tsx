@@ -1,3 +1,6 @@
+// https://react-chartjs-2.js.org/components/pie
+// Adding the pie chart logic
+
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto'
 
