@@ -1,13 +1,11 @@
 import React from 'react';
 import { RouteList } from './routes';
 import Matchmaking from 'src/pages/platform-pages/quiz/Matchmaking';
-import About from 'src/pages/platform-pages/about/About';
 import Cases from 'src/pages/platform-pages/cases/Cases';
 import Definition from 'src/pages/platform-pages/definition/Definition';
 import Resources from 'src/pages/platform-pages/resources/Resources';
 import { DictionaryIcon, HomeIcon, ResourcesIcon, SurveyIcon } from 'src/components/navigation/icons';
 import CasesIcon from 'src/components/navigation/icons/Cases-icon';
-import AboutIcon from 'src/components/navigation/icons/About-icon';
 import Home from 'src/pages/platform-pages/home/Home';
 import { AICloud, Strato, UCloud } from 'src/pages/platform-pages/resources/components/details';
 import { Comparison } from 'src/pages/platform-pages/resources/components/comparison';
@@ -44,12 +42,6 @@ const platformRoutes: RouteList = {
         name: 'Use Cases',
         path: '/cases',
         element: <Cases />
-    },
-    about: {
-        icon: <AboutIcon />,
-        name: 'About HPC',
-        path: '/about',
-        element: <About />
     },
 
     strato: {
