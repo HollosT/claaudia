@@ -12,15 +12,15 @@ const Tab: React.FC<{data: TabType}> = ({data}) => {
     const adjustUnderline = () => {
         switch(activeTab) {
             case 0: 
-                return {left: `.5rem`, width: '12rem'};
+                return {left: `0rem`, width: '13.9rem'};
             case 1: 
-                return {left: `22rem`, width: '5rem'};
+                return {left: `21.8rem`, width: '5.9rem'};
             case 2: 
-                return {left: `36rem`, width: '8rem'};
+                return {left: `35.5rem`, width: '9.1rem'};
             case 3: 
-                return {left: `53rem`, width: '2rem'};
+                return {left: `52.7rem`, width: '2.8rem'};
             default:
-                return {left: `2rem`, width: '12rem'};           
+                return {left: `0rem`, width: '12rem'};           
         }
 
     }

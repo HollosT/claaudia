@@ -3,6 +3,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     &--wave-bottom{
         position: absolute;
@@ -20,14 +21,17 @@
 
 .introduction {
     margin: 0 auto;
-    // height: 50rem;
+    width: 119.4rem;
     background-color: $color-white;
     z-index: 100;
 
     @include center;
 
     &-content {
-        padding: 2rem 5rem;
+        padding: 5rem 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &--body {
             height: 22rem;

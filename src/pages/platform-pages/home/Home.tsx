@@ -49,11 +49,11 @@ const Home: React.FC = () => {
         <section className="home">
             <div className="home-container">
                 <div className="home-header u-margin-bottom-small">
-                    <div className="home-header--content">
-                        <h1 className='primary-header u-margin-bottom-small'>Welcome to HPC Matchmaker</h1>
-                        <p className="home-header--content-body u-margin-bottom-small">
-                            CLAAUDIA is a research support unit at Aalborg University which provides you with assistance in accessing and using high-performance computing (HPC) resources in your work and projects.  
-                            Explore the computing possibilities available to you at AAU and find out which HPC system fits your individual needs. Convenient cloud computing is accessible now at hand through your laptop.                         </p>
+                    <div className="home-header--content ">
+                        <h1 className='primary-header home-header--content-title'>Welcome to HPC Matchmaker</h1>
+                        <p className="home-header--content-body home-header--content-body_first">
+                            CLAAUDIA is a research support unit at Aalborg University which provides you with assistance in accessing and using high-performance computing (HPC) resources in your work and projects.  </p>    
+                        <p className="home-header--content-body">Explore the computing possibilities available to you at AAU and find out which HPC system fits your individual needs. Convenient cloud computing is accessible now at hand through your laptop.</p>
                         <div className="home-header--action-container">
                             <Link className="home-header--content-link" to={platformRoutes.quiz.path}>Find out which HPC suits you best <ArrowRight /> </Link>
                         </div>
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="home-preview u-margin-top-small u-margin-bottom-medium">
                     <Divider />
-                    <h4 className="home-preview--title u-margin-bottom-small u-margin-top-small">What can you do with HPC Matchmaker?</h4>
+                    <h4 className="home-preview--title u-margin-bottom-medium u-margin-top-small">What can you do with HPC Matchmaker?</h4>
                     <div className="home-preview--container">
                         {previews.map(prev => (
                             <Preview key={prev.title} prev={prev} />

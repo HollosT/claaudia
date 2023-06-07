@@ -4,7 +4,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
-        gap: 5rem;
+        gap: 3rem;
 
 
       @media (max-width: 1250px) {
@@ -15,7 +15,7 @@
     }
   }
   .option {
-      padding: 3rem 2rem;
+      padding: 4rem;
       border: 1px solid $border-darker-grey;
       border-radius: 4px;
       border-top: 3px solid $light-blue;
@@ -23,28 +23,27 @@
       max-width: 50rem;
 
         &-title {
-          @include centerOptions();
           padding-bottom: .5rem;
           min-width: max-content;
 
         }
         &-body {
-          @include centerOptions();
           min-width: max-content;
           padding-bottom: 1rem;  
         }
         
 
       &-item {
-          @include centerOptions();
           min-width: 27rem;
 
-
+          &--title {
+            margin-bottom: 2rem;
+          }
           &--item {
               display: flex;
               align-items: center;
               gap: 1rem;
-              margin-bottom: .5rem;
+              margin-bottom: 1.5rem;
           }
 
           &--item-buy_in {
@@ -58,20 +57,27 @@
   }
 
   .option-nav {
-    @include centerOptions();
+    width: 100%;
     display: flex;
     align-items: center;
     gap: .5rem;
     background-color: $light-grey-200;
-    padding:  1rem;
+    padding: 1.2rem 2.4rem;
     border-radius: 4px;
     justify-content: center;
-    min-width: 27rem;
+    // min-width: 27rem;
     transition: all 250ms ease-in-out;
+    height: 5rem;
+
 
     &:hover {
       cursor: pointer;
-      background-color: $border-darker-grey; 
+      background-color: $hover-grey; 
     }
 
+  }
+
+  .option-nav--spacing {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }

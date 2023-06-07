@@ -29,7 +29,7 @@ const OptionItem: React.FC<{hpc: HPCType}> = ({hpc}) => {
         <div className="option">
            <h2 className="option-title">{hpc.name}</h2>
            <p className="option-body">{hpc.intro}</p>
-           <Button className="option-nav" onClick={handleNav}>
+           <Button className="option-nav option-nav--spacing" onClick={handleNav}>
             <ComparisonIcon />
             Compare with other system
             </Button>

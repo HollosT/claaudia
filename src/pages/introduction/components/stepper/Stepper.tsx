@@ -45,9 +45,12 @@ const Stepper: React.FC<StepperProps> = ({ stps, curr }) => {
     return (
         <section className='introduction'>
             <div className='introduction-content'>
-                <Logo />
-                <StepItem step={activeStep} active={active} />
-                <div className='introduction-content--action_container u-margin-top-big'>
+                <div>
+                    <Logo />
+                    <StepItem step={activeStep} active={active} />
+
+                </div>
+                <div className='introduction-content--action_container'>
                     <div className='introduction-content--action_container-primer'>
                         {active === 0 
                             ? 

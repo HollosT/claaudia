@@ -11,7 +11,7 @@ const DetailsHeader: React.FC<{title: string, body: string, path?: string}> = ({
       navigate(-1);
     };
     return (
-        <div className="resource-detail--header u-margin-bottom-medium">
+        <div className="resource-detail--header">
             
             {path ? 
                 <Link className="btn-outline u-margin-bottom-medium" to={path}> <BackLeftArrow /> Back to AAU HPC Resources</Link>

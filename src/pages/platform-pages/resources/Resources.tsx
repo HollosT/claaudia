@@ -45,7 +45,7 @@ const Resources: React.FC = () => {
 
     return (
         <section className="resources">
-            <div className="resources-header u-margin-bottom-medium">
+            <div className="resources-header">
                 <h1 className='primary-header u-margin-bottom-small'>HPC Resources</h1>
                 <p className="resources-header--body">Find out more about high-performance computing resources available for you. See an overview of the offered hardware, operating systems and possible skills required to interact with the machines. Explore the benefits of each of the systems or run a comparison query to have a better understanding of the differences. </p>
             </div>
@@ -78,7 +78,7 @@ const Resources: React.FC = () => {
                 <Divider />
                 <div className='resources-category u-margin-bottom-big u-margin-top-medium'>
                     <div className='no-hpc--header u-margin-bottom-medium'>
-                        <h4 className='resources-category--title u-margin-bottom-small'>No HPC system resources</h4>
+                        <h4 className='resources-category--title u-margin-bottom-tiny'>No HPC system resources</h4>
                         <p className='resources-category--body u-margin-bottom-small'>Sometimes, it might turn out your project does not require high-performance computing. In order to examine whether or not the resources you need are beyond HPC, you can compare specifications of Lenovo ThinkPad P53 (available to loan through AAU Library) with any chosen system.</p>
                         <Button className="resources-category--nav option-nav" onClick={handleNav}>
                             <ComparisonIcon />
@@ -98,7 +98,7 @@ const Resources: React.FC = () => {
                 </div>
             </div>
 
-            <Divider />
+
             <Footer shown={false} />
         </section>
     )

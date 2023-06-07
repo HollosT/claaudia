@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-  font-size: 3rem; //
-  line-height: 1.194;
+  font-size: 3.4rem; //
+  line-height: 1.294;
   font-weight: 600;
 }
 
@@ -93,6 +93,12 @@ a {
       color: $blue-grey;
     }
   }
+}
+
+// Buttons
+// btn-outline
+.btn-outline {
+  color: $dark-blue;
 }
 
 // *******************************************************************
@@ -583,6 +589,7 @@ a {
 // Resources page
 .resources {
   &-header {
+
     color: $paragraph-grey;
   }
 
@@ -655,7 +662,7 @@ a {
 
 .resource-detail {
   &--header {
-    &-body {
+    .resource-detail--body{
       color: $paragraph-grey;
     }
   }

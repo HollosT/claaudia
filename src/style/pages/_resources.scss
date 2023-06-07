@@ -2,18 +2,40 @@
 
     &-header {
         width: 50%;
+        padding-bottom: 9rem;
 
         @media (max-width: 1450px) {
             width: 100%
           }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 27%;
+            background-color: $light-grey-200;
+            z-index: -1;
+
+            @media (max-width: 1450px) {
+                height: 20%;
+
+              }
+            @media (max-width: 1200px) {
+                height: 17%;
+
+              }
+        }
     }
 
     .no-hpc--header {
         width: 50%;
 
         .resources-category--nav {
-            
+            width: max-content;
            margin-inline: 0 auto;
+           height: 5rem;
         }
     }
 }

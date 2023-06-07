@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ shown}) => {
 
     return (
         <>
-        <footer className="footer u-margin-bottom-medium">
+        <footer className="footer">
             <Divider />
             <div className="footer-content">
                 <div className="footer-content--body">
