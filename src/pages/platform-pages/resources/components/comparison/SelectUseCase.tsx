@@ -10,7 +10,7 @@ const SelectUseCase: React.FC<{compared?:  boolean}> = ({compared}) => {
 
     return (
         <>
-            {hpc && <p className="select-usecase u-margin-bottom-medium">
+            {hpc && <p className="select-usecase u-margin-top-tiny u-margin-bottom-medium">
                 {hpc.useCase}
             </p>}
         </>

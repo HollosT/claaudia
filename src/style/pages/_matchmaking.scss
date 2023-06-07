@@ -1,53 +1,61 @@
-.matchmaking {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 5rem;
+.matchmaking-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .matchmaking {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5rem;
+        margin-top: 12%;
+        
+        &-content {
+            align-self: center;
+            width: 80%;
     
-    &-content {
-        align-self: center;
-        width: 80%;
-
-        &--list {
-            &-item {
-              display: flex;
-              gap: .5rem;
-              flex-direction: row;
-              width: max-content;
-              align-items: center;
-              margin-bottom: 1rem;
+            &--list {
+                &-item {
+                  display: flex;
+                  gap: .5rem;
+                  flex-direction: row;
+                  width: max-content;
+                  align-items: center;
+                  margin-bottom: 1rem;
+                }
             }
-        }
-
-        &--nav {
-            background-color: $light-blue;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            display: flex;
-            width: max-content;
-            align-items: center;
-            gap: 1rem;
-            transition: all 150ms ease-in-out;
-
-            .arrow-rigth {
+    
+            &--nav {
+                background-color: $light-blue;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                display: flex;
+                width: max-content;
+                align-items: center;
+                gap: 1rem;
                 transition: all 150ms ease-in-out;
-                transform: translateX(0);
-            }
-
-            &:hover {
-                cursor: pointer;
-                background-color: $active-blue;
-
-            }
-            &:hover .arrow-rigth {
-                transform: translateX(.5rem);
+    
+                .arrow-rigth {
+                    transition: all 150ms ease-in-out;
+                    transform: translateX(0);
+                }
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: $active-blue;
+    
+                }
+                &:hover .arrow-rigth {
+                    transform: translateX(.5rem);
+                }
             }
         }
-    }
-
-
-
-    &--img {
-      align-self: stretch;
-    }
     
+    
+    
+        &--img {
+          align-self: stretch;
+        }
+        
+    }
 }

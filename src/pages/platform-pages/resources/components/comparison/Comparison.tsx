@@ -17,26 +17,53 @@ const Comparison: React.FC = () => {
             <DetailsHeader title="Compare two HPC systems" body="Dive into the characteristics of two selected systems for a comprehensive overview of their differences in contrast to each other." />
             <div className="comparison-select u-margin-bottom-medium">
                 <div className="comparison-select--title">
-                    <h4 className="comparison-select--title-item comparison-select--title-item_1">Select sytems to compare</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_2">Best use case</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_3">Getting access</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_4">Hardware specifications</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_5">Resource availability</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_6">Data classification</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_7">Integrations</h4>
-                    <h4 className="comparison-select--title-item comparison-select--title-item_8">Required skills & knowledge</h4>
                 </div>
                 <div className="comparison-select--container">
                     <div className="select">
-                        <SelectOption /> 
-                        <SelectHeader name={selectedHPC} />
+                        <div className="select-title--content-container">
+                            <h4 className="select-title--content-container_title">Select sytems to compare</h4>
+                            <SelectOption /> 
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className="select-title--content-container select-title--content-container_title">Chosen HPC systems</h4>
+
+                            <SelectHeader name={selectedHPC} />
+                        </div>
+                        <div className="select-title--content-container">
+                            <h4 className="select-title--content-container select-title--content-container_title">Best use case</h4>
+
                         <SelectUseCase/>
-                        <Application />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className="select-title--content-container_title">Getting access</h4>
+
+                            <Application />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className=" select-title--content-container_title">Hardware specifications</h4>
+
                         <HardwareContent />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className=" select-title--content-container_title">Resource availability</h4>
+
                         <SelectResource />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className=" select-title--content-container_title">Data classification</h4>
+
                         <SelectData />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className=" select-title--content-container_title">Integrations</h4>
+
                         <SelectIntegration />
+                        </div>
+                        <div className="select-title--content-container">
+                        <h4 className=" select-title--content-container_title">Required skills & knowledge</h4>
+
                         <SelectSkill />
+                        </div>
                     </div>
                     <div className="select">
                         <SelectOption compared /> 

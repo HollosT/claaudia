@@ -14,7 +14,7 @@ const Matchmaking: React.FC = () => {
     }
 
     return (
-        <>
+        <div className="matchmaking-page">
             <section className="matchmaking u-margin-bottom-big">
                 <div className="matchmaking-content">
                     <div className="matchmaking-content--heade u-margin-bottom-small">
@@ -54,7 +54,7 @@ const Matchmaking: React.FC = () => {
 
             </section>
             <Footer shown={true} />
-        </>
+        </div>
     )
 }
 
