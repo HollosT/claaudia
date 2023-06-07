@@ -1,4 +1,33 @@
 .comparison {
+    
+    
+    .resource-detail--header {
+        width: 50%;
+        padding-bottom: 9rem;
+
+        @media (max-width: 1450px) {
+            width: 100%
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 7%;
+ 
+
+            @media (max-width: 1450px) {
+                height: 20%;
+
+              }
+            @media (max-width: 1200px) {
+                height: 17%;
+
+              }
+        }
+    }
 
     &-select {
         display: grid;

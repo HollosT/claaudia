@@ -21,7 +21,13 @@
             align-items: center;
             background-color: transparent;
             border-left: 2px solid transparent;
-            transition: all 250ms ease-in;
+            transition: all 150ms ease-in;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $dark-blue-100;
+
+            }
         }
     }
 
@@ -49,6 +55,6 @@
 
 .active-link {
     background-color: $dark-blue-100;
-    border-left: 2px solid $light-blue-100;
+    border-left: 2px solid $light-blue;
 
 }

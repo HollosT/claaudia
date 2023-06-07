@@ -1,7 +1,7 @@
 .preview {
     border-radius: 4px;
     border: 1px solid $border-darker-grey;
-    padding: 2rem; 
+    padding: 3rem 2rem 2rem 2rem; 
     border-top: 3px solid $light-blue;
     display: flex;
     flex-direction: column;
@@ -15,22 +15,26 @@
         max-width: 30rem;
     }
 
+    &-title {
+        margin-bottom: 1rem;
+    }
+
     &-nav {
         border-bottom: 1px solid $dark-blue;
         width: max-content;
     }
 
     &-icon{
-        background-color: $border-darker-grey;
+        background-color: $light-grey-200;
         border-radius: 4px;
         width: max-content;
         padding: 2rem;
         position: relative;
+        display: flex;
 
         .nav-icon {
             fill: $light-blue;
-            @include center();
-
+            align-self: center;
         }
     }
 

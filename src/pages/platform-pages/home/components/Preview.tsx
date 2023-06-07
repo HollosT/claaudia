@@ -10,11 +10,13 @@ const Preview: React.FC<{prev: PreviewType}> = ({prev}) => {
 
     return (
         <article onClick={handleNav} className="preview">
-            <div className="preview-icon">
-                {prev.icon}
+            <div>
+                <div className="preview-icon u-margin-bottom-small">
+                    {prev.icon}
+                </div>
+                <h5 className="preview-title">{prev.title}</h5>
+                <p className="preview-body">{prev.body}</p>
             </div>
-            <h5 className="preview-title">{prev.title}</h5>
-            <p className="preview-body">{prev.body}</p>
             <Link className="preview-nav" to={prev.link}>{prev.linkTitle}</Link>
         </article>
     )
