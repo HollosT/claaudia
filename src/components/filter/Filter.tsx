@@ -54,7 +54,7 @@ const Filter = <T,>({ data, handleChange, title, isSearching, isDefinition }: Fi
         <>
             <section className="filter">
                 <div className="filter-header">
-                    <p className={isDefinition ? "filter-header--title u-margin-bottom-small fitler-definition--header" : "filter-header--title u-margin-bottom-small"}>
+                    <p className={isDefinition ? "filter-header--title u-margin-bottom-tiny fitler-definition--header" : "filter-header--title u-margin-bottom-tiny"}>
                         {title}
                     </p>
                     

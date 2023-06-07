@@ -24,7 +24,7 @@ const FinishedHeader: React.FC = () => {
             <div className="content-success">
                 <FinishedSuccessIcon />
                 <div className="content-success--content">
-                    <p className="content-success--content-title p-huge u-margin-bottom-small">
+                    <p className="content-success--content-title p-huge u-margin-bottom-tiny">
                         You have completed the HPC Matchmaking Quiz
                     </p>
                     <p className="content-success--content-body u-margin-bottom-small">
@@ -37,7 +37,7 @@ const FinishedHeader: React.FC = () => {
                 </div>
             </div>
             <div className="content-next">
-                    <p className="content-next--title p-big u-margin-bottom-small">
+                    <p className="content-next--title p-big u-margin-bottom-tiny">
                         What to do next?
                     </p>
                     <p className="content-next--body u-margin-bottom-small">

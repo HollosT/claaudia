@@ -9,7 +9,7 @@ const Definitions: React.FC<{data: DefinitionType[]}> = ({data}) => {
     return (
 
                 <div>
-                <h4 className="definition-items--title u-margin-top-small u-margin-bottom-small">{data[0].topic} definitions</h4>
+                <h4 className="definition-items--title u-margin-top-small">{data[0].topic} definitions</h4>
                     {data.map(item => (
                         <DefinitionItem key={item.id} def={item} />
                     ))}

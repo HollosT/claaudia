@@ -1,6 +1,6 @@
 import { ArrowRight, Button } from "src/atoms";
 import { Check } from "../resources/components/svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "src/components/footer/Footer";
 import platformRoutes from "src/services/router/platform-routes";
 import PreviewImg from "./components/PreviewImg";

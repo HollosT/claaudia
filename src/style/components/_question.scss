@@ -94,7 +94,6 @@
 
       .sv-action {
         .sd-btn {
-          padding: 0.5rem 2rem;
           box-shadow: none;
           border-radius: 4px;
         }
@@ -102,6 +101,13 @@
         .sd-navigation__complete-btn,
         .sd-navigation__next-btn {
           background-color: $light-blue;
+          padding: 1.2rem 2.4rem;
+          transition: all 150ms ease-in-out;
+
+          &:hover {
+            background-color: $hover-blue;
+
+          }
         }
 
         .sd-navigation__complete-btn {
@@ -129,12 +135,27 @@
   width: 1.5rem;
   height: 1.5rem;
   position: relative;
+  transition: all 150ms ease-in-out;
 
   span {
     font-size: 1.2rem;
     color: $dark-blue;
     font-weight: 600;
     @include center();
+    transition: all 150ms ease-in-out;
+
+
+  }
+
+
+  &:hover {
+  background-color: $dark-blue;
+  cursor: pointer;
+
+  span {
+    color: $color-white;
+  }
+    
   }
 
   &:hover .tooltip-text {
@@ -158,6 +179,8 @@
   font-size: 1.6rem;
   font-weight: 400;
 
+
+
   &::before {
     content: "";
     position: absolute;
@@ -168,4 +191,5 @@
     bottom: -2.5%;
     left: 6.5%;
   }
+
 }

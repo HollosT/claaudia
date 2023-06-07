@@ -9,24 +9,14 @@
     
     &--filter {
       width: 100%;
-      display: grid;
-      // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-      grid-template-columns: repeat(5, max-content);
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
-
-      @media (max-width: 1550px) {
-      grid-template-columns: repeat(4, max-content);
-
-      }
-      @media (max-width: 1400px) {
-      grid-template-columns: repeat(3, max-content);
-
-      }
      
         .filter-item{
           background-color: $light-grey-200;
           border-radius: 100vw;
-          padding: .25rem 1rem;
+          padding: .6rem 1.2rem;
           transition: all 150ms ease-in-out;
           text-align: center;
           &--title {

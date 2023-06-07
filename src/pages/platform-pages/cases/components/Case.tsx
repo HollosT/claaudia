@@ -22,7 +22,7 @@ const Case: React.FC<{ useCase: UseCasesType }> = ({ useCase }) => {
             <div className="case-body">
                 <div className="case-body--content">
                     <h3 className="case-body--content-title p-huge u-margin-bottom-small">{useCase.title}</h3>
-                    <div className="case-body--content-feature u-margin-bottom-medium">
+                    <div className="case-body--content-feature">
                         <p className="case-body--content-feature_title">
                             Utilized HPC:
                             <span>{useCase.type}</span>

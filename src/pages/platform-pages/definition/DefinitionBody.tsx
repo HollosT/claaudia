@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import Filter from "src/components/filter/Filter";
-import Footer from "src/components/footer/Footer";
 import { DEFINiTIONS_FILTER_INTRO, DefinitionTopic, DefinitionType } from "src/services/types/definition";
 import { Definitions } from "./components";
 import Search from "src/components/search/Search";
@@ -100,7 +99,7 @@ const DefinitionBody: React.FC = () => {
             <Search handleChange={handleDataFromSearch} className="u-margin-bottom-medium" isFiltering={isFiltering} />
 
             <Filter isDefinition title="Or filter definitions by topic" data={DefinitionTopic} handleChange={handleDataFromFilter} isSearching={isSearching} />
-            {intro && <p className="u-margin-bottom-small">{intro.body}</p>}
+            {intro && <p className="definition-explanation--body u-margin-bottom-small">{intro.body}</p>}
             <Divider />
 
             {loading ? <SkeletonDefinition iteration={3} /> : 
@@ -113,7 +112,6 @@ const DefinitionBody: React.FC = () => {
                     </>
              }
 
-            <Footer shown={true} />
         </>
     )
 }

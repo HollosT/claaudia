@@ -392,7 +392,7 @@ a {
           &-nav {
             color: $light-blue;
             font-size: 1.6rem;
-            font-weight: 600;
+            font-weight: 400;
 
             &:hover {
               color: $active-blue;
@@ -484,7 +484,6 @@ a {
   &-feature {
     &_title {
       color: $paragraph-grey;
-      font-style: italic;
 
       span {
         color: $color-black;
@@ -501,13 +500,23 @@ a {
 // Definition page
 
 .definition {
+  &-header {
+    p {
+      color: $paragraph-grey;
+    }
+  }
   &-items--title {
     color: $dark-blue;
+  }
+
+  .definition-explanation--body {
+    color: $paragraph-grey;
   }
 }
 .defintion-item {
   &--title {
     color: $dark-blue;
+    font-weight: 500;
   }
 
   &--body {
@@ -527,6 +536,7 @@ a {
     font-size: 1.6rem;
     color: $dark-blue;
     border: 1px solid transparent;
+    font-weight: 100;
 
     &::placeholder {
       color: $dark-blue;

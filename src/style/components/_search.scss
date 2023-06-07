@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     align-items: center;
-   
+    gap: 2rem;
 
     &-icon {
         position: absolute;
@@ -14,17 +14,14 @@
         background-color: $light-grey-200;
         border-radius: 4px;
         width: 100%;
-        padding: 1rem 4rem;
+        padding: 1.5rem 4rem;
 
         &:target, 
         &:focus {
           border: 1px solid $dark-blue;
-        }
-    }
+            background-color: $light-blue-opacity-10;
 
-    &-field:focus + &-icon,
-    &-field:target + &-icon  {
-        rotate: 45deg;
+        }
     }
 
 }
